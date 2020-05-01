@@ -1,0 +1,5 @@
+# HSTS 1.0 Known Hosts database for GNU Wget.
+# Edit at your own risk.
+# <hostname>	<port>	<incl. subdomains>	<created>	<max-age>
+i.picsum.photos	0	0	1587745764	15552000
+picsum.photos	0	0	1587745763	15552000

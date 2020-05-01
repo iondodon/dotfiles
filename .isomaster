@@ -1,0 +1,26 @@
+
+[ui]
+windowwidth                    = 500
+windowheight                   = 550
+toppaneheight                  = 170
+fscurrentdir                   = /home/ion/Documents/
+showhiddenfilesfs              = 0
+sortdirsfirst                  = 1
+scanforduplicatefiles          = 1
+followsymlinks                 = 0
+appendextension                = 1
+editor                         = sensible-editor
+viewer                         = sensible-browser
+tempdir                        = /tmp
+isosortcolumnid                = 1
+isosortdirection               = 0
+fssortcolumnid                 = 1
+fssortdirection                = 0
+fsdrive                        = c:\
+casesensitivesort              = 1
+recentlyopen0                  = /home/ion/Documents/MathWorks MATLAB R2018a Linux/R2018a_glnxa64_dvd2.iso
+recentlyopen1                  = 
+recentlyopen2                  = 
+recentlyopen3                  = 
+recentlyopen4                  = 
+

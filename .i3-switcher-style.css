@@ -1,0 +1,41 @@
+
+/* reffer to https://thomashunter.name/i3-configurator/ */
+
+.focused_tab {
+    background-color: #4C7899;
+}
+
+.tab {
+    color: #FFFFFF;
+
+    margin: 5px;
+/**    
+   min-height: 10em;
+   min-width: 18em;
+
+   padding: 0.5em;
+*/
+}
+
+.window {
+    background-color: #333333;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #4C7899;
+}
+
+.picture {
+/**
+    display: none;
+*/
+}
+
+.tabs {
+    background-color: #333333;
+    margin: 1em;
+}
+
+.label {
+    font-size: 70px;    
+}
+

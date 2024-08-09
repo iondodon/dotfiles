@@ -1,0 +1,16 @@
+# Exclude everything by default
+*
+
+# Exclusive include
+
+!.gitignore
+
+!.config/
+
+!.config/i3/
+!.config/i3/**
+
+!.config/zed/
+!.config/zed/**
+
+!.i3-switcher-style.css

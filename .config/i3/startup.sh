@@ -21,7 +21,7 @@ sleep 2
 
 i3-msg "workspace $ws2"
 #i3-msg "exec code"
-i3-msg "exec /home/ion/idea-IU-241.18034.62/bin/idea.sh"
+i3-msg "exec /home/ion/.local/share/JetBrains/Toolbox/apps/intellij-idea-community-edition/bin/idea.sh"
 i3-msg "layout tabbed"
 i3-msg "[workspace=$ws2] focus child"
 

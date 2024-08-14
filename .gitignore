@@ -12,6 +12,8 @@
 
 !.config/polybar/
 !.config/polybar/**
+!.config/polybar/polybar-i3-windows/
+!.config/polybar/polybar-i3-windows/**
 
 !.config/zed/
 !.config/zed/**

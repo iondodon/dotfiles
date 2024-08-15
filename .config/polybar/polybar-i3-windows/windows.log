@@ -914,3 +914,811 @@
 2024-08-15 10:53:00.678 | DEBUG    | __main__:<module>:593 - {<Key.ctrl: <65507>>}
 2024-08-15 10:53:00.872 | DEBUG    | __main__:<module>:592 - Press key 'c'
 2024-08-15 10:53:00.872 | DEBUG    | __main__:<module>:593 - {'c', <Key.ctrl: <65507>>}
+2024-08-15 10:53:58.499 | DEBUG    | __main__:<module>:592 - Press key Key.alt
+2024-08-15 10:53:58.499 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>}
+2024-08-15 10:53:58.598 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 10:53:58.598 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:53:58.670 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:53:58.671 | DEBUG    | __main__:<module>:608 - Release key Key.alt
+2024-08-15 10:53:58.732 | DEBUG    | __main__:<module>:607 - {<Key.tab: <65289>>}
+2024-08-15 10:53:58.732 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 10:54:01.444 | DEBUG    | __main__:<module>:592 - Press key Key.alt
+2024-08-15 10:54:01.445 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>}
+2024-08-15 10:54:01.617 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 10:54:01.617 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:01.659 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:01.660 | DEBUG    | __main__:<module>:608 - Release key Key.alt
+2024-08-15 10:54:01.811 | DEBUG    | __main__:<module>:607 - {<Key.tab: <65289>>}
+2024-08-15 10:54:01.811 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 10:54:02.010 | DEBUG    | __main__:<module>:592 - Press key Key.alt
+2024-08-15 10:54:02.010 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>}
+2024-08-15 10:54:02.058 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 10:54:02.058 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:02.121 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:02.121 | DEBUG    | __main__:<module>:608 - Release key Key.alt
+2024-08-15 10:54:02.230 | DEBUG    | __main__:<module>:607 - {<Key.tab: <65289>>}
+2024-08-15 10:54:02.230 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 10:54:03.842 | DEBUG    | __main__:<module>:592 - Press key Key.alt
+2024-08-15 10:54:03.842 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>}
+2024-08-15 10:54:03.961 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 10:54:03.961 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:04.013 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:04.014 | DEBUG    | __main__:<module>:608 - Release key Key.alt
+2024-08-15 10:54:04.127 | DEBUG    | __main__:<module>:607 - {<Key.tab: <65289>>}
+2024-08-15 10:54:04.128 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 10:54:04.515 | DEBUG    | __main__:<module>:592 - Press key Key.alt
+2024-08-15 10:54:04.516 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>}
+2024-08-15 10:54:04.587 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 10:54:04.588 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:04.683 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:04.683 | DEBUG    | __main__:<module>:608 - Release key Key.alt
+2024-08-15 10:54:04.778 | DEBUG    | __main__:<module>:607 - {<Key.tab: <65289>>}
+2024-08-15 10:54:04.778 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 10:54:08.377 | DEBUG    | __main__:<module>:592 - Press key Key.alt
+2024-08-15 10:54:08.378 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>}
+2024-08-15 10:54:08.430 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 10:54:08.430 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:08.526 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:08.527 | DEBUG    | __main__:<module>:608 - Release key Key.alt
+2024-08-15 10:54:08.591 | DEBUG    | __main__:<module>:607 - {<Key.tab: <65289>>}
+2024-08-15 10:54:08.591 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 10:54:08.644 | DEBUG    | __main__:<module>:592 - Press key Key.alt
+2024-08-15 10:54:08.645 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>}
+2024-08-15 10:54:08.687 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 10:54:08.688 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:08.826 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:08.826 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 10:54:08.959 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 10:54:08.960 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:09.084 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:09.085 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 10:54:09.340 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>}
+2024-08-15 10:54:09.340 | DEBUG    | __main__:<module>:608 - Release key Key.alt
+2024-08-15 10:54:09.784 | DEBUG    | __main__:<module>:592 - Press key Key.alt
+2024-08-15 10:54:09.785 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>}
+2024-08-15 10:54:09.832 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 10:54:09.833 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:09.937 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:09.938 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 10:54:09.995 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 10:54:09.995 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:10.092 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:10.092 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 10:54:10.149 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 10:54:10.149 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:10.280 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:10.280 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 10:54:10.303 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>}
+2024-08-15 10:54:10.303 | DEBUG    | __main__:<module>:608 - Release key Key.alt
+2024-08-15 10:54:13.323 | DEBUG    | __main__:<module>:592 - Press key Key.alt
+2024-08-15 10:54:13.324 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>}
+2024-08-15 10:54:13.489 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 10:54:13.490 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:13.608 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:13.609 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 10:54:13.671 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 10:54:13.672 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:13.800 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:13.801 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 10:54:13.886 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 10:54:13.887 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:14.030 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:14.030 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 10:54:14.130 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>}
+2024-08-15 10:54:14.130 | DEBUG    | __main__:<module>:608 - Release key Key.alt
+2024-08-15 10:54:14.683 | DEBUG    | __main__:<module>:592 - Press key Key.alt
+2024-08-15 10:54:14.684 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>}
+2024-08-15 10:54:14.717 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 10:54:14.718 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:15.010 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:15.010 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 10:54:15.067 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 10:54:15.067 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:15.182 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:15.182 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 10:54:15.243 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 10:54:15.243 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:15.349 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:15.349 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 10:54:15.412 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 10:54:15.413 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:15.540 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:15.541 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 10:54:15.623 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>}
+2024-08-15 10:54:15.624 | DEBUG    | __main__:<module>:608 - Release key Key.alt
+2024-08-15 10:54:28.344 | DEBUG    | __main__:<module>:592 - Press key Key.alt
+2024-08-15 10:54:28.345 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>}
+2024-08-15 10:54:28.424 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 10:54:28.425 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:28.512 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:28.512 | DEBUG    | __main__:<module>:608 - Release key Key.alt
+2024-08-15 10:54:28.573 | DEBUG    | __main__:<module>:607 - {<Key.tab: <65289>>}
+2024-08-15 10:54:28.573 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 10:54:29.024 | DEBUG    | __main__:<module>:592 - Press key Key.alt
+2024-08-15 10:54:29.025 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>}
+2024-08-15 10:54:29.091 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 10:54:29.091 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:29.178 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:29.178 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 10:54:29.225 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 10:54:29.225 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:29.341 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:29.341 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 10:54:29.389 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 10:54:29.390 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:29.500 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:29.500 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 10:54:29.571 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 10:54:29.571 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:29.725 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:29.726 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 10:54:29.774 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>}
+2024-08-15 10:54:29.774 | DEBUG    | __main__:<module>:608 - Release key Key.alt
+2024-08-15 10:54:30.025 | DEBUG    | __main__:<module>:592 - Press key Key.alt
+2024-08-15 10:54:30.025 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>}
+2024-08-15 10:54:30.072 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 10:54:30.073 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:30.187 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:30.187 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 10:54:30.241 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 10:54:30.242 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:30.361 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:30.361 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 10:54:30.418 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 10:54:30.418 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:30.529 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:30.530 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 10:54:30.582 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 10:54:30.583 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:30.706 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:30.706 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 10:54:30.750 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 10:54:30.751 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:30.899 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:30.899 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 10:54:30.990 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>}
+2024-08-15 10:54:30.990 | DEBUG    | __main__:<module>:608 - Release key Key.alt
+2024-08-15 10:54:31.399 | DEBUG    | __main__:<module>:592 - Press key Key.alt
+2024-08-15 10:54:31.399 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>}
+2024-08-15 10:54:31.452 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 10:54:31.452 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:31.520 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:31.520 | DEBUG    | __main__:<module>:608 - Release key Key.alt
+2024-08-15 10:54:31.586 | DEBUG    | __main__:<module>:607 - {<Key.tab: <65289>>}
+2024-08-15 10:54:31.586 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 10:54:31.758 | DEBUG    | __main__:<module>:592 - Press key Key.alt
+2024-08-15 10:54:31.758 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>}
+2024-08-15 10:54:31.795 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 10:54:31.795 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:31.940 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:31.940 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 10:54:32.025 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 10:54:32.026 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:32.103 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:32.103 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 10:54:32.331 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 10:54:32.331 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:32.455 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:32.456 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 10:54:32.566 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 10:54:32.566 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:32.724 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:32.724 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 10:54:33.790 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>}
+2024-08-15 10:54:33.790 | DEBUG    | __main__:<module>:608 - Release key Key.alt
+2024-08-15 10:54:39.283 | DEBUG    | __main__:<module>:592 - Press key Key.esc
+2024-08-15 10:54:39.284 | DEBUG    | __main__:<module>:593 - {<Key.esc: <65307>>}
+2024-08-15 10:54:39.435 | DEBUG    | __main__:<module>:607 - {<Key.esc: <65307>>}
+2024-08-15 10:54:39.435 | DEBUG    | __main__:<module>:608 - Release key Key.esc
+2024-08-15 10:54:44.944 | DEBUG    | __main__:<module>:592 - Press key Key.esc
+2024-08-15 10:54:44.945 | DEBUG    | __main__:<module>:593 - {<Key.esc: <65307>>}
+2024-08-15 10:54:45.078 | DEBUG    | __main__:<module>:607 - {<Key.esc: <65307>>}
+2024-08-15 10:54:45.078 | DEBUG    | __main__:<module>:608 - Release key Key.esc
+2024-08-15 10:54:48.182 | DEBUG    | __main__:<module>:592 - Press key Key.alt
+2024-08-15 10:54:48.183 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>}
+2024-08-15 10:54:48.287 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 10:54:48.287 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:48.406 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:48.406 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 10:54:48.549 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 10:54:48.549 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:48.663 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:48.664 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 10:54:48.737 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 10:54:48.737 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:48.861 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:48.862 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 10:54:48.913 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 10:54:48.914 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:49.057 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:49.057 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 10:54:49.102 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 10:54:49.102 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:49.246 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:54:49.247 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 10:54:49.378 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>}
+2024-08-15 10:54:49.379 | DEBUG    | __main__:<module>:608 - Release key Key.alt
+2024-08-15 10:54:51.707 | DEBUG    | __main__:<module>:592 - Press key Key.ctrl
+2024-08-15 10:54:51.707 | DEBUG    | __main__:<module>:593 - {<Key.ctrl: <65507>>}
+2024-08-15 10:54:51.921 | DEBUG    | __main__:<module>:592 - Press key 'c'
+2024-08-15 10:54:51.921 | DEBUG    | __main__:<module>:593 - {<Key.ctrl: <65507>>, 'c'}
+2024-08-15 10:55:39.000 | DEBUG    | __main__:<module>:592 - Press key Key.alt
+2024-08-15 10:55:39.000 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>}
+2024-08-15 10:55:40.020 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 10:55:40.021 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:55:40.160 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:55:40.160 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 10:55:40.691 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 10:55:40.691 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:55:40.911 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:55:40.912 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 10:55:41.627 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>}
+2024-08-15 10:55:41.627 | DEBUG    | __main__:<module>:608 - Release key Key.alt
+2024-08-15 10:56:07.946 | DEBUG    | __main__:<module>:592 - Press key Key.alt
+2024-08-15 10:56:07.947 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>}
+2024-08-15 10:56:08.022 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 10:56:08.023 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:56:08.204 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 10:56:08.204 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 10:56:08.229 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>}
+2024-08-15 10:56:08.229 | DEBUG    | __main__:<module>:608 - Release key Key.alt
+2024-08-15 10:56:09.045 | DEBUG    | __main__:<module>:592 - Press key Key.ctrl
+2024-08-15 10:56:09.046 | DEBUG    | __main__:<module>:593 - {<Key.ctrl: <65507>>}
+2024-08-15 10:56:09.154 | DEBUG    | __main__:<module>:592 - Press key 'c'
+2024-08-15 10:56:09.154 | DEBUG    | __main__:<module>:593 - {'c', <Key.ctrl: <65507>>}
+2024-08-15 11:09:28.123 | DEBUG    | __main__:<module>:592 - Press key Key.alt
+2024-08-15 11:09:28.123 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>}
+2024-08-15 11:09:28.365 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 11:09:28.365 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 11:09:28.427 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 11:09:28.427 | DEBUG    | __main__:<module>:608 - Release key Key.alt
+2024-08-15 11:09:28.511 | DEBUG    | __main__:<module>:607 - {<Key.tab: <65289>>}
+2024-08-15 11:09:28.512 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 11:09:30.000 | DEBUG    | __main__:<module>:592 - Press key Key.alt
+2024-08-15 11:09:30.001 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>}
+2024-08-15 11:09:30.484 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 11:09:30.484 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 11:09:30.570 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 11:09:30.571 | DEBUG    | __main__:<module>:608 - Release key Key.alt
+2024-08-15 11:09:30.656 | DEBUG    | __main__:<module>:607 - {<Key.tab: <65289>>}
+2024-08-15 11:09:30.657 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 11:09:40.063 | DEBUG    | __main__:<module>:592 - Press key Key.ctrl
+2024-08-15 11:09:40.063 | DEBUG    | __main__:<module>:593 - {<Key.ctrl: <65507>>}
+2024-08-15 11:09:40.166 | DEBUG    | __main__:<module>:592 - Press key 'c'
+2024-08-15 11:09:40.167 | DEBUG    | __main__:<module>:593 - {<Key.ctrl: <65507>>, 'c'}
+2024-08-15 11:10:57.606 | DEBUG    | __main__:<module>:592 - Press key Key.alt
+2024-08-15 11:10:57.606 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>}
+2024-08-15 11:10:57.660 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 11:10:57.660 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 11:10:57.728 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 11:10:57.729 | DEBUG    | __main__:<module>:608 - Release key Key.alt
+2024-08-15 11:10:57.802 | DEBUG    | __main__:<module>:607 - {<Key.tab: <65289>>}
+2024-08-15 11:10:57.803 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 11:10:57.855 | DEBUG    | __main__:<module>:592 - Press key Key.alt
+2024-08-15 11:10:57.855 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>}
+2024-08-15 11:10:57.889 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 11:10:57.889 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 11:10:57.980 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 11:10:57.981 | DEBUG    | __main__:<module>:608 - Release key Key.alt
+2024-08-15 11:10:58.046 | DEBUG    | __main__:<module>:607 - {<Key.tab: <65289>>}
+2024-08-15 11:10:58.046 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 11:11:04.297 | DEBUG    | __main__:<module>:592 - Press key Key.ctrl
+2024-08-15 11:11:04.297 | DEBUG    | __main__:<module>:593 - {<Key.ctrl: <65507>>}
+2024-08-15 11:11:04.381 | DEBUG    | __main__:<module>:592 - Press key 'c'
+2024-08-15 11:11:04.382 | DEBUG    | __main__:<module>:593 - {'c', <Key.ctrl: <65507>>}
+2024-08-15 11:26:57.255 | DEBUG    | __main__:<module>:592 - Press key Key.ctrl
+2024-08-15 11:26:57.255 | DEBUG    | __main__:<module>:593 - {<Key.ctrl: <65507>>}
+2024-08-15 11:26:57.454 | DEBUG    | __main__:<module>:592 - Press key 'c'
+2024-08-15 11:26:57.455 | DEBUG    | __main__:<module>:593 - {<Key.ctrl: <65507>>, 'c'}
+2024-08-15 11:30:36.344 | DEBUG    | __main__:<module>:592 - Press key Key.ctrl
+2024-08-15 11:30:36.345 | DEBUG    | __main__:<module>:593 - {<Key.ctrl: <65507>>}
+2024-08-15 11:30:36.719 | DEBUG    | __main__:<module>:592 - Press key 'x'
+2024-08-15 11:30:36.719 | DEBUG    | __main__:<module>:593 - {'x', <Key.ctrl: <65507>>}
+2024-08-15 11:30:36.824 | DEBUG    | __main__:<module>:607 - {'x', <Key.ctrl: <65507>>}
+2024-08-15 11:30:36.824 | DEBUG    | __main__:<module>:608 - Release key 'x'
+2024-08-15 11:30:36.986 | DEBUG    | __main__:<module>:607 - {<Key.ctrl: <65507>>}
+2024-08-15 11:30:36.987 | DEBUG    | __main__:<module>:608 - Release key Key.ctrl
+2024-08-15 11:30:37.230 | DEBUG    | __main__:<module>:592 - Press key Key.ctrl
+2024-08-15 11:30:37.231 | DEBUG    | __main__:<module>:593 - {<Key.ctrl: <65507>>}
+2024-08-15 11:30:37.391 | DEBUG    | __main__:<module>:592 - Press key 'z'
+2024-08-15 11:30:37.392 | DEBUG    | __main__:<module>:593 - {'z', <Key.ctrl: <65507>>}
+2024-08-15 11:30:37.507 | DEBUG    | __main__:<module>:607 - {'z', <Key.ctrl: <65507>>}
+2024-08-15 11:30:37.507 | DEBUG    | __main__:<module>:608 - Release key 'z'
+2024-08-15 11:30:37.674 | DEBUG    | __main__:<module>:607 - {<Key.ctrl: <65507>>}
+2024-08-15 11:30:37.675 | DEBUG    | __main__:<module>:608 - Release key Key.ctrl
+2024-08-15 11:30:39.327 | DEBUG    | __main__:<module>:592 - Press key Key.ctrl
+2024-08-15 11:30:39.327 | DEBUG    | __main__:<module>:593 - {<Key.ctrl: <65507>>}
+2024-08-15 11:30:39.845 | DEBUG    | __main__:<module>:607 - {<Key.ctrl: <65507>>}
+2024-08-15 11:30:39.845 | DEBUG    | __main__:<module>:608 - Release key Key.ctrl
+2024-08-15 11:30:40.011 | DEBUG    | __main__:<module>:592 - Press key Key.cmd
+2024-08-15 11:30:40.012 | DEBUG    | __main__:<module>:593 - {<Key.cmd: <65515>>}
+2024-08-15 11:30:40.135 | DEBUG    | __main__:<module>:592 - Press key 'd'
+2024-08-15 11:30:40.136 | DEBUG    | __main__:<module>:593 - {'d', <Key.cmd: <65515>>}
+2024-08-15 11:30:40.197 | DEBUG    | __main__:<module>:607 - {'d', <Key.cmd: <65515>>}
+2024-08-15 11:30:40.198 | DEBUG    | __main__:<module>:608 - Release key Key.cmd
+2024-08-15 11:30:40.268 | DEBUG    | __main__:<module>:607 - {'d'}
+2024-08-15 11:30:40.269 | DEBUG    | __main__:<module>:608 - Release key 'd'
+2024-08-15 11:30:40.470 | DEBUG    | __main__:<module>:592 - Press key 't'
+2024-08-15 11:30:40.471 | DEBUG    | __main__:<module>:593 - {'t'}
+2024-08-15 11:30:40.572 | DEBUG    | __main__:<module>:607 - {'t'}
+2024-08-15 11:30:40.572 | DEBUG    | __main__:<module>:608 - Release key 't'
+2024-08-15 11:30:40.576 | DEBUG    | __main__:<module>:592 - Press key 'a'
+2024-08-15 11:30:40.576 | DEBUG    | __main__:<module>:593 - {'a'}
+2024-08-15 11:30:40.705 | DEBUG    | __main__:<module>:592 - Press key 's'
+2024-08-15 11:30:40.706 | DEBUG    | __main__:<module>:593 - {'a', 's'}
+2024-08-15 11:30:40.729 | DEBUG    | __main__:<module>:607 - {'a', 's'}
+2024-08-15 11:30:40.729 | DEBUG    | __main__:<module>:608 - Release key 'a'
+2024-08-15 11:30:40.830 | DEBUG    | __main__:<module>:607 - {'s'}
+2024-08-15 11:30:40.830 | DEBUG    | __main__:<module>:608 - Release key 's'
+2024-08-15 11:30:40.853 | DEBUG    | __main__:<module>:592 - Press key 'k'
+2024-08-15 11:30:40.853 | DEBUG    | __main__:<module>:593 - {'k'}
+2024-08-15 11:30:40.953 | DEBUG    | __main__:<module>:607 - {'k'}
+2024-08-15 11:30:40.954 | DEBUG    | __main__:<module>:608 - Release key 'k'
+2024-08-15 11:30:41.037 | DEBUG    | __main__:<module>:592 - Press key Key.enter
+2024-08-15 11:30:41.038 | DEBUG    | __main__:<module>:593 - {<Key.enter: <65293>>}
+2024-08-15 11:30:41.117 | DEBUG    | __main__:<module>:607 - {<Key.enter: <65293>>}
+2024-08-15 11:30:41.118 | DEBUG    | __main__:<module>:608 - Release key Key.enter
+2024-08-15 11:30:42.328 | DEBUG    | __main__:<module>:592 - Press key 'p'
+2024-08-15 11:30:42.328 | DEBUG    | __main__:<module>:593 - {'p'}
+2024-08-15 11:30:42.419 | DEBUG    | __main__:<module>:607 - {'p'}
+2024-08-15 11:30:42.420 | DEBUG    | __main__:<module>:608 - Release key 'p'
+2024-08-15 11:30:42.482 | DEBUG    | __main__:<module>:592 - Press key 'o'
+2024-08-15 11:30:42.483 | DEBUG    | __main__:<module>:593 - {'o'}
+2024-08-15 11:30:42.558 | DEBUG    | __main__:<module>:607 - {'o'}
+2024-08-15 11:30:42.559 | DEBUG    | __main__:<module>:608 - Release key 'o'
+2024-08-15 11:30:42.634 | DEBUG    | __main__:<module>:592 - Press key 'l'
+2024-08-15 11:30:42.635 | DEBUG    | __main__:<module>:593 - {'l'}
+2024-08-15 11:30:42.720 | DEBUG    | __main__:<module>:607 - {'l'}
+2024-08-15 11:30:42.721 | DEBUG    | __main__:<module>:608 - Release key 'l'
+2024-08-15 11:31:25.440 | DEBUG    | __main__:<module>:592 - Press key Key.ctrl
+2024-08-15 11:31:25.441 | DEBUG    | __main__:<module>:593 - {<Key.ctrl: <65507>>}
+2024-08-15 11:31:25.706 | DEBUG    | __main__:<module>:592 - Press key 'c'
+2024-08-15 11:31:25.707 | DEBUG    | __main__:<module>:593 - {'c', <Key.ctrl: <65507>>}
+2024-08-15 11:32:37.377 | DEBUG    | __main__:<module>:592 - Press key Key.ctrl
+2024-08-15 11:32:37.378 | DEBUG    | __main__:<module>:593 - {<Key.ctrl: <65507>>}
+2024-08-15 11:32:37.416 | DEBUG    | __main__:<module>:592 - Press key Key.shift
+2024-08-15 11:32:37.417 | DEBUG    | __main__:<module>:593 - {<Key.shift: <65505>>, <Key.ctrl: <65507>>}
+2024-08-15 11:32:37.618 | DEBUG    | __main__:<module>:592 - Press key 'T'
+2024-08-15 11:32:37.618 | DEBUG    | __main__:<module>:593 - {'T', <Key.shift: <65505>>, <Key.ctrl: <65507>>}
+2024-08-15 11:32:37.753 | DEBUG    | __main__:<module>:607 - {'T', <Key.shift: <65505>>, <Key.ctrl: <65507>>}
+2024-08-15 11:32:37.753 | DEBUG    | __main__:<module>:608 - Release key 'T'
+2024-08-15 11:32:37.766 | DEBUG    | __main__:<module>:607 - {<Key.shift: <65505>>, <Key.ctrl: <65507>>}
+2024-08-15 11:32:37.766 | DEBUG    | __main__:<module>:608 - Release key Key.ctrl
+2024-08-15 11:32:37.829 | DEBUG    | __main__:<module>:607 - {<Key.shift: <65505>>}
+2024-08-15 11:32:37.829 | DEBUG    | __main__:<module>:608 - Release key Key.shift
+2024-08-15 11:32:38.271 | DEBUG    | __main__:<module>:592 - Press key 'c'
+2024-08-15 11:32:38.271 | DEBUG    | __main__:<module>:593 - {'c'}
+2024-08-15 11:32:38.327 | DEBUG    | __main__:<module>:592 - Press key 'd'
+2024-08-15 11:32:38.328 | DEBUG    | __main__:<module>:593 - {'d', 'c'}
+2024-08-15 11:32:38.394 | DEBUG    | __main__:<module>:607 - {'d', 'c'}
+2024-08-15 11:32:38.395 | DEBUG    | __main__:<module>:608 - Release key 'c'
+2024-08-15 11:32:38.448 | DEBUG    | __main__:<module>:607 - {'d'}
+2024-08-15 11:32:38.449 | DEBUG    | __main__:<module>:608 - Release key 'd'
+2024-08-15 11:32:38.501 | DEBUG    | __main__:<module>:592 - Press key Key.enter
+2024-08-15 11:32:38.502 | DEBUG    | __main__:<module>:593 - {<Key.enter: <65293>>}
+2024-08-15 11:32:38.636 | DEBUG    | __main__:<module>:607 - {<Key.enter: <65293>>}
+2024-08-15 11:32:38.636 | DEBUG    | __main__:<module>:608 - Release key Key.enter
+2024-08-15 11:32:38.765 | DEBUG    | __main__:<module>:592 - Press key 'c'
+2024-08-15 11:32:38.766 | DEBUG    | __main__:<module>:593 - {'c'}
+2024-08-15 11:32:38.827 | DEBUG    | __main__:<module>:592 - Press key 'd'
+2024-08-15 11:32:38.827 | DEBUG    | __main__:<module>:593 - {'d', 'c'}
+2024-08-15 11:32:38.889 | DEBUG    | __main__:<module>:607 - {'d', 'c'}
+2024-08-15 11:32:38.890 | DEBUG    | __main__:<module>:608 - Release key 'c'
+2024-08-15 11:32:38.917 | DEBUG    | __main__:<module>:607 - {'d'}
+2024-08-15 11:32:38.918 | DEBUG    | __main__:<module>:608 - Release key 'd'
+2024-08-15 11:32:39.073 | DEBUG    | __main__:<module>:592 - Press key Key.space
+2024-08-15 11:32:39.073 | DEBUG    | __main__:<module>:593 - {<Key.space: ' '>}
+2024-08-15 11:32:39.173 | DEBUG    | __main__:<module>:607 - {<Key.space: ' '>}
+2024-08-15 11:32:39.173 | DEBUG    | __main__:<module>:608 - Release key Key.space
+2024-08-15 11:32:39.609 | DEBUG    | __main__:<module>:592 - Press key 'v'
+2024-08-15 11:32:39.609 | DEBUG    | __main__:<module>:593 - {'v'}
+2024-08-15 11:32:39.707 | DEBUG    | __main__:<module>:607 - {'v'}
+2024-08-15 11:32:39.708 | DEBUG    | __main__:<module>:608 - Release key 'v'
+2024-08-15 11:32:39.731 | DEBUG    | __main__:<module>:592 - Press key 'p'
+2024-08-15 11:32:39.732 | DEBUG    | __main__:<module>:593 - {'p'}
+2024-08-15 11:32:39.770 | DEBUG    | __main__:<module>:607 - {'p'}
+2024-08-15 11:32:39.770 | DEBUG    | __main__:<module>:608 - Release key 'p'
+2024-08-15 11:32:40.083 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 11:32:40.084 | DEBUG    | __main__:<module>:593 - {<Key.tab: <65289>>}
+2024-08-15 11:32:40.235 | DEBUG    | __main__:<module>:607 - {<Key.tab: <65289>>}
+2024-08-15 11:32:40.236 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 11:32:40.338 | DEBUG    | __main__:<module>:592 - Press key Key.enter
+2024-08-15 11:32:40.339 | DEBUG    | __main__:<module>:593 - {<Key.enter: <65293>>}
+2024-08-15 11:32:40.419 | DEBUG    | __main__:<module>:607 - {<Key.enter: <65293>>}
+2024-08-15 11:32:40.419 | DEBUG    | __main__:<module>:608 - Release key Key.enter
+2024-08-15 11:32:40.628 | DEBUG    | __main__:<module>:592 - Press key Key.ctrl
+2024-08-15 11:32:40.628 | DEBUG    | __main__:<module>:593 - {<Key.ctrl: <65507>>}
+2024-08-15 11:32:40.887 | DEBUG    | __main__:<module>:592 - Press key 'r'
+2024-08-15 11:32:40.887 | DEBUG    | __main__:<module>:593 - {'r', <Key.ctrl: <65507>>}
+2024-08-15 11:32:40.945 | DEBUG    | __main__:<module>:607 - {'r', <Key.ctrl: <65507>>}
+2024-08-15 11:32:40.946 | DEBUG    | __main__:<module>:608 - Release key Key.ctrl
+2024-08-15 11:32:41.003 | DEBUG    | __main__:<module>:607 - {'r'}
+2024-08-15 11:32:41.003 | DEBUG    | __main__:<module>:608 - Release key 'r'
+2024-08-15 11:32:41.193 | DEBUG    | __main__:<module>:592 - Press key 'o'
+2024-08-15 11:32:41.194 | DEBUG    | __main__:<module>:593 - {'o'}
+2024-08-15 11:32:41.261 | DEBUG    | __main__:<module>:607 - {'o'}
+2024-08-15 11:32:41.261 | DEBUG    | __main__:<module>:608 - Release key 'o'
+2024-08-15 11:32:41.314 | DEBUG    | __main__:<module>:592 - Press key 'p'
+2024-08-15 11:32:41.314 | DEBUG    | __main__:<module>:593 - {'p'}
+2024-08-15 11:32:41.401 | DEBUG    | __main__:<module>:607 - {'p'}
+2024-08-15 11:32:41.401 | DEBUG    | __main__:<module>:608 - Release key 'p'
+2024-08-15 11:32:42.327 | DEBUG    | __main__:<module>:592 - Press key Key.enter
+2024-08-15 11:32:42.327 | DEBUG    | __main__:<module>:593 - {<Key.enter: <65293>>}
+2024-08-15 11:32:42.404 | DEBUG    | __main__:<module>:607 - {<Key.enter: <65293>>}
+2024-08-15 11:32:42.405 | DEBUG    | __main__:<module>:608 - Release key Key.enter
+2024-08-15 11:32:42.698 | DEBUG    | __main__:<module>:592 - Press key Key.enter
+2024-08-15 11:32:42.699 | DEBUG    | __main__:<module>:593 - {<Key.enter: <65293>>}
+2024-08-15 11:32:42.760 | DEBUG    | __main__:<module>:607 - {<Key.enter: <65293>>}
+2024-08-15 11:32:42.761 | DEBUG    | __main__:<module>:608 - Release key Key.enter
+2024-08-15 11:32:43.517 | DEBUG    | __main__:<module>:592 - Press key 'e'
+2024-08-15 11:32:43.518 | DEBUG    | __main__:<module>:593 - {'e'}
+2024-08-15 11:32:43.607 | DEBUG    | __main__:<module>:607 - {'e'}
+2024-08-15 11:32:43.608 | DEBUG    | __main__:<module>:608 - Release key 'e'
+2024-08-15 11:32:43.639 | DEBUG    | __main__:<module>:592 - Press key 'r'
+2024-08-15 11:32:43.639 | DEBUG    | __main__:<module>:593 - {'r'}
+2024-08-15 11:32:43.730 | DEBUG    | __main__:<module>:607 - {'r'}
+2024-08-15 11:32:43.731 | DEBUG    | __main__:<module>:608 - Release key 'r'
+2024-08-15 11:32:43.798 | DEBUG    | __main__:<module>:592 - Press key 'o'
+2024-08-15 11:32:43.798 | DEBUG    | __main__:<module>:593 - {'o'}
+2024-08-15 11:32:43.883 | DEBUG    | __main__:<module>:607 - {'o'}
+2024-08-15 11:32:43.884 | DEBUG    | __main__:<module>:608 - Release key 'o'
+2024-08-15 11:32:44.008 | DEBUG    | __main__:<module>:592 - Press key 'n'
+2024-08-15 11:32:44.008 | DEBUG    | __main__:<module>:593 - {'n'}
+2024-08-15 11:32:44.093 | DEBUG    | __main__:<module>:607 - {'n'}
+2024-08-15 11:32:44.093 | DEBUG    | __main__:<module>:608 - Release key 'n'
+2024-08-15 11:32:44.098 | DEBUG    | __main__:<module>:592 - Press key 'a'
+2024-08-15 11:32:44.098 | DEBUG    | __main__:<module>:593 - {'a'}
+2024-08-15 11:32:44.194 | DEBUG    | __main__:<module>:607 - {'a'}
+2024-08-15 11:32:44.194 | DEBUG    | __main__:<module>:608 - Release key 'a'
+2024-08-15 11:32:44.235 | DEBUG    | __main__:<module>:592 - Press key 't'
+2024-08-15 11:32:44.235 | DEBUG    | __main__:<module>:593 - {'t'}
+2024-08-15 11:32:44.335 | DEBUG    | __main__:<module>:607 - {'t'}
+2024-08-15 11:32:44.336 | DEBUG    | __main__:<module>:608 - Release key 't'
+2024-08-15 11:32:44.420 | DEBUG    | __main__:<module>:592 - Press key '9'
+2024-08-15 11:32:44.421 | DEBUG    | __main__:<module>:593 - {'9'}
+2024-08-15 11:32:44.506 | DEBUG    | __main__:<module>:607 - {'9'}
+2024-08-15 11:32:44.507 | DEBUG    | __main__:<module>:608 - Release key '9'
+2024-08-15 11:32:44.579 | DEBUG    | __main__:<module>:592 - Press key '8'
+2024-08-15 11:32:44.580 | DEBUG    | __main__:<module>:593 - {'8'}
+2024-08-15 11:32:44.657 | DEBUG    | __main__:<module>:607 - {'8'}
+2024-08-15 11:32:44.658 | DEBUG    | __main__:<module>:608 - Release key '8'
+2024-08-15 11:32:44.801 | DEBUG    | __main__:<module>:592 - Press key Key.enter
+2024-08-15 11:32:44.802 | DEBUG    | __main__:<module>:593 - {<Key.enter: <65293>>}
+2024-08-15 11:32:44.878 | DEBUG    | __main__:<module>:607 - {<Key.enter: <65293>>}
+2024-08-15 11:32:44.878 | DEBUG    | __main__:<module>:608 - Release key Key.enter
+2024-08-15 11:32:59.241 | DEBUG    | __main__:<module>:592 - Press key Key.ctrl
+2024-08-15 11:32:59.241 | DEBUG    | __main__:<module>:593 - {<Key.ctrl: <65507>>}
+2024-08-15 11:32:59.450 | DEBUG    | __main__:<module>:592 - Press key 'c'
+2024-08-15 11:32:59.450 | DEBUG    | __main__:<module>:593 - {<Key.ctrl: <65507>>, 'c'}
+2024-08-15 11:32:59.550 | DEBUG    | __main__:<module>:607 - {<Key.ctrl: <65507>>, 'c'}
+2024-08-15 11:32:59.550 | DEBUG    | __main__:<module>:608 - Release key 'c'
+2024-08-15 11:32:59.589 | DEBUG    | __main__:<module>:607 - {<Key.ctrl: <65507>>}
+2024-08-15 11:32:59.589 | DEBUG    | __main__:<module>:608 - Release key Key.ctrl
+2024-08-15 11:33:03.529 | DEBUG    | __main__:<module>:592 - Press key 'c'
+2024-08-15 11:33:03.530 | DEBUG    | __main__:<module>:593 - {'c'}
+2024-08-15 11:33:03.616 | DEBUG    | __main__:<module>:607 - {'c'}
+2024-08-15 11:33:03.616 | DEBUG    | __main__:<module>:608 - Release key 'c'
+2024-08-15 11:33:03.821 | DEBUG    | __main__:<module>:592 - Press key 'l'
+2024-08-15 11:33:03.821 | DEBUG    | __main__:<module>:593 - {'l'}
+2024-08-15 11:33:03.882 | DEBUG    | __main__:<module>:592 - Press key 'e'
+2024-08-15 11:33:03.882 | DEBUG    | __main__:<module>:593 - {'l', 'e'}
+2024-08-15 11:33:03.907 | DEBUG    | __main__:<module>:607 - {'l', 'e'}
+2024-08-15 11:33:03.907 | DEBUG    | __main__:<module>:608 - Release key 'l'
+2024-08-15 11:33:03.959 | DEBUG    | __main__:<module>:592 - Press key 'a'
+2024-08-15 11:33:03.960 | DEBUG    | __main__:<module>:593 - {'a', 'e'}
+2024-08-15 11:33:04.012 | DEBUG    | __main__:<module>:607 - {'a', 'e'}
+2024-08-15 11:33:04.012 | DEBUG    | __main__:<module>:608 - Release key 'e'
+2024-08-15 11:33:04.031 | DEBUG    | __main__:<module>:592 - Press key 'r'
+2024-08-15 11:33:04.031 | DEBUG    | __main__:<module>:593 - {'a', 'r'}
+2024-08-15 11:33:04.098 | DEBUG    | __main__:<module>:607 - {'a', 'r'}
+2024-08-15 11:33:04.099 | DEBUG    | __main__:<module>:608 - Release key 'a'
+2024-08-15 11:33:04.167 | DEBUG    | __main__:<module>:592 - Press key Key.enter
+2024-08-15 11:33:04.167 | DEBUG    | __main__:<module>:593 - {<Key.enter: <65293>>, 'r'}
+2024-08-15 11:33:04.185 | DEBUG    | __main__:<module>:607 - {<Key.enter: <65293>>, 'r'}
+2024-08-15 11:33:04.185 | DEBUG    | __main__:<module>:608 - Release key 'r'
+2024-08-15 11:33:04.267 | DEBUG    | __main__:<module>:607 - {<Key.enter: <65293>>}
+2024-08-15 11:33:04.267 | DEBUG    | __main__:<module>:608 - Release key Key.enter
+2024-08-15 11:33:08.719 | DEBUG    | __main__:<module>:592 - Press key Key.ctrl
+2024-08-15 11:33:08.719 | DEBUG    | __main__:<module>:593 - {<Key.ctrl: <65507>>}
+2024-08-15 11:33:08.867 | DEBUG    | __main__:<module>:592 - Press key 'c'
+2024-08-15 11:33:08.867 | DEBUG    | __main__:<module>:593 - {<Key.ctrl: <65507>>, 'c'}
+2024-08-15 11:35:00.593 | DEBUG    | __main__:<module>:592 - Press key Key.alt
+2024-08-15 11:35:00.593 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>}
+2024-08-15 11:35:00.649 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 11:35:00.649 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 11:35:00.716 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 11:35:00.716 | DEBUG    | __main__:<module>:608 - Release key Key.alt
+2024-08-15 11:35:00.811 | DEBUG    | __main__:<module>:607 - {<Key.tab: <65289>>}
+2024-08-15 11:35:00.811 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 11:35:00.999 | DEBUG    | __main__:<module>:592 - Press key Key.alt
+2024-08-15 11:35:01.000 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>}
+2024-08-15 11:35:01.037 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 11:35:01.037 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 11:35:01.115 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 11:35:01.115 | DEBUG    | __main__:<module>:608 - Release key Key.alt
+2024-08-15 11:35:01.177 | DEBUG    | __main__:<module>:607 - {<Key.tab: <65289>>}
+2024-08-15 11:35:01.177 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 11:35:05.482 | DEBUG    | __main__:<module>:592 - Press key Key.up
+2024-08-15 11:35:05.482 | DEBUG    | __main__:<module>:593 - {<Key.up: <65362>>}
+2024-08-15 11:35:05.601 | DEBUG    | __main__:<module>:607 - {<Key.up: <65362>>}
+2024-08-15 11:35:05.601 | DEBUG    | __main__:<module>:608 - Release key Key.up
+2024-08-15 11:35:05.885 | DEBUG    | __main__:<module>:592 - Press key Key.up
+2024-08-15 11:35:05.885 | DEBUG    | __main__:<module>:593 - {<Key.up: <65362>>}
+2024-08-15 11:35:06.032 | DEBUG    | __main__:<module>:607 - {<Key.up: <65362>>}
+2024-08-15 11:35:06.032 | DEBUG    | __main__:<module>:608 - Release key Key.up
+2024-08-15 11:35:06.955 | DEBUG    | __main__:<module>:592 - Press key Key.enter
+2024-08-15 11:35:06.956 | DEBUG    | __main__:<module>:593 - {<Key.enter: <65293>>}
+2024-08-15 11:35:07.022 | DEBUG    | __main__:<module>:607 - {<Key.enter: <65293>>}
+2024-08-15 11:35:07.023 | DEBUG    | __main__:<module>:608 - Release key Key.enter
+2024-08-15 11:35:12.429 | DEBUG    | __main__:<module>:592 - Press key Key.ctrl
+2024-08-15 11:35:12.430 | DEBUG    | __main__:<module>:593 - {<Key.ctrl: <65507>>}
+2024-08-15 11:35:12.833 | DEBUG    | __main__:<module>:592 - Press key 'c'
+2024-08-15 11:35:12.833 | DEBUG    | __main__:<module>:593 - {'c', <Key.ctrl: <65507>>}
+2024-08-15 11:35:12.934 | DEBUG    | __main__:<module>:607 - {'c', <Key.ctrl: <65507>>}
+2024-08-15 11:35:12.935 | DEBUG    | __main__:<module>:608 - Release key 'c'
+2024-08-15 11:35:13.039 | DEBUG    | __main__:<module>:607 - {<Key.ctrl: <65507>>}
+2024-08-15 11:35:13.040 | DEBUG    | __main__:<module>:608 - Release key Key.ctrl
+2024-08-15 11:35:26.100 | DEBUG    | __main__:<module>:592 - Press key Key.backspace
+2024-08-15 11:35:26.101 | DEBUG    | __main__:<module>:593 - {<Key.backspace: <65288>>}
+2024-08-15 11:35:26.205 | DEBUG    | __main__:<module>:607 - {<Key.backspace: <65288>>}
+2024-08-15 11:35:26.206 | DEBUG    | __main__:<module>:608 - Release key Key.backspace
+2024-08-15 11:35:26.329 | DEBUG    | __main__:<module>:592 - Press key Key.backspace
+2024-08-15 11:35:26.329 | DEBUG    | __main__:<module>:593 - {<Key.backspace: <65288>>}
+2024-08-15 11:35:26.421 | DEBUG    | __main__:<module>:607 - {<Key.backspace: <65288>>}
+2024-08-15 11:35:26.421 | DEBUG    | __main__:<module>:608 - Release key Key.backspace
+2024-08-15 11:35:26.556 | DEBUG    | __main__:<module>:592 - Press key Key.backspace
+2024-08-15 11:35:26.556 | DEBUG    | __main__:<module>:593 - {<Key.backspace: <65288>>}
+2024-08-15 11:35:26.636 | DEBUG    | __main__:<module>:607 - {<Key.backspace: <65288>>}
+2024-08-15 11:35:26.637 | DEBUG    | __main__:<module>:608 - Release key Key.backspace
+2024-08-15 11:35:26.744 | DEBUG    | __main__:<module>:592 - Press key Key.ctrl
+2024-08-15 11:35:26.745 | DEBUG    | __main__:<module>:593 - {<Key.ctrl: <65507>>}
+2024-08-15 11:35:26.872 | DEBUG    | __main__:<module>:592 - Press key 's'
+2024-08-15 11:35:26.873 | DEBUG    | __main__:<module>:593 - {'s', <Key.ctrl: <65507>>}
+2024-08-15 11:35:26.950 | DEBUG    | __main__:<module>:607 - {'s', <Key.ctrl: <65507>>}
+2024-08-15 11:35:26.950 | DEBUG    | __main__:<module>:608 - Release key Key.ctrl
+2024-08-15 11:35:27.003 | DEBUG    | __main__:<module>:607 - {'s'}
+2024-08-15 11:35:27.003 | DEBUG    | __main__:<module>:608 - Release key 's'
+2024-08-15 11:35:27.906 | DEBUG    | __main__:<module>:592 - Press key Key.ctrl
+2024-08-15 11:35:27.907 | DEBUG    | __main__:<module>:593 - {<Key.ctrl: <65507>>}
+2024-08-15 11:35:28.204 | DEBUG    | __main__:<module>:592 - Press key 's'
+2024-08-15 11:35:28.205 | DEBUG    | __main__:<module>:593 - {<Key.ctrl: <65507>>, 's'}
+2024-08-15 11:35:28.329 | DEBUG    | __main__:<module>:607 - {<Key.ctrl: <65507>>, 's'}
+2024-08-15 11:35:28.330 | DEBUG    | __main__:<module>:608 - Release key 's'
+2024-08-15 11:35:28.344 | DEBUG    | __main__:<module>:607 - {<Key.ctrl: <65507>>}
+2024-08-15 11:35:28.345 | DEBUG    | __main__:<module>:608 - Release key Key.ctrl
+2024-08-15 11:35:32.910 | DEBUG    | __main__:<module>:592 - Press key Key.backspace
+2024-08-15 11:35:32.910 | DEBUG    | __main__:<module>:593 - {<Key.backspace: <65288>>}
+2024-08-15 11:35:32.996 | DEBUG    | __main__:<module>:607 - {<Key.backspace: <65288>>}
+2024-08-15 11:35:32.996 | DEBUG    | __main__:<module>:608 - Release key Key.backspace
+2024-08-15 11:35:33.403 | DEBUG    | __main__:<module>:592 - Press key Key.ctrl
+2024-08-15 11:35:33.403 | DEBUG    | __main__:<module>:593 - {<Key.ctrl: <65507>>}
+2024-08-15 11:35:33.568 | DEBUG    | __main__:<module>:592 - Press key 's'
+2024-08-15 11:35:33.568 | DEBUG    | __main__:<module>:593 - {<Key.ctrl: <65507>>, 's'}
+2024-08-15 11:35:33.676 | DEBUG    | __main__:<module>:607 - {<Key.ctrl: <65507>>, 's'}
+2024-08-15 11:35:33.676 | DEBUG    | __main__:<module>:608 - Release key Key.ctrl
+2024-08-15 11:35:33.710 | DEBUG    | __main__:<module>:607 - {'s'}
+2024-08-15 11:35:33.710 | DEBUG    | __main__:<module>:608 - Release key 's'
+2024-08-15 11:35:37.884 | DEBUG    | __main__:<module>:592 - Press key 'c'
+2024-08-15 11:35:37.885 | DEBUG    | __main__:<module>:593 - {'c'}
+2024-08-15 11:35:37.970 | DEBUG    | __main__:<module>:607 - {'c'}
+2024-08-15 11:35:37.971 | DEBUG    | __main__:<module>:608 - Release key 'c'
+2024-08-15 11:35:38.805 | DEBUG    | __main__:<module>:592 - Press key Key.backspace
+2024-08-15 11:35:38.805 | DEBUG    | __main__:<module>:593 - {<Key.backspace: <65288>>}
+2024-08-15 11:35:38.887 | DEBUG    | __main__:<module>:607 - {<Key.backspace: <65288>>}
+2024-08-15 11:35:38.887 | DEBUG    | __main__:<module>:608 - Release key Key.backspace
+2024-08-15 11:35:38.935 | DEBUG    | __main__:<module>:592 - Press key Key.backspace
+2024-08-15 11:35:38.935 | DEBUG    | __main__:<module>:593 - {<Key.backspace: <65288>>}
+2024-08-15 11:35:39.034 | DEBUG    | __main__:<module>:607 - {<Key.backspace: <65288>>}
+2024-08-15 11:35:39.035 | DEBUG    | __main__:<module>:608 - Release key Key.backspace
+2024-08-15 11:35:40.042 | DEBUG    | __main__:<module>:592 - Press key Key.up
+2024-08-15 11:35:40.043 | DEBUG    | __main__:<module>:593 - {<Key.up: <65362>>}
+2024-08-15 11:35:40.218 | DEBUG    | __main__:<module>:607 - {<Key.up: <65362>>}
+2024-08-15 11:35:40.218 | DEBUG    | __main__:<module>:608 - Release key Key.up
+2024-08-15 11:35:43.081 | DEBUG    | __main__:<module>:592 - Press key Key.down
+2024-08-15 11:35:43.081 | DEBUG    | __main__:<module>:593 - {<Key.down: <65364>>}
+2024-08-15 11:35:43.199 | DEBUG    | __main__:<module>:607 - {<Key.down: <65364>>}
+2024-08-15 11:35:43.200 | DEBUG    | __main__:<module>:608 - Release key Key.down
+2024-08-15 11:35:44.290 | DEBUG    | __main__:<module>:592 - Press key 'c'
+2024-08-15 11:35:44.290 | DEBUG    | __main__:<module>:593 - {'c'}
+2024-08-15 11:35:44.394 | DEBUG    | __main__:<module>:607 - {'c'}
+2024-08-15 11:35:44.395 | DEBUG    | __main__:<module>:608 - Release key 'c'
+2024-08-15 11:35:44.899 | DEBUG    | __main__:<module>:592 - Press key 'l'
+2024-08-15 11:35:44.899 | DEBUG    | __main__:<module>:593 - {'l'}
+2024-08-15 11:35:44.961 | DEBUG    | __main__:<module>:592 - Press key 'e'
+2024-08-15 11:35:44.961 | DEBUG    | __main__:<module>:593 - {'l', 'e'}
+2024-08-15 11:35:44.981 | DEBUG    | __main__:<module>:607 - {'l', 'e'}
+2024-08-15 11:35:44.982 | DEBUG    | __main__:<module>:608 - Release key 'l'
+2024-08-15 11:35:45.025 | DEBUG    | __main__:<module>:592 - Press key 'a'
+2024-08-15 11:35:45.025 | DEBUG    | __main__:<module>:593 - {'a', 'e'}
+2024-08-15 11:35:45.053 | DEBUG    | __main__:<module>:607 - {'a', 'e'}
+2024-08-15 11:35:45.054 | DEBUG    | __main__:<module>:608 - Release key 'e'
+2024-08-15 11:35:45.106 | DEBUG    | __main__:<module>:592 - Press key 'r'
+2024-08-15 11:35:45.106 | DEBUG    | __main__:<module>:593 - {'a', 'r'}
+2024-08-15 11:35:45.154 | DEBUG    | __main__:<module>:607 - {'a', 'r'}
+2024-08-15 11:35:45.155 | DEBUG    | __main__:<module>:608 - Release key 'a'
+2024-08-15 11:35:45.231 | DEBUG    | __main__:<module>:607 - {'r'}
+2024-08-15 11:35:45.231 | DEBUG    | __main__:<module>:608 - Release key 'r'
+2024-08-15 11:35:45.466 | DEBUG    | __main__:<module>:592 - Press key Key.enter
+2024-08-15 11:35:45.467 | DEBUG    | __main__:<module>:593 - {<Key.enter: <65293>>}
+2024-08-15 11:35:45.595 | DEBUG    | __main__:<module>:607 - {<Key.enter: <65293>>}
+2024-08-15 11:35:45.595 | DEBUG    | __main__:<module>:608 - Release key Key.enter
+2024-08-15 11:36:01.992 | DEBUG    | __main__:<module>:592 - Press key Key.alt
+2024-08-15 11:36:01.993 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>}
+2024-08-15 11:36:02.064 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 11:36:02.064 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 11:36:02.161 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 11:36:02.161 | DEBUG    | __main__:<module>:608 - Release key Key.alt
+2024-08-15 11:36:02.226 | DEBUG    | __main__:<module>:607 - {<Key.tab: <65289>>}
+2024-08-15 11:36:02.227 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 11:36:02.597 | DEBUG    | __main__:<module>:592 - Press key Key.alt
+2024-08-15 11:36:02.597 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>}
+2024-08-15 11:36:02.631 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 11:36:02.631 | DEBUG    | __main__:<module>:593 - {<Key.tab: <65289>>, <Key.alt: <65513>>}
+2024-08-15 11:36:02.712 | DEBUG    | __main__:<module>:607 - {<Key.tab: <65289>>, <Key.alt: <65513>>}
+2024-08-15 11:36:02.712 | DEBUG    | __main__:<module>:608 - Release key Key.alt
+2024-08-15 11:36:02.788 | DEBUG    | __main__:<module>:607 - {<Key.tab: <65289>>}
+2024-08-15 11:36:02.788 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 11:36:04.517 | DEBUG    | __main__:<module>:592 - Press key 'e'
+2024-08-15 11:36:04.518 | DEBUG    | __main__:<module>:593 - {'e'}
+2024-08-15 11:36:04.603 | DEBUG    | __main__:<module>:607 - {'e'}
+2024-08-15 11:36:04.603 | DEBUG    | __main__:<module>:608 - Release key 'e'
+2024-08-15 11:36:04.707 | DEBUG    | __main__:<module>:592 - Press key 'x'
+2024-08-15 11:36:04.708 | DEBUG    | __main__:<module>:593 - {'x'}
+2024-08-15 11:36:04.812 | DEBUG    | __main__:<module>:607 - {'x'}
+2024-08-15 11:36:04.813 | DEBUG    | __main__:<module>:608 - Release key 'x'
+2024-08-15 11:36:04.856 | DEBUG    | __main__:<module>:592 - Press key 'i'
+2024-08-15 11:36:04.857 | DEBUG    | __main__:<module>:593 - {'i'}
+2024-08-15 11:36:04.903 | DEBUG    | __main__:<module>:592 - Press key 't'
+2024-08-15 11:36:04.903 | DEBUG    | __main__:<module>:593 - {'t', 'i'}
+2024-08-15 11:36:04.943 | DEBUG    | __main__:<module>:607 - {'t', 'i'}
+2024-08-15 11:36:04.943 | DEBUG    | __main__:<module>:608 - Release key 'i'
+2024-08-15 11:36:05.015 | DEBUG    | __main__:<module>:607 - {'t'}
+2024-08-15 11:36:05.015 | DEBUG    | __main__:<module>:608 - Release key 't'
+2024-08-15 11:36:05.130 | DEBUG    | __main__:<module>:592 - Press key Key.enter
+2024-08-15 11:36:05.130 | DEBUG    | __main__:<module>:593 - {<Key.enter: <65293>>}
+2024-08-15 11:36:05.239 | DEBUG    | __main__:<module>:607 - {<Key.enter: <65293>>}
+2024-08-15 11:36:05.240 | DEBUG    | __main__:<module>:608 - Release key Key.enter
+2024-08-15 11:36:06.477 | DEBUG    | __main__:<module>:592 - Press key Key.ctrl
+2024-08-15 11:36:06.477 | DEBUG    | __main__:<module>:593 - {<Key.ctrl: <65507>>}
+2024-08-15 11:36:07.193 | DEBUG    | __main__:<module>:592 - Press key 'c'
+2024-08-15 11:36:07.194 | DEBUG    | __main__:<module>:593 - {'c', <Key.ctrl: <65507>>}
+2024-08-15 11:45:16.156 | DEBUG    | __main__:<module>:592 - Press key Key.alt
+2024-08-15 11:45:16.156 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>}
+2024-08-15 11:45:16.221 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 11:45:16.221 | DEBUG    | __main__:<module>:593 - {<Key.tab: <65289>>, <Key.alt: <65513>>}
+2024-08-15 11:45:16.284 | DEBUG    | __main__:<module>:607 - {<Key.tab: <65289>>, <Key.alt: <65513>>}
+2024-08-15 11:45:16.284 | DEBUG    | __main__:<module>:608 - Release key Key.alt
+2024-08-15 11:45:16.370 | DEBUG    | __main__:<module>:607 - {<Key.tab: <65289>>}
+2024-08-15 11:45:16.370 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 11:45:16.432 | DEBUG    | __main__:<module>:592 - Press key Key.alt
+2024-08-15 11:45:16.433 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>}
+2024-08-15 11:45:16.481 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 11:45:16.481 | DEBUG    | __main__:<module>:593 - {<Key.tab: <65289>>, <Key.alt: <65513>>}
+2024-08-15 11:45:16.572 | DEBUG    | __main__:<module>:607 - {<Key.tab: <65289>>, <Key.alt: <65513>>}
+2024-08-15 11:45:16.573 | DEBUG    | __main__:<module>:608 - Release key Key.alt
+2024-08-15 11:45:16.619 | DEBUG    | __main__:<module>:607 - {<Key.tab: <65289>>}
+2024-08-15 11:45:16.619 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 11:45:19.341 | DEBUG    | __main__:<module>:592 - Press key Key.ctrl
+2024-08-15 11:45:19.342 | DEBUG    | __main__:<module>:593 - {<Key.ctrl: <65507>>}
+2024-08-15 11:45:20.405 | DEBUG    | __main__:<module>:592 - Press key 'c'
+2024-08-15 11:45:20.405 | DEBUG    | __main__:<module>:593 - {'c', <Key.ctrl: <65507>>}
+2024-08-15 11:45:34.772 | DEBUG    | __main__:<module>:592 - Press key Key.alt
+2024-08-15 11:45:34.772 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>}
+2024-08-15 11:45:34.861 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 11:45:34.861 | DEBUG    | __main__:<module>:593 - {<Key.tab: <65289>>, <Key.alt: <65513>>}
+2024-08-15 11:45:34.928 | DEBUG    | __main__:<module>:607 - {<Key.tab: <65289>>, <Key.alt: <65513>>}
+2024-08-15 11:45:34.929 | DEBUG    | __main__:<module>:608 - Release key Key.alt
+2024-08-15 11:45:35.010 | DEBUG    | __main__:<module>:607 - {<Key.tab: <65289>>}
+2024-08-15 11:45:35.010 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 11:45:35.473 | DEBUG    | __main__:<module>:592 - Press key Key.alt
+2024-08-15 11:45:35.473 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>}
+2024-08-15 11:45:35.653 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 11:45:35.654 | DEBUG    | __main__:<module>:593 - {<Key.tab: <65289>>, <Key.alt: <65513>>}
+2024-08-15 11:45:35.725 | DEBUG    | __main__:<module>:607 - {<Key.tab: <65289>>, <Key.alt: <65513>>}
+2024-08-15 11:45:35.726 | DEBUG    | __main__:<module>:608 - Release key Key.alt
+2024-08-15 11:45:35.811 | DEBUG    | __main__:<module>:607 - {<Key.tab: <65289>>}
+2024-08-15 11:45:35.811 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 11:45:36.705 | DEBUG    | __main__:<module>:592 - Press key Key.alt
+2024-08-15 11:45:36.706 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>}
+2024-08-15 11:45:36.753 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 11:45:36.754 | DEBUG    | __main__:<module>:593 - {<Key.tab: <65289>>, <Key.alt: <65513>>}
+2024-08-15 11:45:36.831 | DEBUG    | __main__:<module>:607 - {<Key.tab: <65289>>, <Key.alt: <65513>>}
+2024-08-15 11:45:36.831 | DEBUG    | __main__:<module>:608 - Release key Key.alt
+2024-08-15 11:45:36.912 | DEBUG    | __main__:<module>:607 - {<Key.tab: <65289>>}
+2024-08-15 11:45:36.912 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 11:45:37.505 | DEBUG    | __main__:<module>:592 - Press key Key.alt
+2024-08-15 11:45:37.506 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>}
+2024-08-15 11:45:37.586 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 11:45:37.586 | DEBUG    | __main__:<module>:593 - {<Key.tab: <65289>>, <Key.alt: <65513>>}
+2024-08-15 11:45:37.764 | DEBUG    | __main__:<module>:607 - {<Key.tab: <65289>>, <Key.alt: <65513>>}
+2024-08-15 11:45:37.764 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 11:45:37.925 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>}
+2024-08-15 11:45:37.926 | DEBUG    | __main__:<module>:608 - Release key Key.alt
+2024-08-15 11:45:38.586 | DEBUG    | __main__:<module>:592 - Press key Key.alt
+2024-08-15 11:45:38.586 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>}
+2024-08-15 11:45:38.652 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 11:45:38.653 | DEBUG    | __main__:<module>:593 - {<Key.tab: <65289>>, <Key.alt: <65513>>}
+2024-08-15 11:45:38.748 | DEBUG    | __main__:<module>:607 - {<Key.tab: <65289>>, <Key.alt: <65513>>}
+2024-08-15 11:45:38.749 | DEBUG    | __main__:<module>:608 - Release key Key.alt
+2024-08-15 11:45:38.805 | DEBUG    | __main__:<module>:607 - {<Key.tab: <65289>>}
+2024-08-15 11:45:38.805 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 11:45:39.595 | DEBUG    | __main__:<module>:592 - Press key Key.alt
+2024-08-15 11:45:39.595 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>}
+2024-08-15 11:45:39.695 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 11:45:39.695 | DEBUG    | __main__:<module>:593 - {<Key.tab: <65289>>, <Key.alt: <65513>>}
+2024-08-15 11:45:39.758 | DEBUG    | __main__:<module>:607 - {<Key.tab: <65289>>, <Key.alt: <65513>>}
+2024-08-15 11:45:39.759 | DEBUG    | __main__:<module>:608 - Release key Key.alt
+2024-08-15 11:45:39.844 | DEBUG    | __main__:<module>:607 - {<Key.tab: <65289>>}
+2024-08-15 11:45:39.845 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 11:45:40.288 | DEBUG    | __main__:<module>:592 - Press key Key.alt
+2024-08-15 11:45:40.288 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>}
+2024-08-15 11:45:40.340 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 11:45:40.341 | DEBUG    | __main__:<module>:593 - {<Key.tab: <65289>>, <Key.alt: <65513>>}
+2024-08-15 11:45:40.403 | DEBUG    | __main__:<module>:607 - {<Key.tab: <65289>>, <Key.alt: <65513>>}
+2024-08-15 11:45:40.403 | DEBUG    | __main__:<module>:608 - Release key Key.alt
+2024-08-15 11:45:40.483 | DEBUG    | __main__:<module>:607 - {<Key.tab: <65289>>}
+2024-08-15 11:45:40.483 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 11:45:40.975 | DEBUG    | __main__:<module>:592 - Press key Key.alt
+2024-08-15 11:45:40.975 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>}
+2024-08-15 11:45:41.032 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 11:45:41.032 | DEBUG    | __main__:<module>:593 - {<Key.tab: <65289>>, <Key.alt: <65513>>}
+2024-08-15 11:45:41.109 | DEBUG    | __main__:<module>:607 - {<Key.tab: <65289>>, <Key.alt: <65513>>}
+2024-08-15 11:45:41.109 | DEBUG    | __main__:<module>:608 - Release key Key.alt
+2024-08-15 11:45:41.190 | DEBUG    | __main__:<module>:607 - {<Key.tab: <65289>>}
+2024-08-15 11:45:41.191 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 11:45:41.539 | DEBUG    | __main__:<module>:592 - Press key Key.alt
+2024-08-15 11:45:41.539 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>}
+2024-08-15 11:45:41.596 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 11:45:41.597 | DEBUG    | __main__:<module>:593 - {<Key.tab: <65289>>, <Key.alt: <65513>>}
+2024-08-15 11:45:41.697 | DEBUG    | __main__:<module>:607 - {<Key.tab: <65289>>, <Key.alt: <65513>>}
+2024-08-15 11:45:41.697 | DEBUG    | __main__:<module>:608 - Release key Key.alt
+2024-08-15 11:45:41.765 | DEBUG    | __main__:<module>:607 - {<Key.tab: <65289>>}
+2024-08-15 11:45:41.766 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 11:45:51.165 | DEBUG    | __main__:<module>:592 - Press key Key.alt
+2024-08-15 11:45:51.165 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>}
+2024-08-15 11:45:51.237 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 11:45:51.237 | DEBUG    | __main__:<module>:593 - {<Key.tab: <65289>>, <Key.alt: <65513>>}
+2024-08-15 11:45:51.323 | DEBUG    | __main__:<module>:607 - {<Key.tab: <65289>>, <Key.alt: <65513>>}
+2024-08-15 11:45:51.323 | DEBUG    | __main__:<module>:608 - Release key Key.alt
+2024-08-15 11:45:51.389 | DEBUG    | __main__:<module>:607 - {<Key.tab: <65289>>}
+2024-08-15 11:45:51.389 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 11:45:52.181 | DEBUG    | __main__:<module>:592 - Press key Key.ctrl
+2024-08-15 11:45:52.182 | DEBUG    | __main__:<module>:593 - {<Key.ctrl: <65507>>}
+2024-08-15 11:45:52.932 | DEBUG    | __main__:<module>:592 - Press key 'c'
+2024-08-15 11:45:52.932 | DEBUG    | __main__:<module>:593 - {<Key.ctrl: <65507>>, 'c'}
+2024-08-15 12:01:07.321 | DEBUG    | __main__:<module>:592 - Press key Key.ctrl
+2024-08-15 12:01:07.322 | DEBUG    | __main__:<module>:593 - {<Key.ctrl: <65507>>}
+2024-08-15 12:01:07.739 | DEBUG    | __main__:<module>:592 - Press key 'c'
+2024-08-15 12:01:07.740 | DEBUG    | __main__:<module>:593 - {'c', <Key.ctrl: <65507>>}
+2024-08-15 12:01:21.310 | DEBUG    | __main__:<module>:592 - Press key Key.ctrl
+2024-08-15 12:01:21.310 | DEBUG    | __main__:<module>:593 - {<Key.ctrl: <65507>>}
+2024-08-15 12:01:21.432 | DEBUG    | __main__:<module>:592 - Press key 'c'
+2024-08-15 12:01:21.432 | DEBUG    | __main__:<module>:593 - {'c', <Key.ctrl: <65507>>}
+2024-08-15 12:01:57.106 | DEBUG    | __main__:<module>:592 - Press key Key.ctrl
+2024-08-15 12:01:57.107 | DEBUG    | __main__:<module>:593 - {<Key.ctrl: <65507>>}
+2024-08-15 12:01:57.309 | DEBUG    | __main__:<module>:592 - Press key 'c'
+2024-08-15 12:01:57.309 | DEBUG    | __main__:<module>:593 - {'c', <Key.ctrl: <65507>>}
+2024-08-15 12:02:49.172 | DEBUG    | __main__:<module>:592 - Press key Key.alt
+2024-08-15 12:02:49.172 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>}
+2024-08-15 12:02:49.228 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 12:02:49.228 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 12:02:49.291 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 12:02:49.292 | DEBUG    | __main__:<module>:608 - Release key Key.alt
+2024-08-15 12:02:49.355 | DEBUG    | __main__:<module>:607 - {<Key.tab: <65289>>}
+2024-08-15 12:02:49.355 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 12:02:49.854 | DEBUG    | __main__:<module>:592 - Press key Key.alt
+2024-08-15 12:02:49.854 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>}
+2024-08-15 12:02:51.816 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>}
+2024-08-15 12:02:51.816 | DEBUG    | __main__:<module>:608 - Release key Key.alt
+2024-08-15 12:03:20.791 | DEBUG    | __main__:<module>:592 - Press key Key.alt
+2024-08-15 12:03:20.791 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>}
+2024-08-15 12:03:20.863 | DEBUG    | __main__:<module>:592 - Press key Key.tab
+2024-08-15 12:03:20.863 | DEBUG    | __main__:<module>:593 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 12:03:20.940 | DEBUG    | __main__:<module>:607 - {<Key.alt: <65513>>, <Key.tab: <65289>>}
+2024-08-15 12:03:20.941 | DEBUG    | __main__:<module>:608 - Release key Key.alt
+2024-08-15 12:03:20.977 | DEBUG    | __main__:<module>:607 - {<Key.tab: <65289>>}
+2024-08-15 12:03:20.978 | DEBUG    | __main__:<module>:608 - Release key Key.tab
+2024-08-15 12:03:21.729 | DEBUG    | __main__:<module>:592 - Press key Key.ctrl
+2024-08-15 12:03:21.729 | DEBUG    | __main__:<module>:593 - {<Key.ctrl: <65507>>}
+2024-08-15 12:03:21.928 | DEBUG    | __main__:<module>:592 - Press key 'c'
+2024-08-15 12:03:21.928 | DEBUG    | __main__:<module>:593 - {'c', <Key.ctrl: <65507>>}

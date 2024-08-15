@@ -26,7 +26,7 @@ i3-msg "exec dbeaver"
 i3-msg "layout tabbed"
 i3-msg "[workspace=$ws2] focus child"
 
-sleep 5
+sleep 10
 
 i3-msg "workspace $ws3"
 i3-msg "exec teams-for-linux"

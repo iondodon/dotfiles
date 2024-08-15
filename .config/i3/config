@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 8
+font pango:monospace 0
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -202,34 +202,18 @@ bindsym $mod+r mode "resize"
 #        status_command i3status
 #}
 
-# remove the window title bar
-new_window none
-
 exec xinput set-prop "VEN_0488:00 0488:1024 Touchpad" "libinput Tapping Enabled" 1
 
 for_window [title="i3switcherX11"] floating enable
 #exec --no-startup-id i3-switcher-x11 > ~/.i3-switcher-x11.log 2>&1 
 exec --no-startup-id xrandr --output DVI-D-0 --auto --output HDMI-0 --auto --left-of DVI-D-0
 
-#assign applicatios to workspaces
-#assign [class="google-chrome"] $ws1
-#assign [class="firefox"] $ws1
-
-#assign [class="Code"] $ws2
-#assign [class="jetbrains-idea"] $ws2
-
-# teams
-#assign [class="crx_cifhbcnohmdccbgoicgdjpfamggdegmo" role="pop-up"] $ws3 
-# outlook
-#assign [class="crx_faolnafnngnfdaknnbpnkhgohbobgegn"] $ws3
-#assign [class="cherrytree"] $ws3
-
-#assign [class="Gnome-terminal"] $ws4
-#assign [class="dev.warp.Warp"] $ws4
-
 exec --no-startup-id /home/ion/.config/i3/startup.sh
 exec_always --no-startup-id polybar --config=/home/ion/.config/polybar/config.ini example
 
+new_window none
+
+client.focused          #000000 #000000 #000000 #000000   #000000
 
 # install fzf
 

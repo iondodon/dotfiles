@@ -212,7 +212,6 @@ exec --no-startup-id /home/ion/.config/i3/startup.sh
 exec_always --no-startup-id polybar --config=/home/ion/.config/polybar/config.ini example
 
 new_window none
-
 client.focused          #000000 #000000 #000000 #000000   #000000
 
 # install fzf

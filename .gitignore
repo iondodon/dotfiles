@@ -10,6 +10,8 @@
 !.config/i3/
 !.config/i3/**
 
+.config/polybar/polybar-i3-windows/windows.log
+
 !.config/polybar/
 !.config/polybar/**
 !.config/polybar/polybar-i3-windows/

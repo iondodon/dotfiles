@@ -48,25 +48,23 @@ class TitleBar:
 
     def get_title_bar(self):
         tree = self.i3.get_tree()
-        # Get current workspace
         focused = tree.find_focused()
         workspace = focused.workspace()
 
-        entries = []
-        if len(workspace.nodes) == 1 and workspace.nodes[0].layout == 'tabbed':
-            # Ensure first level nodes only contain the tabbed container
-            tabbed_con = workspace.nodes[0]
-            entries = [ self.format_entry(node) for node in tabbed_con.nodes ]
+        entries = [self.format_entry(node) for node in workspace.nodes]
+
+        # Dynamically adjust the spacing between entries based on count
+        num_windows = len(entries)
+        if num_windows > 1:
+            interval = "%{O5}"  # Minimal space between entries
+            title_bar = interval.join(entries)
         else:
-            entries = [ self.format_entry(node) for node in workspace.nodes ]
-
-        interval = "%{O"f"{self.config['title']['interval']}""}"
-        title_bar = interval.join(entries)
-
-        if not title_bar:
-            title_bar = interval
+            title_bar = "".join(entries)  # No additional space if only one window
 
         return title_bar
+
+
+
 
     def print_title_bar(self, hint=False):
         self.hint = hint
@@ -90,23 +88,7 @@ class TitleBar:
         return title
 
     def format_win(self, win, nested=False):
-        '''Format the title of a window
-
-        Parameters
-        ----------
-        win: i3ipc.con.Con
-            A window object
-        nested: bool, optional
-            If the window is in a container. (default is False)
-            If so, the window class is shown to follow i3 behavior.
-
-        Returns
-        -------
-        str
-            A window title formatted with icon, mouse command etc.
-        '''
-
-        title   = self.make_title(win, nested=nested)
+        title = self.make_title(win, nested=nested)
         command = self.make_command(win)
 
         title = self.paint_window_icon(win, title)
@@ -115,13 +97,18 @@ class TitleBar:
         if self.hint:
             title = self.paint_window_hint(win, title)
 
+        # Ensure the entire title, including spaces, is clickable
         t = Template('%{A1:$left_command:}%{A4:$scroll_up_command:}%{A5:$scroll_down_command:}$title%{A}%{A}%{A}')
         entry = t.substitute(left_command=command['left'],
-                             scroll_up_command=command['scroll_up'],
-                             scroll_down_command=command['scroll_down'],
-                             title=title)
+                            scroll_up_command=command['scroll_up'],
+                            scroll_down_command=command['scroll_down'],
+                            title=title)
 
         return entry
+
+
+
+
 
     def make_icon(self, win):
         # The icon is defined in the config file by the window class.
@@ -167,28 +154,21 @@ class TitleBar:
             else win.name if win.name \
             else ''
 
-        title = ''
         title_type = 1 if nested else self.config['title'].getint('title')
-
         if title_type == 1:
             title = window_class
         else:
             title = window_title
 
-        window_num = len(win.workspace().leaves())
-        # consider space between windows
-        window_len = self.config['general'].getint('length') // window_num - 1
-
-        # 47 letters equals to 33 
-        # we treat 1  as 2 letters for more flexible
-        # as we have symbols like H, V, [, ]
-        if window_len >= 3:
-            if len(title) > window_len:
-                title = title[:window_len - 2] + ''
-        else:
-            title = title[:1] + '•'
+        # Append spaces dynamically based on title length or fixed number of spaces
+        max_length = 30  # You can adjust this based on your needs
+        padding_length = max_length - len(title)
+        if padding_length > 0:
+            spaces = ' ' * (padding_length // 2)
+            title = f'{spaces}{title}{spaces}'
 
         return title
+
 
     def make_command(self, win):
         scroll_type = self.config['general']['scroll']

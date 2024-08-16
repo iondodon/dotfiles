@@ -213,6 +213,7 @@ exec_always --no-startup-id polybar --config=/home/ion/.config/polybar/config.in
 
 new_window none
 client.focused          #000000 #000000 #000000 #000000   #000000
+client.unfocused 	#000000 #000000 #000000 #000000   #000000
 
 # install fzf
 

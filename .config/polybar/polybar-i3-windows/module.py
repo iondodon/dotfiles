@@ -161,7 +161,7 @@ class TitleBar:
             title = window_title
 
         # Append spaces dynamically based on title length or fixed number of spaces
-        max_length = 40  # You can adjust this based on your needs
+        max_length = 50  # You can adjust this based on your needs
         padding_length = max_length - len(title)
         if padding_length > 0:
             spaces = ' ' * (padding_length // 2)

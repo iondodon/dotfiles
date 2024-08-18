@@ -37,7 +37,7 @@ i3-msg "[workspace=$ws3] focus child"
 sleep 2
 
 i3-msg "workspace $ws4"
-i3-msg "exec i3-sensible-terminal"
+i3-msg "exec terminator --layout=magentus"
 i3-msg "layout tabbed"
 i3-msg "[workspace=$ws4] focus child"
 

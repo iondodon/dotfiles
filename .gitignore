@@ -20,4 +20,7 @@
 !.config/zed/
 !.config/zed/**
 
+!.config/terminator/
+!.config/terminator/**
+
 !.i3-switcher-style.css

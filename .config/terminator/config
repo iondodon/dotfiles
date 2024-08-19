@@ -33,42 +33,47 @@
       type = Window
       parent = ""
       order = 0
-      position = 0:4
+      position = 0:0
       maximised = False
       fullscreen = False
-      size = 1920, 1052
+      size = 1920, 1056
       title = ion@dell: ~
       last_active_window = True
     [[[child1]]]
       type = Notebook
       parent = child0
       order = 0
-      labels = main, VPN, scheduler-app
-      last_active_term = 8793adf1-0b8b-4925-9cd2-c08e9f09ffd7, 11d7e32c-f7ea-4e72-b691-3b7f3dd5a13d, 7165c32b-1b89-4637-a892-950f8fad0cbd
-      active_page = 0
-    [[[main]]]
+      labels = main, VPN, scheduler-app | containees, scheduler-app
+      last_active_term = 8793adf1-0b8b-4925-9cd2-c08e9f09ffd7, 11d7e32c-f7ea-4e72-b691-3b7f3dd5a13d, 7165c32b-1b89-4637-a892-950f8fad0cbd, 2bef6b3f-23a2-4280-b5eb-0e0f5cdf8a4b
+      active_page = 3
+    [[[terminal2]]]
       type = Terminal
       parent = child1
       order = 0
       profile = default
       uuid = 8793adf1-0b8b-4925-9cd2-c08e9f09ffd7
-      directory = ""
-      command = cd ~/; bash
-    [[[vpn]]]
+      command = ""
+      directory = /home/ion
+    [[[terminal3]]]
       type = Terminal
       parent = child1
       order = 1
       profile = default
       title = VPN
       uuid = 11d7e32c-f7ea-4e72-b691-3b7f3dd5a13d
-      directory = ""
-      command = cd ~/vpn; bash
-    [[[scheduler-app]]]
+      directory = /home/ion/vpn
+    [[[terminal4]]]
       type = Terminal
       parent = child1
       order = 2
       profile = default
       uuid = 7165c32b-1b89-4637-a892-950f8fad0cbd
-      directory = ""
-      command = cd ~/scheduler-app; bash
+      directory = /home/ion/scheduler-app
+    [[[terminal5]]]
+      type = Terminal
+      parent = child1
+      order = 3
+      profile = default
+      directory = /home/ion/scheduler-app
+      uuid = 2bef6b3f-23a2-4280-b5eb-0e0f5cdf8a4b
 [plugins]

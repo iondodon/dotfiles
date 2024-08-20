@@ -115,13 +115,13 @@ bindsym $mod+a focus parent
 
 # switch workspace
 # Go to the next workspace with Alt+w
-bindsym $mod+w workspace next_on_output
+bindsym $mod+2 workspace next_on_output
 
 # Go to the previous workspace with Alt+q
-bindsym $mod+q workspace prev_on_output
+bindsym $mod+1 workspace prev_on_output
 
 # Go to the previously focused workspace with Alt+Tab
-bindsym $mod+Tab workspace back_and_forth
+#bindsym $mod+Tab workspace back_and_forth
 
 
 

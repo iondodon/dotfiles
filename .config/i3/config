@@ -9,7 +9,7 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod4
+set $mod Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -50,7 +50,7 @@ floating_modifier $mod
 # tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+t exec i3-sensible-terminal
+bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -100,7 +100,7 @@ bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+bindsym $mod+t layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
@@ -112,18 +112,18 @@ bindsym $mod+space exec --no-startup-id rofi -show filebrowser
 # focus the parent container
 bindsym $mod+a focus parent
 
-##
-## Select application with rofi
-##
-# bindsym $mod+Tab workspace next
-# bindsym $mod+Tab exec --no-startup-id rofi -show window
-# bindsym $mod+Tab exec ~/new_folder/bin/i3wins
-# to show rofi configurations -> rofi -dump-config > config.rasi
-# bindsym $mod+Tab exec --no-startup-id rofi -kb-accept-entry 'Alt_L' -show window -show-icons
-
 
 # switch workspace
-# bindsym Mod1+Tab workspace back_and_forth
+# Go to the next workspace with Alt+w
+bindsym $mod+w workspace next_on_output
+
+# Go to the previous workspace with Alt+q
+bindsym $mod+q workspace prev_on_output
+
+# Go to the previously focused workspace with Alt+Tab
+bindsym $mod+Tab workspace back_and_forth
+
+
 
 # focus the child container
 #bindsym $mod+d focus child

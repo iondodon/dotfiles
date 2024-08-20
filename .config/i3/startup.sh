@@ -54,4 +54,4 @@ i3-msg "workspace $ws1"
 
 sleep 1
 
-i3-msg "exec --no-startup-id i3-switcher-x11 > ~/.i3-switcher-x11.log 2>&1"
+# i3-msg "exec --no-startup-id i3-switcher-x11 > ~/.i3-switcher-x11.log 2>&1"

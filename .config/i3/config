@@ -113,15 +113,8 @@ bindsym $mod+space exec --no-startup-id rofi -show filebrowser
 bindsym $mod+a focus parent
 
 
-# switch workspace
-# Go to the next workspace with Alt+w
-bindsym $mod+2 workspace next_on_output
-
-# Go to the previous workspace with Alt+q
-bindsym $mod+1 workspace prev_on_output
-
 # Go to the previously focused workspace with Alt+Tab
-#bindsym $mod+Tab workspace back_and_forth
+bindsym $mod+Tab workspace back_and_forth
 
 
 
@@ -130,18 +123,18 @@ bindsym $mod+1 workspace prev_on_output
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "🌍"
-set $ws2 "🛠"
-set $ws3 "💬"
-set $ws4 "⌘"
-set $ws5 "📝"
+set $ws1 "1:🌍"
+set $ws2 "2:🛠"
+set $ws3 "3:💬"
+set $ws4 "4:⌘"
+set $ws5 "5:📝"
 
 # switch to workspace
-#bindsym $mod+1 workspace number $ws1
-#bindsym $mod+2 workspace number $ws2
-#bindsym $mod+3 workspace number $ws3
-#bindsym $mod+4 workspace number $ws4
-#bindsym $mod+5 workspace number $ws5
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
 #bindsym $mod+6 workspace number $ws6
 #bindsym $mod+7 workspace number $ws7
 #bindsym $mod+8 workspace number $ws8

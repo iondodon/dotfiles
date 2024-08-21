@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Define workspace names as per i3 configuration
-ws1="🌍"
-ws2="🛠"
-ws3="💬"
-ws4="⌘"
-ws5="📝"
+ws1="1:🌍"
+ws2="2:🛠"
+ws3="3:💬"
+ws4="4:⌘"
+ws5="5:📝"
 
 
 # Start applications on specific workspaces

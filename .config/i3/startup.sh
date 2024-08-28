@@ -3,8 +3,8 @@
 # Define workspace names as per i3 configuration
 ws1="1:🌍"
 ws2="2:🛠"
-ws3="3:💬"
-ws4="4:⌘"
+ws3="3:⌘"
+ws4="4:💬"
 ws5="5:📝"
 
 
@@ -29,15 +29,15 @@ i3-msg "[workspace=$ws2] focus child"
 sleep 10
 
 i3-msg "workspace $ws3"
-i3-msg "exec teams-for-linux"
-i3-msg "exec outlook-for-linux"
+i3-msg "exec terminator --layout=magentus"
 i3-msg "layout tabbed"
 i3-msg "[workspace=$ws3] focus child"
 
 sleep 2
 
 i3-msg "workspace $ws4"
-i3-msg "exec terminator --layout=magentus"
+i3-msg "exec teams-for-linux"
+i3-msg "exec outlook-for-linux"
 i3-msg "layout tabbed"
 i3-msg "[workspace=$ws4] focus child"
 

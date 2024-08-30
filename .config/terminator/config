@@ -43,7 +43,7 @@
       type = Notebook
       parent = child0
       order = 0
-      labels = main, VPN, scheduler-app | containees, scheduler-app
+      labels = main, VPN, docker-compose, scheduler-app
       last_active_term = 8793adf1-0b8b-4925-9cd2-c08e9f09ffd7, 11d7e32c-f7ea-4e72-b691-3b7f3dd5a13d, 7165c32b-1b89-4637-a892-950f8fad0cbd, 2bef6b3f-23a2-4280-b5eb-0e0f5cdf8a4b
       active_page = 3
     [[[terminal2]]]

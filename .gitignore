@@ -3,7 +3,10 @@
 
 # Exclusive include
 
+
 !.gitignore
+
+!.bashrc
 
 !.config/
 

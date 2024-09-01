@@ -1,5 +1,6 @@
 ### INSTALL:
 
+- rofi
 - fzf 
 - neofetch 
 - pavucontrol qasmixer pavucontrol 

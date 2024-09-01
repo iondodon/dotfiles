@@ -208,8 +208,9 @@ new_window none
 client.focused          #000000 #000000 #000000 #000000   #000000
 client.unfocused 	#000000 #000000 #000000 #000000   #000000
 
-# install fzf
-
+# INSTALL:
+# fzf
+# neofetch
 # audio: 	pavucontrol, qasmixer, pavucontrol
 # bluetooth:	blueman
 # suspend: 	pm-utils (pm-suspend)

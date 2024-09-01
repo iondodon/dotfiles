@@ -52,8 +52,8 @@
       order = 0
       profile = default
       uuid = 8793adf1-0b8b-4925-9cd2-c08e9f09ffd7
-      command = ""
       directory = /home/ion
+      command = neofetch; bash
     [[[terminal3]]]
       type = Terminal
       parent = child1

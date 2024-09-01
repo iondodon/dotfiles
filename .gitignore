@@ -3,6 +3,7 @@
 
 # Exclusive include
 
+!README.md
 
 !.gitignore
 

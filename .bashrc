@@ -300,3 +300,17 @@ source "$OSH"/oh-my-bash.sh
 # Example aliases
 # alias bashconfig="mate ~/.bashrc"
 # alias ohmybash="mate ~/.oh-my-bash"
+
+
+
+
+# ---------------- inshellisense shell plugin ----------------
+if [[ -z "${ISTERM}" && $- = *i* && $- != *c* ]]; then
+  shopt -q login_shell
+  login_shell=$?
+  if [ $login_shell -eq 0 ]; then
+    is -s bash --login ; exit
+  else
+    is -s bash ; exit
+  fi 
+fi

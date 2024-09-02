@@ -8,3 +8,4 @@
 - pm-utils 
 - brightnessctl
 - oh-my-bash
+- npm install -g @microsoft/inshellisense

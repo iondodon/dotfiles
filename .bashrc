@@ -314,3 +314,5 @@ if [[ -z "${ISTERM}" && $- = *i* && $- != *c* ]]; then
     is -s bash ; exit
   fi 
 fi
+
+neofetch

@@ -598,28 +598,9 @@ end
 
 
 -- Autostart applications
-awful.spawn.with_shell("ulauncher --hide-window")
-
 awful.spawn.with_shell("xinput set-prop \"VEN_0488:00 0488:1024 Touchpad\" \"libinput Tapping Enabled\" 1")
 
-awful.tag.find_by_name(awful.screen.focused(), "1"):view_only()
-awful.spawn.with_shell("sleep 1 && awesome-client 'run_on_tag(\"1\", \"google-chrome\")'")
-awful.spawn.with_shell("sleep 1 && awesome-client 'run_on_tag(\"1\", \"firefox\")'")
-awful.spawn.with_shell("sleep 1 && awesome-client 'run_on_tag(\"1\", \"flameshot\")'")
-
-awful.tag.find_by_name(awful.screen.focused(), "2"):view_only()
-awful.spawn.with_shell("sleep 1 && awesome-client 'run_on_tag(\"2\", \"./home/ion/.local/share/JetBrains/Toolbox/apps/intellij-idea-community-edition/bin/idea.sh\")'")
-awful.spawn.with_shell("sleep 1 && awesome-client 'run_on_tag(\"2\", \"dbeaver\")'")
-
-awful.tag.find_by_name(awful.screen.focused(), "3"):view_only()
-awful.spawn.with_shell("sleep 1 && awesome-client 'run_on_tag(\"3\", \"terminator --layout=magentus\")'")
-
-awful.tag.find_by_name(awful.screen.focused(), "4"):view_only()
-awful.spawn.with_shell("sleep 1 && awesome-client 'run_on_tag(\"4\", \"teams-for-linux\")'")
-awful.spawn.with_shell("sleep 1 && awesome-client 'run_on_tag(\"4\", \"outlook-for-linux\")'")
-
-awful.tag.find_by_name(awful.screen.focused(), "5"):view_only()
-awful.spawn.with_shell("sleep 1 && awesome-client 'run_on_tag(\"5\", \"cherrytree\")'")
+awful.spawn.with_shell("~/.config/awesome/startup.sh")
 
 
 

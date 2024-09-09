@@ -200,7 +200,7 @@ awful.screen.connect_for_each_screen(function(s)
                            awful.button({ }, 4, function () awful.layout.inc( 1) end),
                            awful.button({ }, 5, function () awful.layout.inc(-1) end)))
     -- Create a taglist widget
-    s.mytaglist = awful.widget.taglist {
+     s.mytaglist = awful.widget.taglist {
         screen  = s,
         filter  = awful.widget.taglist.filter.all,
         buttons = taglist_buttons
@@ -581,11 +581,46 @@ client.connect_signal("focus", function(c) c.border_color = beautiful.border_foc
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
 
+function run_on_tag(tag_name, app_command)
+    -- Find the tag by name
+    local tag = awful.tag.find_by_name(awful.screen.focused(), tag_name)
+
+    if tag then
+        -- Switch to the tag
+        tag:view_only()
+
+        -- Run the application
+        awful.spawn(app_command)
+    else
+        print("Tag '" .. tag_name .. "' not found")
+    end
+end
+
+
 -- Autostart applications
 awful.spawn.with_shell("ulauncher --hide-window")
 
-
 awful.spawn.with_shell("xinput set-prop \"VEN_0488:00 0488:1024 Touchpad\" \"libinput Tapping Enabled\" 1")
+
+awful.tag.find_by_name(awful.screen.focused(), "1"):view_only()
+awful.spawn.with_shell("sleep 1 && awesome-client 'run_on_tag(\"1\", \"google-chrome\")'")
+awful.spawn.with_shell("sleep 1 && awesome-client 'run_on_tag(\"1\", \"firefox\")'")
+awful.spawn.with_shell("sleep 1 && awesome-client 'run_on_tag(\"1\", \"flameshot\")'")
+
+awful.tag.find_by_name(awful.screen.focused(), "2"):view_only()
+awful.spawn.with_shell("sleep 1 && awesome-client 'run_on_tag(\"2\", \"./home/ion/.local/share/JetBrains/Toolbox/apps/intellij-idea-community-edition/bin/idea.sh\")'")
+awful.spawn.with_shell("sleep 1 && awesome-client 'run_on_tag(\"2\", \"dbeaver\")'")
+
+awful.tag.find_by_name(awful.screen.focused(), "3"):view_only()
+awful.spawn.with_shell("sleep 1 && awesome-client 'run_on_tag(\"3\", \"terminator --layout=magentus\")'")
+
+awful.tag.find_by_name(awful.screen.focused(), "4"):view_only()
+awful.spawn.with_shell("sleep 1 && awesome-client 'run_on_tag(\"4\", \"teams-for-linux\")'")
+awful.spawn.with_shell("sleep 1 && awesome-client 'run_on_tag(\"4\", \"outlook-for-linux\")'")
+
+awful.tag.find_by_name(awful.screen.focused(), "5"):view_only()
+awful.spawn.with_shell("sleep 1 && awesome-client 'run_on_tag(\"5\", \"cherrytree\")'")
+
 
 
 

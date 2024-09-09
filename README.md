@@ -1,5 +1,6 @@
 ### INSTALL:
 
+- ulauncher
 - rofi
 - fzf 
 - neofetch 

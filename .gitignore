@@ -17,6 +17,9 @@
 !.config/awesome/
 !.config/awesome/**
 
+!.config/ulauncher/
+!.config/ulauncher/**
+
 .config/polybar/polybar-i3-windows/windows.log
 
 !.config/polybar/

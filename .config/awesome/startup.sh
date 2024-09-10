@@ -17,7 +17,8 @@ awesome-client 'run_on_tag("2", "/home/ion/.local/share/JetBrains/Toolbox/apps/i
 sleep 10
 
 awesome-client 'awful.tag.find_by_name(awful.screen.focused(), "3"):view_only()'
-awesome-client 'run_on_tag("3", "terminator --layout=magentus")'
+# awesome-client 'run_on_tag("3", "terminator --layout=magentus")'
+awesome-client 'awful.util.spawn_with_shell("kitty --session ~/.config/kitty/magentus")'
 
 sleep 2
 

@@ -10,3 +10,6 @@
 - brightnessctl
 - oh-my-bash
 - npm install -g @microsoft/inshellisense
+- terminator
+- kitty
+

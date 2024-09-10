@@ -221,7 +221,7 @@ awful.screen.connect_for_each_screen(function(s)
     -- Create a text widget to display battery
     local battery_widget = wibox.widget.textbox()    
     -- Register the battery widget
-    vicious.register(battery_widget, vicious.widgets.bat, "Battery: $2%", 61, "BAT0")
+    vicious.register(battery_widget, vicious.widgets.bat, "Bat $2%", 61, "BAT0")
 
     -- Create a textbox widget
     local java_version_widget = wibox.widget {
@@ -246,6 +246,18 @@ awful.screen.connect_for_each_screen(function(s)
      awful.widget.watch('/home/ion/.config/polybar/scripts/pkgs-to-update.sh', 10, function(widget, stdout)
 	widget.text = stdout
      end, apt_update_widget)
+     
+    -- VPN
+    local vpn_widget = wibox.widget {
+        widget = wibox.widget.textbox,
+	align  = 'center',
+	valign = 'center',
+	-- Set initial text (optional)
+	text   = 'VPN'
+     }
+     awful.widget.watch('/home/ion/.config/polybar/scripts/active-openvpn.sh', 10, function(widget, stdout)
+	widget.text = stdout
+     end, vpn_widget)
 
      
      local mylayout = wibox.layout.align.horizontal()
@@ -271,6 +283,8 @@ awful.screen.connect_for_each_screen(function(s)
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
+            separator,
+            vpn_widget,
             separator,
             java_version_widget,
             separator,

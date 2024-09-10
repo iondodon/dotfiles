@@ -18,6 +18,8 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
 
+local vicious = require("vicious")
+
 -- Load Debian menu entries
 local debian = require("debian.menu")
 local has_fdo, freedesktop = pcall(require, "freedesktop")
@@ -215,10 +217,42 @@ awful.screen.connect_for_each_screen(function(s)
 
     -- Create the wibox
     s.mywibox = awful.wibar({ position = "bottom", screen = s })
+    
+    -- Create a text widget to display battery
+    local battery_widget = wibox.widget.textbox()    
+    -- Register the battery widget
+    vicious.register(battery_widget, vicious.widgets.bat, "Battery: $2%", 61, "BAT0")
+
+    -- Create a textbox widget
+    local java_version_widget = wibox.widget {
+        widget = wibox.widget.textbox,
+	align  = 'center',
+	valign = 'center',
+	-- Set initial text (optional)
+	text   = 'Java version...'
+     }
+     awful.widget.watch('/home/ion/.config/polybar/scripts/info-java.sh', 10, function(widget, stdout)
+	widget.text = stdout
+     end, java_version_widget)
+     
+    -- Create a textbox widget
+    local apt_update_widget = wibox.widget {
+        widget = wibox.widget.textbox,
+	align  = 'center',
+	valign = 'center',
+	-- Set initial text (optional)
+	text   = 'apt...'
+     }
+     awful.widget.watch('/home/ion/.config/polybar/scripts/pkgs-to-update.sh', 10, function(widget, stdout)
+	widget.text = stdout
+     end, apt_update_widget)
+     
+     local mylayout = wibox.layout.align.horizontal()
+     mylayout.spacing = 20
 
     -- Add widgets to the wibox
     s.mywibox:setup {
-        layout = wibox.layout.align.horizontal,
+        layout = mylayout,
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
             mylauncher,
@@ -227,6 +261,9 @@ awful.screen.connect_for_each_screen(function(s)
         },
         s.mytasklist, -- Middle widget
         { -- Right widgets
+	    java_version_widget,
+	    apt_update_widget,
+            battery_widget,
             layout = wibox.layout.fixed.horizontal,
             mykeyboardlayout,
             wibox.widget.systray(),

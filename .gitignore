@@ -20,6 +20,9 @@
 !.config/ulauncher/
 !.config/ulauncher/**
 
+!.config/kitty/
+!.config/kitty/**
+
 .config/polybar/polybar-i3-windows/windows.log
 
 !.config/polybar/

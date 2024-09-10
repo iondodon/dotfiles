@@ -1,0 +1,23 @@
+new_tab main
+cd ~
+title main
+launch bash
+enabled_layouts tall:bias=50;full_size=1
+layout tall
+
+new_tab vpn
+cd ~/vpn
+title VPN
+launch bash
+enabled_layouts tall:bias=50;full_size=1
+layout tall
+
+new_tab scheduler-app
+cd ~/scheduler-app
+title scheduler-app
+launch bash
+launch bash
+enabled_layouts tall:bias=50;full_size=1
+layout tall
+
+

@@ -246,9 +246,16 @@ awful.screen.connect_for_each_screen(function(s)
      awful.widget.watch('/home/ion/.config/polybar/scripts/pkgs-to-update.sh', 10, function(widget, stdout)
 	widget.text = stdout
      end, apt_update_widget)
+
      
      local mylayout = wibox.layout.align.horizontal()
-     mylayout.spacing = 20
+     
+     local separator = wibox.widget.separator({
+	    orientation = "vertical",
+	    forced_width = 8, -- Adjust the width of the separator
+	    span_ratio = 0.5, -- The height of the separator as a ratio of the parent's height
+	    color = "#FFFFFF", -- Separator color
+	})
 
     -- Add widgets to the wibox
     s.mywibox:setup {
@@ -256,21 +263,31 @@ awful.screen.connect_for_each_screen(function(s)
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
             mylauncher,
+            separator,
             s.mytaglist,
+            separator,
             s.mypromptbox,
         },
         s.mytasklist, -- Middle widget
         { -- Right widgets
-	    java_version_widget,
-	    apt_update_widget,
-            battery_widget,
             layout = wibox.layout.fixed.horizontal,
+            java_version_widget,
+            separator,
+	    apt_update_widget,
+	    separator,
+            battery_widget,
+            separator,
             mykeyboardlayout,
-            wibox.widget.systray(),
+            separator,
             mytextclock,
+            separator,
+            wibox.widget.systray(),
+            separator,
             s.mylayoutbox,
         },
     }
+    
+    
 end)
 -- }}}
 

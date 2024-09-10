@@ -471,7 +471,8 @@ awful.rules.rules = {
                      keys = clientkeys,
                      buttons = clientbuttons,
                      screen = awful.screen.preferred,
-                     placement = awful.placement.no_overlap+awful.placement.no_offscreen
+                     placement = awful.placement.no_overlap+awful.placement.no_offscreen,
+                     maximized = false
      }
     },
 
@@ -483,6 +484,7 @@ awful.rules.rules = {
           "pinentry",
         },
         class = {
+          "ulauncher",
           "Arandr",
           "Blueman-manager",
           "Gpick",
@@ -514,7 +516,7 @@ awful.rules.rules = {
     {
         rule = { },
         except = { type = "dialog" },
-        properties = { maximized = true }
+        properties = { maximized = false }
     },
 
     -- Set Firefox to always map on the tag named "2" on screen 1.

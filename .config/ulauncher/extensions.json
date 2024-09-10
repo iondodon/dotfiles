@@ -5,5 +5,19 @@
         "updated_at": "2024-09-10T15:46:22.730879",
         "last_commit": "0ad36c00a888e687b4bfbf76f266f1000040b337",
         "last_commit_time": "2019-07-11T06:53:31"
+    },
+    "com.github.melianmiko.ulauncher-nmcli": {
+        "id": "com.github.melianmiko.ulauncher-nmcli",
+        "url": "https://github.com/melianmiko/ulauncher-nmcli",
+        "updated_at": "2024-09-10T22:16:13.248246",
+        "last_commit": "fe967c947748616df602c9d022fec6d68a6b2cf2",
+        "last_commit_time": "2022-05-01T12:20:38"
+    },
+    "com.github.ygun.ulauncher-nm": {
+        "id": "com.github.ygun.ulauncher-nm",
+        "url": "https://github.com/ygun/ulauncher-nm",
+        "updated_at": "2024-09-10T22:21:13.938700",
+        "last_commit": "036a0b3b24fb325f7aa648872c916d04966e7101",
+        "last_commit_time": "2021-02-03T13:17:59"
     }
 }

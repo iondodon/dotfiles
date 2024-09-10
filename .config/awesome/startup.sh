@@ -4,6 +4,7 @@
 
 awesome-client 'awful.spawn.with_shell("ulauncher --hide-window")'
 awesome-client 'awful.spawn.with_shell("flameshot")'
+awesome-client 'awful.spawn.with_shell("compton")'
 
 awesome-client 'run_on_tag("1", "google-chrome")'
 awesome-client 'run_on_tag("1", "firefox")'

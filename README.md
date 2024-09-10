@@ -12,4 +12,4 @@
 - npm install -g @microsoft/inshellisense
 - terminator
 - kitty
-
+- compton

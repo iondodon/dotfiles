@@ -37,3 +37,6 @@
 !.config/terminator/**
 
 !.i3-switcher-style.css
+
+!/wallpapers/
+!/wallpapers/**

@@ -13,3 +13,4 @@
 - terminator
 - kitty
 - compton
+- nitrogen

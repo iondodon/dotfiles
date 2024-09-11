@@ -14,3 +14,4 @@
 - kitty
 - compton
 - nitrogen
+- beep

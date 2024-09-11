@@ -677,6 +677,7 @@ end
 -- Autostart applications
 awful.spawn.with_shell("xinput set-prop \"VEN_0488:00 0488:1024 Touchpad\" \"libinput Tapping Enabled\" 1")
 
+awful.spawn.with_shell("~/.config/polybar/scripts/pomodoro.sh")
 awful.spawn.with_shell("compton")
 awful.spawn.with_shell("nitrogen --restore")
 awful.spawn.with_shell("ulauncher --hide-window")

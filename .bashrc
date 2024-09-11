@@ -315,4 +315,4 @@ if [[ -z "${ISTERM}" && $- = *i* && $- != *c* ]]; then
   fi 
 fi
 
-neofetch
+

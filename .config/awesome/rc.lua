@@ -578,14 +578,26 @@ awful.rules.rules = {
       }, properties = { floating = true }},
 
     -- Add titlebars to normal clients and dialogs
-    { rule_any = {type = { "normal", "dialog" }
-      }, properties = { titlebars_enabled = false }
-    },
-    
+    { 
+    	rule_any = {
+    		type = { "normal" }
+      	}, 
+      	properties = { titlebars_enabled = false }
+    }, 
     {
         rule = { },
         except = { type = "dialog" },
-        properties = { maximized = false }
+        properties = { 
+        	maximized = false
+         }
+    },
+    {
+    	rule_any = { type = { "dialog" } },
+    	properties = {
+    		border_width = 2, -- Set your desired border width here
+            -- You can also set a specific border color if desired:
+            border_color = "#ff0000", -- 
+    	}
     },
 
     -- Set Firefox to always map on the tag named "2" on screen 1.

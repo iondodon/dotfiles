@@ -314,6 +314,32 @@ root.buttons(gears.table.join(
 ))
 -- }}}
 
+
+-- Table to track workspace history
+local tag_history = {}
+
+-- Function to update workspace history
+local function update_tag_history()
+    -- Get the current screen and the selected tag
+    local current_screen = awful.screen.focused()
+    local current_tag = current_screen.selected_tag
+
+    -- Add the tag to the history if it's different from the last one
+    if tag_history[#tag_history] ~= current_tag then
+        table.insert(tag_history, current_tag)
+    end
+
+    -- Limit history to the last 2 workspaces
+    if #tag_history > 2 then
+        table.remove(tag_history, 1)
+    end
+end
+
+-- Connect the function to the tag change signal
+tag.connect_signal("property::selected", function()
+    update_tag_history()
+end)
+
 -- {{{ Key bindings
 globalkeys = gears.table.join(
     awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
@@ -352,13 +378,15 @@ globalkeys = gears.table.join(
     awful.key({ modkey,           }, "u", awful.client.urgent.jumpto,
               {description = "jump to urgent client", group = "client"}),
     awful.key({ modkey,           }, "Tab",
-        function ()
-            awful.client.focus.history.previous()
-            if client.focus then
-                client.focus:raise()
+        function () 
+        if #tag_history > 1 then
+            local last_tag = tag_history[#tag_history - 1]
+            if last_tag then
+                last_tag:view_only()
             end
-        end,
-        {description = "go back", group = "client"}),
+        end
+    end,
+    {description = "go back to last workspace", group = "tag"}),
 
     -- Standard program
     awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,

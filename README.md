@@ -18,8 +18,8 @@
 - beep
 
 
-git init
-git remote add origin git@github.com:iondodon/dotfiles.git
-git fetch origin
-git reset --hard origin/main
-git clean -fd
+- git init
+- git remote add origin git@github.com:iondodon/dotfiles.git
+- git fetch origin
+- git reset --hard origin/main
+- git clean -fd

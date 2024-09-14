@@ -1,5 +1,6 @@
 ### INSTALL:
 
+- awesome
 - ulauncher
 - rofi
 - fzf 

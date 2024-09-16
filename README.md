@@ -1,6 +1,7 @@
 ### INSTALL:
 
 - awesome
+- zenity
 - ulauncher
 - rofi
 - fzf 

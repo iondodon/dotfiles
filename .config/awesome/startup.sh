@@ -9,20 +9,21 @@ awesome-client 'run_on_tag("1", "google-chrome")'
 sleep 2
 
 awesome-client 'awful.tag.find_by_name(awful.screen.focused(), "2"):view_only()'
-awesome-client 'run_on_tag("2", "/home/ion/.local/share/JetBrains/Toolbox/apps/intellij-idea-community-edition/bin/idea.sh")'
-awesome-client 'run_on_tag("2", "dbeaver")'
-
-sleep 5
-
-awesome-client 'awful.tag.find_by_name(awful.screen.focused(), "3"):view_only()'
-# awesome-client 'run_on_tag("3", "terminator --layout=magentus")'
-awesome-client 'awful.util.spawn_with_shell("kitty --session ~/.config/kitty/magentus")'
+awesome-client 'run_on_tag("2", "teams-for-linux")'
+awesome-client 'run_on_tag("2", "outlook-for-linux")'
 
 sleep 2
 
+awesome-client 'awful.tag.find_by_name(awful.screen.focused(), "3"):view_only()'
+awesome-client 'run_on_tag("3", "/home/ion/.local/share/JetBrains/Toolbox/apps/intellij-idea-community-edition/bin/idea.sh")'
+awesome-client 'run_on_tag("3", "dbeaver")'
+
+sleep 7
+
 awesome-client 'awful.tag.find_by_name(awful.screen.focused(), "4"):view_only()'
-awesome-client 'run_on_tag("4", "teams-for-linux")'
-awesome-client 'run_on_tag("4", "outlook-for-linux")'
+# awesome-client 'run_on_tag("4", "terminator --layout=magentus")'
+awesome-client 'awful.util.spawn_with_shell("kitty --session ~/.config/kitty/magentus")'
+
 
 sleep 2
 

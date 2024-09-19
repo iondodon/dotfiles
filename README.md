@@ -1,26 +1,24 @@
-### INSTALL:
+### Install
 
-- awesome
-- zenity
-- ulauncher
-- rofi
-- fzf 
-- neofetch 
-- pavucontrol qasmixer pavucontrol 
-- blueman 
-- pm-utils 
-- brightnessctl
-- oh-my-bash
-- npm install -g @microsoft/inshellisense
-- terminator
-- kitty
-- compton
-- nitrogen
-- beep
+```bash
+sudo apt install awesome zenity rofi ulauncher pavucontrol qasmixer blueman pm-utils brightnessctl kitty compton nitrogen
+```
 
+```bash
+npm install -g @microsoft/inshellisense
+```
 
-- git init
-- git remote add origin git@github.com:iondodon/dotfiles.git
-- git fetch origin
-- git reset --hard origin/main
-- git clean -fd
+- [nvm](https://github.com/nvm-sh/nvm)
+- [sdkman](https://sdkman.io/)
+- [fzf](https://github.com/junegunn/fzf)
+- [oh-my-bash](https://github.com/ohmybash/oh-my-bash)
+
+# Clone for new machine
+
+```bash
+git init
+git remote add origin git@github.com:iondodon/dotfiles.git
+git fetch origin
+git reset --hard origin/main
+git clean -fd
+```

@@ -387,6 +387,16 @@ globalkeys = gears.table.join(
         end
     end,
     {description = "go back to last workspace", group = "tag"}),
+    awful.key({ modkey }, "`",
+    function()
+        -- Focus the previously focused client in the current tag
+        awful.client.focus.history.previous()
+        if client.focus then
+            client.focus:raise()
+        end
+    end,
+    {description = "go back to previous client", group = "client"}),
+
 
     -- Standard program
     awful.key({ modkey,           }, "t", function () awful.spawn(terminal) end,

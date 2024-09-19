@@ -13,7 +13,7 @@ npm install -g @microsoft/inshellisense
 - [fzf](https://github.com/junegunn/fzf)
 - [oh-my-bash](https://github.com/ohmybash/oh-my-bash)
 
-# Clone for new machine
+### Clone for new machine
 
 ```bash
 git init

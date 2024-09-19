@@ -268,6 +268,12 @@ awful.screen.connect_for_each_screen(function(s)
 	    span_ratio = 0.5, -- The height of the separator as a ratio of the parent's height
 	    color = "#FFFFFF", -- Separator color
 	})
+	local separator_left = wibox.widget.textbox("[")
+	separator_left.font = "monospace bold 10"
+	separator_left.markup = '<span>[</span>'
+	local separator_right = wibox.widget.textbox("]")
+	separator_right.font = "monospace bold 10"
+	separator_right.markup = '<span>]</span>'
 
     -- Add widgets to the wibox
     s.mywibox:setup {
@@ -275,27 +281,27 @@ awful.screen.connect_for_each_screen(function(s)
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
             mylauncher,
-            separator,
+            separator_left,
             s.mytaglist,
-            separator,
             s.mypromptbox,
+            separator_right
         },
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            separator,
+            separator_left,
             vpn_widget,
             separator,
             java_version_widget,
             separator,
-	    apt_update_widget,
-	    separator,
+			apt_update_widget,
+			separator,
             battery_widget,
             separator,
             mykeyboardlayout,
             separator,
             mytextclock,
-            separator,
+            separator_right,
             wibox.widget.systray(),
             separator,
             s.mylayoutbox,

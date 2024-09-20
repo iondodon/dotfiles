@@ -231,7 +231,7 @@ awful.screen.connect_for_each_screen(function(s)
 	-- Set initial text (optional)
 	text   = 'Java version...'
      }
-     awful.widget.watch('/home/ion/.config/polybar/scripts/info-java.sh', 10, function(widget, stdout)
+     awful.widget.watch('/home/ion/scripts/info-java.sh', 10, function(widget, stdout)
 	widget.text = stdout
      end, java_version_widget)
      
@@ -243,7 +243,7 @@ awful.screen.connect_for_each_screen(function(s)
 	-- Set initial text (optional)
 	text   = 'apt...'
      }
-     awful.widget.watch('/home/ion/.config/polybar/scripts/pkgs-to-update.sh', 10, function(widget, stdout)
+     awful.widget.watch('/home/ion/scripts/pkgs-to-update.sh', 10, function(widget, stdout)
 	widget.text = stdout
      end, apt_update_widget)
      
@@ -255,7 +255,7 @@ awful.screen.connect_for_each_screen(function(s)
 	-- Set initial text (optional)
 	text   = 'VPN'
      }
-     awful.widget.watch('/home/ion/.config/polybar/scripts/active-openvpn.sh', 10, function(widget, stdout)
+     awful.widget.watch('/home/ion/scripts/active-openvpn.sh', 10, function(widget, stdout)
 	widget.text = stdout
      end, vpn_widget)
 
@@ -290,11 +290,13 @@ awful.screen.connect_for_each_screen(function(s)
             separator_left,
             s.mytaglist,
             s.mypromptbox,
-            separator_right
+            separator_right,
+            separator_empty,
         },
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
+            separator_empty,
             separator_left,
             vpn_widget,
             separator_empty,
@@ -722,7 +724,7 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- Autostart applications
 awful.spawn.with_shell("xinput set-prop \"VEN_0488:00 0488:1024 Touchpad\" \"libinput Tapping Enabled\" 1")
 
-awful.spawn.with_shell("~/.config/polybar/scripts/pomodoro.sh")
+awful.spawn.with_shell("~/scripts/pomodoro.sh")
 awful.spawn.with_shell("compton")
 awful.spawn.with_shell("nitrogen --restore")
 awful.spawn.with_shell("ulauncher --hide-window")

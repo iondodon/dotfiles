@@ -221,7 +221,7 @@ awful.screen.connect_for_each_screen(function(s)
     -- Create a text widget to display battery
     local battery_widget = wibox.widget.textbox()   
     -- Register the battery widget
-    vicious.register(battery_widget, vicious.widgets.bat, "🔋$2%", 61, "BAT0")
+    vicious.register(battery_widget, vicious.widgets.bat, "Bat.$2%", 61, "BAT0")
 
     -- Create a textbox widget
     local java_version_widget = wibox.widget {
@@ -232,7 +232,7 @@ awful.screen.connect_for_each_screen(function(s)
 	text   = 'Java version...'
      }
      awful.widget.watch('/home/ion/scripts/info-java.sh', 10, function(widget, stdout)
-	widget.text = stdout
+	widget.markup = stdout
      end, java_version_widget)
      
     -- Create a textbox widget
@@ -256,7 +256,7 @@ awful.screen.connect_for_each_screen(function(s)
 	text   = 'VPN'
      }
      awful.widget.watch('/home/ion/scripts/active-openvpn.sh', 10, function(widget, stdout)
-	widget.text = stdout
+	widget.markup = stdout
      end, vpn_widget)
 
      

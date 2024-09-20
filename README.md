@@ -1,7 +1,7 @@
 ### Install
 
 ```bash
-sudo apt install awesome zenity rofi ulauncher pavucontrol qasmixer blueman pm-utils brightnessctl kitty compton nitrogen
+sudo apt install awesome zenity rofi ulauncher pavucontrol qasmixer blueman pm-utils brightnessctl kitty compton nitrogen network-manager-gnome
 ```
 
 ```bash

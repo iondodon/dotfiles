@@ -238,13 +238,13 @@ awful.screen.connect_for_each_screen(function(s)
     -- Create a textbox widget
     local apt_update_widget = wibox.widget {
         widget = wibox.widget.textbox,
-	align  = 'center',
-	valign = 'center',
-	-- Set initial text (optional)
-	text   = 'apt...'
+		align  = 'center',
+		valign = 'center',
+		-- Set initial text (optional)
+		text   = 'apt...'
      }
      awful.widget.watch('/home/ion/scripts/pkgs-to-update.sh', 10, function(widget, stdout)
-	widget.text = stdout
+	 widget.markup = stdout
      end, apt_update_widget)
      
     -- VPN

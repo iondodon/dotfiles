@@ -221,7 +221,7 @@ awful.screen.connect_for_each_screen(function(s)
     -- Create a text widget to display battery
     local battery_widget = wibox.widget.textbox()   
     -- Register the battery widget
-    vicious.register(battery_widget, vicious.widgets.bat, "Bat $2%", 61, "BAT0")
+    vicious.register(battery_widget, vicious.widgets.bat, "🔋$2%", 61, "BAT0")
 
     -- Create a textbox widget
     local java_version_widget = wibox.widget {

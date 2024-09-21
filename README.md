@@ -8,6 +8,10 @@ sudo apt install awesome zenity rofi ulauncher pavucontrol qasmixer blueman pm-u
 npm install -g @microsoft/inshellisense
 ```
 
+```bash
+cargo install --locked zellij
+```
+
 - [nvm](https://github.com/nvm-sh/nvm)
 - [sdkman](https://sdkman.io/)
 - [fzf](https://github.com/junegunn/fzf)

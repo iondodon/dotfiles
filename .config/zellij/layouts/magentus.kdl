@@ -1,0 +1,45 @@
+layout {
+	tab name="Main" focus=true {
+		pane size=1 borderless=true {
+		    plugin location="zellij:tab-bar"
+		}
+		pane split_direction="vertical" {
+			pane name="Main" {
+				cwd "~"
+				size "60%"
+			}
+			pane name="VPN" {
+				size "40%"
+				cwd "~/vpn"
+				command "bash"
+		    	args "-c" "sudo -S openvpn --config ~/vpn/HSSID000Amdaris11.ovpn; exec bash"
+		    	start_suspended true
+			}
+		}
+		pane size=2 borderless=true {
+		    plugin location="zellij:status-bar"
+		}
+	}
+	
+	tab name="scheduler-app" {
+		pane size=1 borderless=true {
+		    plugin location="zellij:tab-bar"
+		}
+		pane split_direction="vertical" {
+			pane {
+				name "docker-compose"
+				cwd "~/scheduler-app"
+				start_suspended true
+				command "docker"
+				args "compose" "-f" "compose-alpha-data.yml" "up"
+			}
+			pane {
+				name "scheduler-app"
+				cwd "~/scheduler-app"
+			}
+		}
+		pane size=2 borderless=true {
+		    plugin location="zellij:status-bar"
+		}
+	}
+}

@@ -23,6 +23,9 @@
 !.config/kitty/
 !.config/kitty/**
 
+!.config/zellij/
+!.config/zellij/**
+
 .config/polybar/polybar-i3-windows/windows.log
 
 !.config/polybar/

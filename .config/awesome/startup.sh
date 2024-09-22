@@ -13,6 +13,6 @@ sleep 2
 awesome-client 'awful.tag.find_by_name(awful.screen.focused(), "dev"):view_only()'
 awesome-client 'awful.util.spawn("/home/ion/.local/share/JetBrains/Toolbox/apps/intellij-idea-community-edition/bin/idea.sh")'
 awesome-client 'awful.util.spawn("dbeaver")'
-awesome-client 'awful.util.spawn_with_shell("kitty zellij --layout ~/.config/zellij/layouts/magentus.kdl")'
+awesome-client 'awful.util.spawn_with_shell("kitty --session ~/.config/kitty/magentus")'
 
 

@@ -21,7 +21,7 @@ npm install -g @microsoft/inshellisense
 cargo install --locked zellij
 ```
 
-- [kitty](https://sw.kovidgoyal.net/kitty/)
+- [kitty](https://sw.kovidgoyal.net/kitty/) `sudo ln -s ~/kitty/bin/kitty /usr/local/bin/kitty`
 - [nvm](https://github.com/nvm-sh/nvm)
 - [sdkman](https://sdkman.io/)
 - [fzf](https://github.com/junegunn/fzf)

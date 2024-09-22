@@ -1,14 +1,14 @@
 new_tab main
+layout horizontal
 title scheduler-app
 cd ~
 launch bash
 cd ~/vpn
-launch bash
-layout horizontal
+launch --bias=-15 bash
 
 new_tab scheduler-app
+layout horizontal
 title scheduler-app
 cd ~/scheduler-app
 launch bash
-launch bash
-layout horizontal
+launch --bias=-15 bash

@@ -1,14 +1,12 @@
 ### Install
 
 ```bash
-sudo apt install awesome zenity rofi ulauncher pavucontrol qasmixer blueman pm-utils brightnessctl kitty compton nitrogen network-manager-gnome
+sudo apt install awesome zenity rofi ulauncher pavucontrol qasmixer blueman pm-utils brightnessctl compton nitrogen network-manager-gnome
 ```
 
 ```bash
 npm install -g @microsoft/inshellisense
-```
-
-```bash
+curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 cargo install --locked zellij
 ```
 

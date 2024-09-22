@@ -2,7 +2,7 @@ new_tab main
 layout horizontal
 title scheduler-app
 cd ~
-launch bash
+launch /home/ion/scripts/main.sh
 cd ~/vpn
 launch --bias=-15 bash
 

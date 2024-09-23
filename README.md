@@ -15,7 +15,8 @@ sudo apt install \
 	nitrogen \
 	network-manager-gnome \
 	xprintidle \
-	xdotool
+	xdotool \
+	arandr
 ```
 
 ```bash

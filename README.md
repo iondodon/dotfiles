@@ -16,7 +16,8 @@ sudo apt install \
 	network-manager-gnome \
 	xprintidle \
 	xdotool \
-	arandr
+	arandr \
+	pasystray
 ```
 
 ```bash

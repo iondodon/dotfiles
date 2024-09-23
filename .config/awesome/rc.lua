@@ -739,6 +739,7 @@ awful.spawn.with_shell("xinput set-prop \"VEN_0488:00 0488:1024 Touchpad\" \"lib
 
 awful.spawn.with_shell("compton")
 awful.spawn.with_shell("nm-applet")
+awful.spawn.with_shell("pasystray")
 awful.spawn.with_shell("nitrogen --restore")
 awful.spawn.with_shell("ulauncher --hide-window")
 awful.spawn.with_shell("flameshot")

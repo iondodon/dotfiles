@@ -13,7 +13,9 @@ sudo apt install \
 	brightnessctl \
 	compton \
 	nitrogen \
-	network-manager-gnome
+	network-manager-gnome \
+	xprintidle \
+	xdotool
 ```
 
 ```bash

@@ -730,6 +730,6 @@ awful.spawn.with_shell("nitrogen --restore")
 awful.spawn.with_shell("ulauncher --hide-window")
 awful.spawn.with_shell("flameshot")
 
--- awful.spawn.with_shell("~/.config/awesome/startup.sh")
+awful.spawn.with_shell("~/.config/awesome/startup.sh")
 
 

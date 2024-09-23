@@ -207,12 +207,32 @@ awful.screen.connect_for_each_screen(function(s)
         filter  = awful.widget.taglist.filter.all,
         buttons = taglist_buttons
     }
+    
+    local separator = wibox.widget.separator({
+	    orientation = "vertical",
+	    forced_width = 8, -- Adjust the width of the separator
+	    span_ratio = 0.5, -- The height of the separator as a ratio of the parent's height
+	    color = "#FFFFFF", -- Separator color
+	})
 
     -- Create a tasklist widget
     s.mytasklist = awful.widget.tasklist {
         screen  = s,
         filter  = awful.widget.tasklist.filter.currenttags,
         buttons = tasklist_buttons,
+        layout   = {
+		    spacing = 10,
+		    spacing_widget = {
+		        {
+		            forced_width = 5,
+		            widget       = separator
+		        },
+		        valign = 'center',
+		        halign = 'center',
+		        widget = wibox.container.place,
+		    },
+		    layout  = wibox.layout.flex.horizontal
+		},
     }
 
     -- Create the wibox
@@ -261,13 +281,6 @@ awful.screen.connect_for_each_screen(function(s)
 
      
      local mylayout = wibox.layout.align.horizontal()
-     
-     local separator = wibox.widget.separator({
-	    orientation = "vertical",
-	    forced_width = 8, -- Adjust the width of the separator
-	    span_ratio = 0.5, -- The height of the separator as a ratio of the parent's height
-	    color = "#FFFFFF", -- Separator color
-	})
 	
 	local separator_left = wibox.widget.textbox("[")
 	separator_left.font = "monospace bold 10"

@@ -17,7 +17,8 @@ sudo apt install \
 	xprintidle \
 	xdotool \
 	arandr \
-	pasystray
+	pasystray \
+	simplescreenrecorder
 ```
 
 ```bash

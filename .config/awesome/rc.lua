@@ -743,6 +743,7 @@ awful.spawn.with_shell("blueman-applet")
 awful.spawn.with_shell("pasystray")
 awful.spawn.with_shell("nitrogen --restore")
 awful.spawn.with_shell("ulauncher --hide-window")
+awful.spawn.with_shell("simplescreenrecorder --start-hidden")
 awful.spawn.with_shell("flameshot")
 
 awful.spawn.with_shell("~/.config/awesome/startup.sh")

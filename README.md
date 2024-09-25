@@ -18,7 +18,8 @@ sudo apt install \
 	xdotool \
 	arandr \
 	pasystray \
-	simplescreenrecorder
+	simplescreenrecorder \
+	pulseaudio-utils
 ```
 
 ```bash

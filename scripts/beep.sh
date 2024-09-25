@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Interval in seconds between each beep
-INTERVAL=5
+INTERVAL=900 # 15 minutes
 
 # Infinite loop to beep at each interval until stopped manually
 while true

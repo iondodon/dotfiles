@@ -11,4 +11,4 @@ layout horizontal
 title scheduler-app
 cd ~/scheduler-app
 launch bash
-launch --bias=-15 bash
+launch bash

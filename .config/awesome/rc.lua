@@ -283,12 +283,12 @@ awful.screen.connect_for_each_screen(function(s)
      local mylayout = wibox.layout.align.horizontal()
 	
 	local separator_left = wibox.widget.textbox("[")
-	separator_left.font = "monospace bold 10"
-	separator_left.markup = '<span>[</span>'
+	separator_left.font = "monospace 16"
+	separator_left.markup = '['
 	
 	local separator_right = wibox.widget.textbox("]")
-	separator_right.font = "monospace bold 10"
-	separator_right.markup = '<span>]</span>'
+	separator_right.font = "monospace 16"
+	separator_right.markup = ']'
 	
 	local separator_empty = wibox.widget.textbox(" ")
 	separator_empty.font = "monospace 10"

@@ -307,7 +307,6 @@ awful.screen.connect_for_each_screen(function(s)
 	    s.mytasklist,
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            --separator_empty,
             separator_right,
             separator_left,
             vpn_widget,
@@ -317,7 +316,6 @@ awful.screen.connect_for_each_screen(function(s)
 			apt_update_widget,
 			separator_empty,
             battery_widget,
-            --separator_empty,
             --mykeyboardlayout,
             separator_empty,
             mytextclock,

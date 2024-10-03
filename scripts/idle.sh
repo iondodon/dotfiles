@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Time in milliseconds (300000 ms = 5 minutes)
-IDLE_TIME_LIMIT=300000  #300000
+IDLE_TIME_LIMIT=60000  #300000
 
 # Time interval to reset idle status (4 minutes, or 240000 milliseconds)
-RESET_INTERVAL=240000  #240000
+RESET_INTERVAL=55000  #240000
 
 # Get screen dimensions
 SCREEN_WIDTH=$(xdpyinfo | awk '/dimensions:/ {print $2}' | cut -d 'x' -f 1)

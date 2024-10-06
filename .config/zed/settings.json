@@ -60,7 +60,7 @@
   },
   "languages": {
     "Java": {
-			"language_servers": ["jdtls"],
+			"language_servers": ["java"],
 			"enable_language_server": true
 		},
     "Elixir": {

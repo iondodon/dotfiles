@@ -143,6 +143,7 @@ export NVM_DIR="$HOME/.nvm"
 
 export JAVA_SERVER="172.17.0.1"
 export JRE_HOME="/home/ion/.sdkman/candidates/java/8.0.265-open"
+export PATH=$PATH:/home/ion/jdtls/bin
 
 export PATH=$PATH:/home/ion/gnome-terminal-session
 

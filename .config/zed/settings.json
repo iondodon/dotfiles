@@ -39,7 +39,13 @@
         }
       }
     },
+    "jdtls": {
+      "settings": {
+        "java_home": "/home/ion/.sdkman/candidates/java/17.0.12-oracle"
+      }
+    },
     "java": {
+      "java.jdt.ls.java.home": "/home/ion/.sdkman/candidates/java/17.0.12-oracle",
       "java.jdt.ls.lombokSupport.enabled:": true,
       "java.format.enabled": false
     },
@@ -53,8 +59,12 @@
     }
   },
   "languages": {
-     "Elixir": {
-       "language_servers": ["next-ls", "!elixir-ls"]
-     }
+    "Java": {
+			"language_servers": ["jdtls"],
+			"enable_language_server": true
+		},
+    "Elixir": {
+      "language_servers": ["next-ls", "!elixir-ls"]
+    }
    }
 }

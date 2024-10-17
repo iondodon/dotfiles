@@ -19,7 +19,6 @@ while true; do
   IDLE_TIME=$(xprintidle)
 
   if [ "$IDLE_TIME" -gt "$IDLE_TIME_LIMIT" ]; then
-    echo "move"
     # Move the mouse to the center of the screen
     xdotool mousemove $CENTER_X $CENTER_Y
 

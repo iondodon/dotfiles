@@ -671,11 +671,17 @@ awful.rules.rules = {
     {
         rule_any = { type = { "dialog" } },
         properties = {
-            border_width = 2,         -- Set your desired border width here
-            -- You can also set a specific border color if desired:
-            border_color = "#ff0000", --
+            border_width = 2,         
+            border_color = "#ff0000", 
         }
     },
+    {
+		-- No `rule` or `rule_any` means this applies to all windows
+		rule = {},
+		properties = { 
+		    placement = awful.placement.centered  -- Center all windows
+		}
+	}
 
     -- Set Firefox to always map on the tag named "2" on screen 1.
     -- { rule = { class = "Firefox" },
@@ -756,7 +762,6 @@ awful.spawn.with_shell("~/scripts/beep.sh")
 awful.spawn.with_shell("nm-applet")
 awful.spawn.with_shell("blueman-applet")
 awful.spawn.with_shell("pasystray")
---awful.spawn.with_shell("nitrogen --restore")
 awful.spawn.with_shell("ulauncher --hide-window")
 awful.spawn.with_shell("simplescreenrecorder --start-hidden")
 awful.spawn.with_shell("flameshot")

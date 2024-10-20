@@ -20,9 +20,15 @@ require("awful.hotkeys_popup.keys")
 
 local vicious = require("vicious")
 
+
 -- Load Debian menu entries
 local debian = require("debian.menu")
 local has_fdo, freedesktop = pcall(require, "freedesktop")
+
+naughty.config.notify_callback = function(args)
+    args.preset.timeout = 20
+    return args
+end
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to

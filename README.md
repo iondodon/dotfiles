@@ -34,6 +34,24 @@ cargo install --locked zellij
 - [oh-my-bash](https://github.com/ohmybash/oh-my-bash)
 - [snipline](https://snipline.io)
 
+### VS Code
+
+```json
+// Place your key bindings in this file to override the defaults
+// https://samedwardes.com/blog/2023-06-11-vscode-bash-to-terminal/
+// Open the command pallet using cmd + shift + p.
+// Type Preferences: Open Keyboard Shortcuts (JSON)
+// Then edit the keybindings.json file:
+
+[
+  {
+    "key": "shift+enter",
+    "command": "workbench.action.terminal.runSelectedText",
+    "when": "editorTextFocus && !findInputFocussed && !replaceInputFocussed && editorLangId == 'shellscript'"
+  }
+]
+```
+
 ### Clone for new machine
 
 ```bash

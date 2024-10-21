@@ -32,6 +32,7 @@ cargo install --locked zellij
 - [sdkman](https://sdkman.io/)
 - [fzf](https://github.com/junegunn/fzf)
 - [oh-my-bash](https://github.com/ohmybash/oh-my-bash)
+- [snipline](https://snipline.io)
 
 ### Clone for new machine
 

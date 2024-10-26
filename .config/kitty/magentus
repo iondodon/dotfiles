@@ -1,14 +1,19 @@
-new_tab main
-layout horizontal
-title scheduler-app
-cd ~
-launch /home/ion/scripts/main.sh
-cd ~/vpn
-launch --bias=-15 bash
+# Create a complex layout using multiple splits. Creates two columns of
+# windows with two windows in each column. The windows in the first column are
+# split 50:50. In the second column the windows are not evenly split.
+new_tab Magetnus
+layout splits
 
-new_tab scheduler-app
-layout horizontal
-title scheduler-app
-cd ~/scheduler-app
-launch bash
-launch bash
+# First window, set a user variable on it so we can focus it later
+launch --var window=first
+
+# Create the second column by splitting the first window vertically
+launch --location=vsplit --cwd=~/scheduler-app bash
+
+# Create the third window in the second column by splitting the second window horizontally
+# Make it take 40% of the height instead of 50%
+launch --location=hsplit --bias=40 --cwd=~/vpn bash
+
+# Go back to focusing the first window, so that we can split it
+focus_matching_window var:window=first
+

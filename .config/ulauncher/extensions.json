@@ -6,24 +6,10 @@
         "last_commit": "0ad36c00a888e687b4bfbf76f266f1000040b337",
         "last_commit_time": "2019-07-11T06:53:31"
     },
-    "com.github.matheusfillipe.joplin-snippets": {
-        "id": "com.github.matheusfillipe.joplin-snippets",
-        "url": "https://github.com/matheusfillipe/joplin-snippets",
-        "updated_at": "2024-10-22T08:37:14.034386",
-        "last_commit": "89c91e4e77519cd05fe92bc5a889f4bc3d3718a9",
-        "last_commit_time": "2022-03-26T21:02:15"
-    },
-    "com.github.laercioskt.ulauncher-kv": {
-        "id": "com.github.laercioskt.ulauncher-kv",
-        "url": "https://github.com/laercioskt/ulauncher-kv",
-        "updated_at": "2024-10-22T08:38:57.894748",
-        "last_commit": "eeb278a3ee53024fb1252a0a3ba30950fea2bac8",
-        "last_commit_time": "2024-01-28T19:14:55"
-    },
     "com.github.mikebarkmin.ulauncher-snippets": {
         "id": "com.github.mikebarkmin.ulauncher-snippets",
         "url": "https://github.com/mikebarkmin/ulauncher-snippets",
-        "updated_at": "2024-10-22T08:42:26.497429",
+        "updated_at": "2024-10-26T20:45:52.079053",
         "last_commit": "6ed92b0e0914aae9cbb3c8601d7d77683872351d",
         "last_commit_time": "2022-11-20T14:22:30"
     }

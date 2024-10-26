@@ -1,7 +1,6 @@
 # Create a complex layout using multiple splits. Creates two columns of
 # windows with two windows in each column. The windows in the first column are
 # split 50:50. In the second column the windows are not evenly split.
-new_tab Magetnus
 layout splits
 
 # First window, set a user variable on it so we can focus it later

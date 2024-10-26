@@ -26,7 +26,7 @@ local debian = require("debian.menu")
 local has_fdo, freedesktop = pcall(require, "freedesktop")
 
 naughty.config.notify_callback = function(args)
-    args.preset.timeout = 20
+    args.preset.timeout = 5
     return args
 end
 

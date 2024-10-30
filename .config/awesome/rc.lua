@@ -331,9 +331,8 @@ awful.screen.connect_for_each_screen(function(s)
             separator_right,
             separator_left,
             wibox.widget.systray(),
+            s.mylayoutbox,
             separator_right
-            --separator,
-            --s.mylayoutbox,
         },
     }
 end)
@@ -593,6 +592,34 @@ clientbuttons = gears.table.join(
     end)
 )
 
+
+client.connect_signal("property::maximized", function(c)
+    if c.maximized then
+        c.border_width = 0  -- Remove border for maximized windows
+    else
+        c.border_width = beautiful.border_width  -- Set the normal border width for other windows
+    end
+end)
+
+client.connect_signal("focus", function(c)
+    if c.maximized then
+        c.border_width = 0
+    elseif c.floating or awful.layout.get(c.screen) == awful.layout.suit.floating then
+        c.border_width = beautiful.border_width  -- Restore borders for floating windows
+    else
+        c.border_width = beautiful.border_width  -- Restore borders for tiled windows
+    end
+end)
+
+-- Remove border for ulauncher and other floating windows
+client.connect_signal("manage", function (c)
+    if c.class == "Ulauncher" then
+        c.border_width = 0  -- Remove border for ulauncher
+    elseif c.floating then
+        c.border_width = beautiful.border_width  -- Set border for other floating windows
+    end
+end)
+
 -- Set keys
 root.keys(globalkeys)
 -- }}}
@@ -604,7 +631,7 @@ awful.rules.rules = {
     {
         rule = {},
         properties = {
-            border_width = 0,
+            border_width = beautiful.border_width,
             border_color = beautiful.border_normal,
             focus = awful.client.focus.filter,
             raise = true,
@@ -615,8 +642,16 @@ awful.rules.rules = {
             maximized = false
         }
     },
+    
+    {
+        rule = {},
+        properties = {
+            maximized = true,
+            border_width = 0 -- Remove border for maximized windows
+        }
+    },
 
-    -- Floating clients.
+     -- Floating clients.
     {
         rule_any = {
             instance = {
@@ -637,8 +672,6 @@ awful.rules.rules = {
                 "veromix",
                 "xtightvncviewer" },
 
-            -- Note that the name property shown in xprop might be set slightly after creation of the client
-            -- and the name shown there might not match defined rules here.
             name = {
                 "Event Tester", -- xev.
             },
@@ -650,6 +683,7 @@ awful.rules.rules = {
         },
         properties = { floating = true }
     },
+
 
     -- Add titlebars to normal clients and dialogs
     {

@@ -26,7 +26,7 @@ theme.fg_urgent     = "#ffffff"
 theme.fg_minimize   = "#ffffff"
 
 theme.useless_gap   = dpi(0)
-theme.border_width  = dpi(1)
+theme.border_width  = 2
 theme.border_normal = "#000000"
 theme.border_focus  = "#535d6c"
 theme.border_marked = "#91231c"
@@ -57,7 +57,7 @@ theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(
 -- notification_font
 -- notification_[bg|fg]
 -- notification_[width|height|margin]
--- notification_[border_color|border_width|shape|opacity]
+-- notification_[   _color|border_width|shape|opacity]
 
 -- Variables set for theming the menu:
 -- menu_[bg|fg]_[normal|focus]

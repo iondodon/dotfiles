@@ -86,7 +86,7 @@ awful.layout.layouts = {
     -- awful.layout.suit.fair.horizontal,
     -- awful.layout.suit.spiral,
     -- awful.layout.suit.spiral.dwindle,
-    awful.layout.suit.max,
+    -- awful.layout.suit.max,
     -- awful.layout.suit.max.fullscreen,
     -- awful.layout.suit.magnifier,
     -- awful.layout.suit.corner.nw,
@@ -331,7 +331,7 @@ awful.screen.connect_for_each_screen(function(s)
             separator_right,
             separator_left,
             wibox.widget.systray(),
-            s.mylayoutbox,
+            --s.mylayoutbox,
             separator_right
         },
     }
@@ -589,6 +589,11 @@ clientbuttons = gears.table.join(
     awful.button({ modkey }, 3, function(c)
         c:emit_signal("request::activate", "mouse_click", { raise = true })
         awful.mouse.client.resize(c)
+    end),
+     -- modkey + Shift + Left Click drag to resize
+    awful.button({ modkey, "Shift" }, 1, function (c)
+        c:emit_signal("request::activate", "mouse_click", {raise = true})
+        awful.mouse.client.resize(c)
     end)
 )
 
@@ -642,14 +647,6 @@ awful.rules.rules = {
             maximized = false
         }
     },
-    
-    {
-        rule = {},
-        properties = {
-            maximized = true,
-            border_width = 0 -- Remove border for maximized windows
-        }
-    },
 
      -- Floating clients.
     {
@@ -691,20 +688,6 @@ awful.rules.rules = {
             type = { "normal" }
         },
         properties = { titlebars_enabled = false }
-    },
-    {
-        rule = {},
-        except = { type = "dialog" },
-        properties = {
-            maximized = false
-        }
-    },
-    {
-        rule_any = { type = { "dialog" } },
-        properties = {
-            border_width = 2,         
-            border_color = "#ff0000", 
-        }
     },
     {
 		-- No `rule` or `rule_any` means this applies to all windows

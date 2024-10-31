@@ -1,8 +1,6 @@
 # Exclude everything by default
 *
 
-.config/ulauncher/snippets/secure
-
 # Exclusive include
 
 !README.md
@@ -21,6 +19,9 @@
 
 !.config/ulauncher/
 !.config/ulauncher/**
+
+!snippets/open/
+!snippets/open/**
 
 !.config/kitty/
 !.config/kitty/**

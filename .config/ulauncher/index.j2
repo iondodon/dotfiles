@@ -7,7 +7,7 @@ sudo openvpn --config HSSID000Amdaris11.ovpn
 ===
 
 ---
-name: Current date
+name: Current DateTime ISO 8601 UTC
 ---
 
-{{ date('now') }}
+{{ get_current_datetime_iso8601_utc() }}

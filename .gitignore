@@ -20,6 +20,9 @@
 !.config/ulauncher/
 !.config/ulauncher/**
 
+!snippets/
+!snippets/globals.py
+
 !snippets/open/
 !snippets/open/**
 

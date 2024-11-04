@@ -14,6 +14,6 @@ if [ -d "$BATTERY_PATH" ]; then
         echo "<span>Bat.$BATTERY_CAPACITY%</span>"
     fi
 else
-    echo "Battery not found or path does not exist."
+    echo "No battery."
 fi
 

@@ -53,6 +53,10 @@ cargo install --locked zellij
 ]
 ```
 
+
+### ulauncher
+`sudo pip install python-frontmatter --break-system-packages`
+
 ### Clone for new machine
 
 ```bash

@@ -25,11 +25,6 @@ local vicious = require("vicious")
 local debian = require("debian.menu")
 local has_fdo, freedesktop = pcall(require, "freedesktop")
 
-naughty.config.notify_callback = function(args)
-    args.preset.timeout = 5
-    return args
-end
-
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)

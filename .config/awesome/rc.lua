@@ -286,13 +286,19 @@ awful.screen.connect_for_each_screen(function(s)
 
     local mylayout = wibox.layout.align.horizontal()
 
-    local separator_left = wibox.widget.textbox("[")
-    separator_left.font = "monospace 16"
-    separator_left.markup = '['
+	local separator_left = wibox.widget {
+		markup = "[",
+		valign = "center",
+		font = "YourDesiredFont 16", -- Replace with your preferred font and size
+		widget = wibox.widget.textbox
+	}
 
-    local separator_right = wibox.widget.textbox("]")
-    separator_right.font = "monospace 16"
-    separator_right.markup = ']'
+	local separator_right = wibox.widget {
+		markup = "]",
+		valign = "center",
+		font = "YourDesiredFont 16", -- Replace with your preferred font and size
+		widget = wibox.widget.textbox
+	}
 
     local separator_empty = wibox.widget.textbox(" ")
     separator_empty.font = "monospace 10"

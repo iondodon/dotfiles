@@ -22,6 +22,8 @@
 
 !snippets/
 !snippets/globals.py
+!snippets/split.py
+!snippets/index.j2.all
 
 !snippets/open/
 !snippets/open/**

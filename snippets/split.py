@@ -36,7 +36,7 @@ def split_j2_file(input_path, output_dir, delimiter='==='):
         print(f"Created: {output_file}")
 
 # Usage
-input_path = '/home/ion/.config/ulauncher/index.j2'      
+input_path = '/home/ion/snippets/index.j2.all'      
 output_dir = '/home/ion/snippets/open'
 split_j2_file(input_path, output_dir)
 

@@ -317,6 +317,3 @@ source "$OSH"/oh-my-bash.sh
 #  fi 
 #fi
 
-
-
-source /home/ion/.manter.sh

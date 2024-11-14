@@ -19,7 +19,8 @@ sudo apt install \
 	arandr \
 	pasystray \
 	simplescreenrecorder \
-	pulseaudio-utils
+	pulseaudio-utils \
+	kdocker
 ```
 
 ```bash

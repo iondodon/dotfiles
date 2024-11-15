@@ -150,10 +150,6 @@ export PATH=$PATH:/home/ion/gnome-terminal-session
 export PATH=$PATH:/usr/local/go/bin
 . "$HOME/.cargo/env"
 
-
-export PATH=$PATH:/home/ion/zig-linux-x86_64-0.13.0
-export PATH=$PATH:/home/ion/kitty/bin
-
 # ??? THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!! ???
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

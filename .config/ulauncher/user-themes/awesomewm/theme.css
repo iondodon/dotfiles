@@ -44,7 +44,7 @@ theme.border_marked = "#91231c"
   * Result items
   */
 @define-color item_name @lg_white;
-@define-color item_text #fff;
+@define-color item_text @lg_white;
 @define-color item_box_selected @lg_blue;
 @define-color item_text_selected @dk_grey;
 @define-color item_name_selected @dk_grey;

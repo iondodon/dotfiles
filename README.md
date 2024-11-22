@@ -35,6 +35,7 @@ cargo install --locked zellij
 - [oh-my-bash](https://github.com/ohmybash/oh-my-bash)
 - [snipline](https://snipline.io)
 - [ulauncher-snippets](https://github.com/mikebarkmin/ulauncher-snippets)
+- [ulauncher-2fa](https://github.com/martindiphoorn/ulauncher-2fa)
 
 ### VS Code
 

@@ -1,3 +1,3 @@
 #!/bin/bash
-kitty --title Magentus &
-kdocker -n Magentus
+kitty --title KittyGlobal &
+kdocker -n KittyGlobal

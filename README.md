@@ -36,6 +36,7 @@ cargo install --locked zellij
 - [snipline](https://snipline.io)
 - [ulauncher-snippets](https://github.com/mikebarkmin/ulauncher-snippets)
 - [ulauncher-2fa](https://github.com/martindiphoorn/ulauncher-2fa)
+- [lazydocker](https://github.com/jesseduffield/lazydocker)
 
 ### VS Code
 

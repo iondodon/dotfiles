@@ -289,14 +289,14 @@ awful.screen.connect_for_each_screen(function(s)
 	local separator_left = wibox.widget {
 		markup = "[",
 		valign = "center",
-		font = "YourDesiredFont 16", -- Replace with your preferred font and size
+		font = "YourDesiredFont 17", -- Replace with your preferred font and size
 		widget = wibox.widget.textbox
 	}
 
 	local separator_right = wibox.widget {
 		markup = "]",
 		valign = "center",
-		font = "YourDesiredFont 16", -- Replace with your preferred font and size
+		font = "YourDesiredFont 17", -- Replace with your preferred font and size
 		widget = wibox.widget.textbox
 	}
 

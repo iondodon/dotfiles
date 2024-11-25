@@ -20,6 +20,7 @@ sudo apt install \
 	pasystray \
 	simplescreenrecorder \
 	pulseaudio-utils \
+	kdocker \
 	alltray
 ```
 

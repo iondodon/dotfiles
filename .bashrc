@@ -141,9 +141,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
-export JAVA_SERVER="172.17.0.1"
-export JRE_HOME="/home/ion/.sdkman/candidates/java/8.0.265-open"
-export PATH=$PATH:/home/ion/jdtls/bin
+# export JAVA_SERVER="172.17.0.1"
+# export JRE_HOME="/home/ion/.sdkman/candidates/java/8.0.265-open"
+# export PATH=$PATH:/home/ion/jdtls/bin
 
 export PATH=$PATH:/home/ion/gnome-terminal-session
 

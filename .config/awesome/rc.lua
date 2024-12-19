@@ -279,7 +279,7 @@ awful.screen.connect_for_each_screen(function(s)
         -- Set initial text (optional)
         text   = 'VPN'
     }
-    awful.widget.watch('/home/ion/scripts/active-openvpn.sh', 10, function(widget, stdout)
+    awful.widget.watch('/home/ion/scripts/active-openvpn3.sh', 10, function(widget, stdout)
         widget.markup = stdout
     end, vpn_widget)
 

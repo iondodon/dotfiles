@@ -1,56 +1,30 @@
 /**
-from awesomewm
-theme.bg_normal     = "#222222"
-theme.bg_focus      = "#535d6c"
-theme.bg_urgent     = "#ff0000"
-theme.bg_minimize   = "#444444"
-theme.bg_systray    = theme.bg_normal
-
-theme.fg_normal     = "#aaaaaa"
-theme.fg_focus      = "#ffffff"
-theme.fg_urgent     = "#ffffff"
-theme.fg_minimize   = "#ffffff"
-
-theme.useless_gap   = dpi(0)
-theme.border_width  = 2
-theme.border_normal = "#000000"
-theme.border_focus  = "#535d6c"
-theme.border_marked = "#91231c"
-*/
-
-@define-color dk_grey  #18181c;
-@define-color lg_blue  #535d6c;
-@define-color lg_grey  #5e6377;
-@define-color lg_white  #aaaaaa;
-@define-color lg_caret  #FFC996;
-
-/**
  * App Window
  */
 @define-color bg_color #222222;
 @define-color window_bg @bg_color;
-@define-color window_border_color @lg_blue;
-@define-color prefs_backgroud @lg_white;
+@define-color window_border_color #535d6c;
+@define-color prefs_backgroud #aaaaaa;
 
 /**
   * Input
   */
-@define-color selected_bg_color @lg_grey;
-@define-color selected_fg_color @lg_white;
-@define-color input_color @lg_white;
-@define-color caret_color darker(@lg_caret);
+@define-color selected_bg_color #46b9f2;
+@define-color selected_fg_color #aaaaaa;
+@define-color input_color #aaaaaa;
+@define-color caret_color darker(#73cfeb);
 
 /**
   * Result items
   */
-@define-color item_name @lg_white;
-@define-color item_text @lg_white;
-@define-color item_box_selected @lg_blue;
-@define-color item_text_selected @dk_grey;
-@define-color item_name_selected @dk_grey;
-@define-color item_shortcut_color @lg_white;
+@define-color item_name #aaaaaa;
+@define-color item_text #aaaaaa;
+@define-color item_box_selected #5fc1fa;
+@define-color item_text_selected #18181c;
+@define-color item_name_selected #18181c;
+@define-color item_shortcut_color #aaaaaa;
 @define-color item_shortcut_shadow darker(@bg_color);
-@define-color item_shortcut_color_sel @dk_grey;
+@define-color item_shortcut_color_sel #18181c;
 @define-color item_shortcut_shadow_sel darker(@item_box_selected);
 
 .app {

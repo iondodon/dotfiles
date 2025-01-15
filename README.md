@@ -60,6 +60,7 @@ cargo install --locked zellij
 
 ### ulauncher
 `sudo pip install python-frontmatter --break-system-packages`
+`sudo apt install python3-onetimepass`
 
 ### Clone for new machine
 

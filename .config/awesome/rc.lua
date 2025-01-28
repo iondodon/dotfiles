@@ -270,6 +270,47 @@ awful.screen.connect_for_each_screen(function(s)
     awful.widget.watch('/home/ion/scripts/pkgs-to-update.sh', 10, function(widget, stdout)
         widget.markup = stdout
     end, apt_update_widget)
+    
+    
+    -- Iddle script
+    -- Flag to track the script state
+	local iddle_running = false
+	-- Create the widget
+	local set_iddle_widget = wibox.widget {
+		widget = wibox.widget.textbox,
+		text = "⚡",  -- Unicode icon
+		align = "center",
+		valign = "center"
+	}
+	-- Define the toggle function
+	local function toggle_active()
+		-- Check if the script is running
+		awful.spawn.easy_async_with_shell("pgrep -f '/home/ion/scripts/i.sh'", function(stdout)
+		    if stdout ~= "" then
+		        -- Immediately update the icon to indicate stopping
+		        iddle_running = false
+		        set_iddle_widget.text = "⚡"  -- Reset icon
+		        set_iddle_widget:emit_signal("widget::redraw_needed")  -- Refresh widget
+
+		        -- Stop the script
+		        awful.spawn.with_shell("pkill -f '/home/ion/scripts/i.sh'")
+		    else
+		        -- Immediately update the icon to indicate starting
+		        iddle_running = true
+		        set_iddle_widget.text = "💫"  -- Change icon to active
+		        set_iddle_widget:emit_signal("widget::redraw_needed")  -- Refresh widget
+
+		        -- Start the script
+		        awful.spawn.with_shell("bash -c '/home/ion/scripts/i.sh &'")
+		    end
+		end)
+	end
+	-- Add click event to the widget
+	set_iddle_widget:buttons(
+		awful.util.table.join(
+		    awful.button({}, 1, function() toggle_active() end)  -- Left mouse click
+		)
+	)
 
     -- VPN
     local vpn_widget = wibox.widget {
@@ -320,6 +361,8 @@ awful.screen.connect_for_each_screen(function(s)
             separator_right,
             separator_left,
             vpn_widget,
+            separator_empty,
+            set_iddle_widget,
             --separator_empty,
             --java_version_widget,
             --separator_empty,

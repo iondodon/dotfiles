@@ -17,8 +17,8 @@
 !.config/awesome/
 !.config/awesome/**
 
-!.config/ulauncher/
 !.config/ulauncher/**
+.config/ulauncher/ext_preferences/
 
 !snippets/
 !snippets/globals.py

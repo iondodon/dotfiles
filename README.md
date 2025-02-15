@@ -61,7 +61,7 @@ cargo install --locked zellij
 ### ulauncher
 `sudo pip install python-frontmatter --break-system-packages`
 `sudo apt install python3-onetimepass`
-`echo 'greenclip daemon &' >> ~/.xprofile` then `sudo chmod +x greenclip` for [https://github.com/iondodon/ulauncher-greenclip](https://github.com/iondodon/ulauncher-greenclip)
+`echo 'greenclip daemon &' >> ~/.xprofile` then  `sudo chmod +x greenclip` for [https://github.com/iondodon/ulauncher-greenclip](https://github.com/iondodon/ulauncher-greenclip)
 
 ### Clone for new machine
 

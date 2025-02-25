@@ -330,19 +330,19 @@ awful.screen.connect_for_each_screen(function(s)
 	local separator_left = wibox.widget {
 		markup = "[",
 		valign = "center",
-		font = "sans 16", -- Replace with your preferred font and size
+		font = "sans 17", -- Replace with your preferred font and size
 		widget = wibox.widget.textbox
 	}
 
 	local separator_right = wibox.widget {
 		markup = "]",
 		valign = "center",
-		font = "sans 16", -- Replace with your preferred font and size
+		font = "sans 17", -- Replace with your preferred font and size
 		widget = wibox.widget.textbox
 	}
 
     local separator_empty = wibox.widget.textbox(" ")
-    separator_empty.font = "sans 16"
+    separator_empty.font = "sans 17"
     separator_empty.markup = '<span> </span>'
 
     -- Add widgets to the wibox
@@ -816,6 +816,7 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 awful.spawn.with_shell("xinput set-prop \"VEN_0488:00 0488:1024 Touchpad\" \"libinput Tapping Enabled\" 1")
 
 awful.spawn.with_shell("compton")
+awful.spawn.with_shell("redshift -l 47.0036:28.9070 -t 6000:5000 -g 1.0:1.0:1.0 -m randr")
 awful.spawn.with_shell("~/scripts/beep.sh")
 awful.spawn.with_shell("nm-applet")
 awful.spawn.with_shell("blueman-applet")

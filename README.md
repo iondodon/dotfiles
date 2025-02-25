@@ -21,7 +21,8 @@ sudo apt install \
 	simplescreenrecorder \
 	pulseaudio-utils \
 	kdocker \
-	alltray
+	alltray \
+	redshift
 ```
 
 ```bash
@@ -62,6 +63,11 @@ cargo install --locked zellij
 `sudo pip install python-frontmatter --break-system-packages`
 `sudo apt install python3-onetimepass`
 `echo 'greenclip daemon &' >> ~/.xprofile` then  `sudo chmod +x greenclip` for [https://github.com/iondodon/ulauncher-greenclip](https://github.com/iondodon/ulauncher-greenclip)
+
+### redshift
+`redshift -l 47.0036:28.9070 -t 6000:5000 -g 1.0:1.0:1.0 -m randr`
+
+`redshift -x` - back to defaults
 
 ### Clone for new machine
 

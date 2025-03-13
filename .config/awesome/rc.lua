@@ -278,7 +278,7 @@ awful.screen.connect_for_each_screen(function(s)
 	-- Create the widget
 	local set_iddle_widget = wibox.widget {
 		widget = wibox.widget.textbox,
-		text = "⚡",  -- Unicode icon
+		markup = "<span font_size=\"large\">A</span>",  -- Unicode icon
 		align = "center",
 		valign = "center"
 	}
@@ -289,7 +289,7 @@ awful.screen.connect_for_each_screen(function(s)
 		    if stdout ~= "" then
 		        -- Immediately update the icon to indicate stopping
 		        iddle_running = false
-		        set_iddle_widget.text = "⚡"  -- Reset icon
+		        set_iddle_widget.markup = "<span font_size=\"large\">A</span>"  -- Reset icon
 		        set_iddle_widget:emit_signal("widget::redraw_needed")  -- Refresh widget
 
 		        -- Stop the script
@@ -297,7 +297,7 @@ awful.screen.connect_for_each_screen(function(s)
 		    else
 		        -- Immediately update the icon to indicate starting
 		        iddle_running = true
-		        set_iddle_widget.text = "💫"  -- Change icon to active
+		        set_iddle_widget.markup = "<span foreground=\"green\" font_size=\"large\">A</span>"  -- Change icon to active
 		        set_iddle_widget:emit_signal("widget::redraw_needed")  -- Refresh widget
 
 		        -- Start the script

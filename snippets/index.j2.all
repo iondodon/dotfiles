@@ -1,5 +1,5 @@
 ---
-name: "OpenVPN"
+name: "Magentus OpenVPN"
 ---
 
 sudo openvpn --config HSSID000Amdaris11.ovpn

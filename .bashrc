@@ -134,7 +134,7 @@ if [ -z "$RUNNING" ]; then
     disown
 fi
 
-export PATH="/home/ion/.sdkman/candidates/maven/3.9.8/bin:$PATH"
+export PATH="~/.sdkman/candidates/maven/3.9.8/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -142,10 +142,10 @@ export NVM_DIR="$HOME/.nvm"
 
 
 # export JAVA_SERVER="172.17.0.1"
-# export JRE_HOME="/home/ion/.sdkman/candidates/java/8.0.265-open"
-# export PATH=$PATH:/home/ion/jdtls/bin
+# export JRE_HOME="~/.sdkman/candidates/java/8.0.265-open"
+# export PATH=$PATH:~/jdtls/bin
 
-export PATH=$PATH:/home/ion/gnome-terminal-session
+export PATH=$PATH:~/gnome-terminal-session
 
 export PATH=$PATH:/usr/local/go/bin
 . "$HOME/.cargo/env"
@@ -161,7 +161,7 @@ export PATH=$HOME/.local/bin:$PATH
 #####################################################################################################
 
 # Path to your oh-my-bash installation.
-export OSH='/home/ion/.oh-my-bash'
+export OSH='~/.oh-my-bash'
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-bash is loaded.

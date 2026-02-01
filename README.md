@@ -3,13 +3,13 @@ The dotfiles are managed by GNU `stow`. Before creating the symlinks perform a s
 ## Debian based
 
 ```bash
-sudo apt install stow awesome pavucontrol blueman pm-utils brightnessctl network-manager-gnome xprintidle xdotool arandr pasystray simplescreenrecorder pulseaudio-utils redshift flameshot fonts-jetbrains-mono wl-clipboard yaru-theme-gtk sddm shellcheck
+sudo apt install stow pavucontrol blueman pm-utils brightnessctl network-manager-gnome xprintidle xdotool arandr pasystray simplescreenrecorder pulseaudio-utils flameshot fonts-jetbrains-mono wl-clipboard yaru-theme-gtk sddm shellcheck
 ```
 
 ## Arch based
 
 ```bash
-sudo pacman -S stow sddm niri hyprland awesome waybar picom mako swaylock blueman ttf-nerd-fonts-symbols flameshot rofi nautilus vicious redshift gammastep xclip xsel ttf-jetbrains-mono arandr wl-clipboard shellcheck swaybg network-manager-applet systemctl-tui caligula swayidle fuzzel grim pacman-contrib xwayland-satellite
+sudo pacman -S stow sddm niri hyprland waybar mako swaylock blueman ttf-nerd-fonts-symbols flameshot nautilus vicious gammastep xclip xsel ttf-jetbrains-mono arandr wl-clipboard shellcheck swaybg network-manager-applet systemctl-tui caligula swayidle fuzzel grim pacman-contrib xwayland-satellite
 ```
 
 ```bash
@@ -21,12 +21,9 @@ yay -S ttf-jetbrains-mono fsearch yaru-gtk-theme outlook-for-linux swaylock-effe
 - [stow](https://www.gnu.org/software/stow/)
 - [flameshot](https://github.com/flameshot-org/flameshot) - [flameshot.org](https://flameshot.org/)
 - [fireshot](https://github.com/iondodon/fireshot) - `cargo install --path crates/app` from root directory
-- [picom](https://github.com/yshui/picom) - for debian build from source, for arch install with pacman
-- [xwitcher](https://github.com/iondodon/xwitcher) - `cargo install --path .`
 - [witcher](https://github.com/iondodon/witcher) - `cargo install --path .`
 - [nvm](https://github.com/nvm-sh/nvm)
 - [sdkman](https://sdkman.io/)
-- [rofi](https://github.com/davatorium/rofi) - build newest from source
 - [lazydocker](https://github.com/jesseduffield/lazydocker)
 - [lazygit](https://github.com/jesseduffield/lazygit)
 - [dictate](https://github.com/iondodon/dictate)
@@ -49,7 +46,6 @@ yay -S ttf-jetbrains-mono fsearch yaru-gtk-theme outlook-for-linux swaylock-effe
 
 <br>
 
-- [zellij](https://github.com/zellij-org/zellij)
 - [tpm](https://github.com/tmux-plugins/tpm) - install to use it to install tmux plugins
 - [tmux](https://github.com/tmux/tmux) - install latest version from source. Use [tpm](https://github.com/tmux-plugins/tpm) plugin to install other plugins - `prefix+b I` to install the plugins defined in `tmux.conf`.
 - [tmux-better-mouse-mode](https://github.com/NHDaly/tmux-better-mouse-mode)
@@ -66,18 +62,6 @@ yay -S ttf-jetbrains-mono fsearch yaru-gtk-theme outlook-for-linux swaylock-effe
 
 ---
 
-#### rofi
-
-In `combi` mode, type `!mode` (example: `!2fa Google`) to active a mode.
-
-Install dependencies for the custom modes: `pip install pyotp pyyaml`
-
-Check the mode scripts for any other dependencies.
-
-For the `2fa` mode rename the 2fa.yml.example to 2fa.yml in ~/.config/rofi. The 2fa.yml file will be ignored in dotfiles .gitignore for pretection.
-
-Use `-no-lazy-grab` to make rofi appear quicker.
-
 #### fuzzel
 
 2FA mode (~/.config/fuzzel/2fa.py)
@@ -91,12 +75,6 @@ Snippets mode (~/.config/fuzzel/snippets.py)
 - Required: python3, fuzzel, pyyaml
 - Clipboard: wl-clipboard (wl-copy) preferred; fallback xclip or xsel
 - Notifications: notify-send (from libnotify)
-
-#### redshift
-
-`redshift -l 47.0036:28.9070 -t 6000:5000 -g 1.0:1.0:1.0 -m randr`
-
-`redshift -x` - back to defaults
 
 #### InteliJ IDEA
 

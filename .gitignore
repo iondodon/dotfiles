@@ -1,0 +1,14 @@
+.config/ulauncher/ext_preferences/**
+.config/tmux/plugins/
+
+.config/rofi/2fa.yml
+.config/rofi/snippets_closed.yml
+.config/rofi/__pycache__/
+
+.config/fuzzel/2fa.yml
+.config/fuzzel/snippets_closed.yml
+.config/rofi/__pycache__/
+
+.config/zed/workspace/**
+.config/awesome/window_state.lua
+.config/nvim/lazyvim.json

@@ -1,0 +1,192 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `zed: Open Default Settings` command
+// from the command palette
+{
+  "outline_panel": {
+    "auto_fold_dirs": true,
+    "file_icons": true,
+    "button": true
+  },
+  "window_decorations": "server",
+  "centered_layout": {
+    "left_padding": 0.2
+  },
+  "bottom_dock_layout": "contained",
+  "preview_tabs": {
+    "enabled": true
+  },
+  "tabs": {
+    "file_icons": true,
+    "git_status": false
+  },
+  "tab_bar": {
+    "show_tab_bar_buttons": true,
+    "show_nav_history_buttons": false,
+    "show": false
+  },
+  "title_bar": {
+    "show_menus": false,
+    "show_sign_in": true,
+    "show_user_picture": true,
+    "show_onboarding_banner": true,
+    "show_project_items": true,
+    "show_branch_name": true,
+    "show_branch_icon": true
+  },
+  "search": {
+    "button": true
+  },
+  "diagnostics": {
+    "button": true
+  },
+  "status_bar": {
+    "cursor_position_button": false,
+    "active_language_button": false
+  },
+  "project_panel": {
+    "hide_hidden": false,
+    "hide_root": true,
+    "auto_fold_dirs": false,
+    "auto_reveal_entries": true,
+    "indent_size": 15.0,
+    "git_status": true,
+    "folder_icons": true,
+    "file_icons": true,
+    "entry_spacing": "standard",
+    "dock": "left",
+    "button": true
+  },
+  "toolbar": {
+    "agent_review": true
+  },
+  "autosave": "on_focus_change",
+  "rounded_selection": false,
+  "hide_mouse": "never",
+  "cursor_shape": "bar",
+  "buffer_line_height": "standard",
+  "minimap": {
+    "display_in": "active_editor",
+    "show": "auto"
+  },
+  "disable_ai": true,
+  "vim_mode": false,
+  "edit_predictions": {
+    "mode": "subtle",
+    "copilot": {
+      "proxy": null,
+      "proxy_no_verify": null
+    },
+    "enabled_in_text_threads": false
+  },
+  "show_edit_predictions": true,
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Zed (Default)",
+    "dark": "Zed (Default)"
+  },
+  "agent": {
+    "button": true,
+    "inline_assistant_model": {
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4"
+    },
+    "default_profile": "write",
+    "always_allow_tool_actions": true,
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-5-mini"
+    },
+  },
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
+  "format_on_save": "off",
+
+  "ui_font_family": "JetBrains Mono",
+  "ui_font_size": 15.0,
+  "ui_font_weight": 150.0,
+
+  "buffer_font_family": "JetBrains Mono",
+  "buffer_font_size": 17.0,
+  "buffer_font_weight": 150.0,
+
+  "buffer_font_features": {
+     "calt": false
+  },
+
+   "terminal": {
+    "font_weight": 100.0,
+    "button": false,
+    "font_family": "JetBrains Mono",
+    "font_size": 14,
+    "font_features": { "calt": true }
+   },
+
+  "theme": {
+    "mode": "system",
+    "light": "Gruvbox Material",
+    "dark": "Gruvbox Material"
+  },
+
+  "languages": {
+    "Go": {
+      "language_servers": ["gopls"],
+      "format_on_save": "on",
+      "code_actions_on_save": {
+        "source.organizeImports": true
+      }
+    },
+    "Java": {
+      "language_servers": ["jdtls"]
+    }
+  },
+  "lsp": {
+    "jdtls": {
+      "settings": {
+        "java_home": "/home/ion/.sdkman/candidates/java/current",
+        "lombok_support": true,
+        "jdk_auto_download": true,
+        "check_updates": "always",
+        "jdtls_launcher": "/home/ion/.local/share/zed-java/jdtls/bin/jdtls",
+        "lombok_jar": "/home/ion/.local/share/zed-java/lombok.jar",
+        "java_debug_jar": "/home/ion/.local/share/zed-java/com.microsoft.java.debug.plugin.jar"
+      }
+    },
+    "gopls": {
+      "initialization_options": {
+        "hints": {
+          "assignVariableTypes": true,
+          "compositeLiteralFields": true,
+          "compositeLiteralTypes": true,
+          "constantValues": true,
+          "functionTypeParameters": true,
+          "parameterNames": true,
+          "rangeVariableTypes": true
+        }
+      },
+      "settings": {
+        "gopls": {
+          "staticcheck": true,
+          "analyses": {
+            "nilness": true,
+            "unusedparams": true,
+            "unusedwrite": true
+          }
+        }
+      }
+    },
+    "rust-analyzer": {
+      "initialization_options": {
+        "rust": {
+          "analyzerTargetDir": true,
+          // "rust-analyzer.cargo.buildScripts.overrideCommand": "cargo"
+        }
+      }
+    }
+  }
+}

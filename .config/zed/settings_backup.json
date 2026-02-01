@@ -1,0 +1,81 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `zed: Open Default Settings` command
+// from the command palette
+{
+  "edit_predictions": {
+    "mode": "subtle",
+    "copilot": {
+      "proxy": null,
+      "proxy_no_verify": null
+    },
+    "enabled_in_text_threads": false
+  },
+  "show_edit_predictions": true,
+  "icon_theme": "Zed (Default)",
+  "agent": {
+    "always_allow_tool_actions": true,
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4-thinking"
+    },
+    "version": "2"
+  },
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
+  "format_on_save": "off",
+  "ui_font_size": 11,
+  "buffer_font_size": 16,
+  "theme": {
+    "mode": "system",
+    "light": "Gruvbox Dark",
+    "dark": "One Dark"
+  },
+  "lsp": {
+    "gopls": {
+      "initialization_options": {
+        "hints": {
+          "assignVariableTypes": true,
+          "compositeLiteralFields": true,
+          "compositeLiteralTypes": true,
+          "constantValues": true,
+          "functionTypeParameters": true,
+          "parameterNames": true,
+          "rangeVariableTypes": true
+        }
+      }
+    },
+    "jdtls": {
+      "settings": {
+        "java_home": "/home/ion/.sdkman/candidates/java/17.0.12-oracle"
+      }
+    },
+    "java": {
+      "java.jdt.ls.java.home": "/home/ion/.sdkman/candidates/java/17.0.12-oracle",
+      "java.jdt.ls.lombokSupport.enabled:": true,
+      "java.format.enabled": false
+    },
+    "rust-analyzer": {
+      "initialization_options": {
+        "rust": {
+          "analyzerTargetDir": true,
+          // "rust-analyzer.cargo.buildScripts.overrideCommand": "cargo"
+        }
+      }
+    }
+  },
+  "languages": {
+    "Java": {
+			"language_servers": ["java"],
+			"enable_language_server": true
+		},
+    "Elixir": {
+      "language_servers": ["next-ls", "!elixir-ls"]
+    }
+   }
+}

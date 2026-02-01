@@ -1,0 +1,7 @@
+/* 
+Use GTK_DEBUG=interactive ghostty to inspect the CSS.
+*/
+
+window {
+	padding: 0;
+}

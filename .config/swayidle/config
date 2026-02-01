@@ -1,0 +1,5 @@
+# Suspend after 10 minutes
+# timeout 600 "systemctl suspend"
+
+# Always lock before sleep
+# before-sleep swaylock

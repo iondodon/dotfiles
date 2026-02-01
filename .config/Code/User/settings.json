@@ -1,0 +1,200 @@
+{
+  "editor.fontSize": 19,
+  "editor.fontWeight": 200,
+  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontLigatures": false,
+  "editor.showFoldingControls": "always",
+  "editor.multiCursorModifier": "alt",
+  "editor.linkedEditing": true,
+  "editor.matchBrackets": "always",
+  "editor.largeFileOptimizations": false,
+  "editor.bracketPairColorization.enabled": false,
+
+  "editor.tokenColorCustomizations": {
+    "[Default Dark Modern]": {
+      "textMateRules": [
+        {
+          "scope": "keyword",
+          "settings": {
+            "fontStyle": "italic"
+          }
+        },
+        {
+          "scope": "comment",
+          "settings": {
+            "foreground": "#6b99557a",
+            "fontStyle": "italic"
+          }
+        }
+      ]
+    },
+    "[Classic Terminal]": {
+      "textMateRules": [
+        {
+          "scope": "support.function.go",
+          "settings": {
+            "foreground": "#798fbd",
+            "fontStyle": ""
+          }
+        },
+        {
+          "scope": "support.function.builtin.go",
+          "settings": {
+            "foreground": "#798fbd",
+            "fontStyle": ""
+          }
+        },
+        {
+          "scope": "variable.other.assignment.go",
+          "settings": {
+            "foreground": "#eeffff99"
+          }
+        }
+      ]
+    },
+    "[Karry Color Golang]": {
+      "textMateRules": [
+        {
+          "scope": "keyword.function.go",
+          "settings": {
+            "foreground": "#5c69bd"
+          }
+        },
+        {
+          "scope": "keyword.interface.go",
+          "settings": {
+            "fontStyle": "italic"
+          }
+        },
+        {
+          "scope": "entity.name.function.go",
+          "settings": {
+            "fontStyle": ""
+          }
+        },
+        {
+          "scope": "support.function.go",
+          "settings": {
+            "foreground": "#7f000ddc",
+            "fontStyle": ""
+          }
+        },
+        {
+          "scope": "support.function.builtin.go",
+          "settings": {
+            "foreground": "#7f000ddc",
+            "fontStyle": ""
+          }
+        },
+        {
+          "scope": "keyword.operator.address.go",
+          "settings": {
+            "foreground": "#f200ff"
+          }
+        },
+        {
+          "scope": "variable.other.assignment.go",
+          "settings": {
+            "foreground": "#4a7498"
+          }
+        }
+      ]
+    }
+  },
+
+  "editor.inlayHints.enabled": "on",
+
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.tree.indent": 16,
+  "workbench.colorCustomizations": {
+    "[Default Dark Modern]": {
+      // "editor.background": "#ddc9b0",
+      // "editor.lineHighlightBackground": "#ddc9b0",
+      // "editor.lineHighlightBorder": "#c7b59e",
+
+      // "editor.findMatchBackground": "#ff0000",
+      // "editor.findRangeHighlightBackground": "#ff0000",
+
+      // "editorGutter.background": "#e1ceb7",
+
+      "editorInlayHint.background": "#ff000000",
+
+      "errorLens.errorBackground": "#8f6d6d00",
+      "errorLens.warningBackground": "#ff000000",
+      "errorLens.hintBackground": "#ff000000",
+      "errorLens.infoBackground": "#ff000000",
+
+      "editor.wordHighlightBackground": "#58585840",
+      "editor.wordHighlightTextBorder": "#ffc4c444",
+      "editor.selectionBackground": "#90909060",
+      "editor.selectionHighlightBackground": "#4b4b4b00",
+      "editor.selectionHighlightBorder": "#ff000054"
+    },
+    "[Karry Color Golang]": {
+      // "editor.background": "#ddc9b0",
+      // "editor.lineHighlightBackground": "#ddc9b0",
+      // "editor.lineHighlightBorder": "#c7b59e",
+
+      // "editor.findMatchBackground": "#ff0000",
+      // "editor.findRangeHighlightBackground": "#ff0000",
+
+      // "editorGutter.background": "#e1ceb7",
+
+      "editor.wordHighlightBackground": "#00000010",
+      "editor.wordHighlightTextBorder": "#ff0000",
+      "editor.selectionBackground": "#00000010",
+      "editor.selectionHighlightBorder": "#ff000054"
+    },
+    "peekViewEditor.background": "#00000073",
+    "peekViewEditorGutter.background": "#00000035",
+    "peekViewResult.background": "#00000035",
+    "peekViewTitle.background": "#00000035"
+  },
+
+  "files.autoSave": "onFocusChange",
+
+  "git.autofetch": true,
+  "git.openRepositoryInParentFolders": "never",
+
+  "diffEditor.ignoreTrimWhitespace": false,
+
+  "security.workspace.trust.untrustedFiles": "open",
+
+  "go.toolsManagement.autoUpdate": true,
+  "go.coverOnSingleTest": true,
+  "go.coverOnSingleTestFile": true,
+  "gopls": {
+    "ui.semanticTokens": true
+  },
+
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+
+  "tooltitude.workspaceSyncForDownload": false,
+  "svelte.enable-ts-plugin": true,
+
+  "rust-analyzer.inlayHints.closingBraceHints.enable": false,
+  "editor.minimap.enabled": false,
+  "editor.formatOnSave": true,
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "git.ignoreRebaseWarning": true,
+  "redhat.telemetry.enabled": true,
+  "ipynb.experimental.serialization": true,
+  "github.copilot.nextEditSuggestions.enabled": false,
+  "zig.zls.enabled": "on",
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+    "go": false
+  },
+  "workbench.activityBar.location": "top",
+  "window.menuBarVisibility": "compact",
+  "window.commandCenter": false,
+  "workbench.layoutControl.enabled": false,
+  "chat.commandCenter.enabled": false,
+  "makefile.configureOnOpen": true
+}

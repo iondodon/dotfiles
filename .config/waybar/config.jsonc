@@ -71,7 +71,6 @@
 		"return-type": "json",
 		"interval": 3600,
 		"exec": "~/.config/waybar/dotfiles-update.sh status",
-		"on-click": "~/.config/waybar/dotfiles-update.sh prompt",
 		"tooltip": true
 	},
 	"custom/packages": {

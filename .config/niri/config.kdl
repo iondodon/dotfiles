@@ -367,7 +367,7 @@ layout {
 // This line starts waybar, a commonly used bar for Wayland compositors.
 spawn-sh-at-startup "swaybg -i ~/.local/share/backgrounds/bolduresti.png -m fill"
 spawn-at-startup "waybar"
-spawn-at-startup "witcher" "--daemon" "--backend" "niri"
+spawn-at-startup "~/.cargo/bin/witcher" "--daemon" "--backend" "niri"
 spawn-at-startup "gammastep" "-l" "47.0:28.9"
 spawn-at-startup "flameshot"
 spawn-at-startup "blueman-applet"
@@ -486,8 +486,8 @@ binds {
     // shows a list of important hotkeys.
     Mod+Shift+Slash { show-hotkey-overlay; }
 
-    Alt+Tab repeat=false hotkey-overlay-title="Switch windows" { spawn "witcher" "--cycle-next"; }
-    Alt+Shift+Tab repeat=false { spawn "witcher" "--cycle-prev"; }
+    Alt+Tab repeat=false hotkey-overlay-title="Switch windows" { spawn "~/.cargo/bin/witcher" "--cycle-next"; }
+    Alt+Shift+Tab repeat=false { spawn "~/.cargo/bin/witcher" "--cycle-prev"; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+Return hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }

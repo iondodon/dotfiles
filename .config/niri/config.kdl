@@ -470,7 +470,7 @@ overview {
 }
 
 binds {
-    Ctrl+Space  { spawn "fuzzel"; }
+    Ctrl+Space hotkey-overlay-title="Application laucher: fuzzel" { spawn "fuzzel"; }
 
     // Keys consist of modifiers separated by + signs, followed by an XKB key name
     // in the end. To find an XKB name for a particular key, you may use a program
@@ -491,7 +491,6 @@ binds {
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+Return hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
-    Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
 
@@ -678,7 +677,7 @@ binds {
     Mod+Shift+R { switch-preset-window-height; }
     Mod+Ctrl+R { reset-window-height; }
     Mod+M hotkey-overlay-title="Maximize column" { maximize-column; }
-    // Mod+Shift+F { fullscreen-window; }
+    Mod+Shift+F { fullscreen-window; }
     Mod+Shift+M hotkey-overlay-title="Maximize window to edges" { maximize-window-to-edges; }
 
     // Expand the focused column to space not taken up by other fully visible columns.

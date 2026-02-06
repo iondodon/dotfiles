@@ -23,10 +23,6 @@ source $ZSH/oh-my-zsh.sh
 # User configuration ##################
 #######################################
 
-if [ -d /opt/nvim-linux-x86_64/bin ]; then
-	export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
-fi
-
 # Secrets
 if [ -f "$HOME/.secrets" ]; then
     source "$HOME/.secrets"
@@ -57,10 +53,6 @@ fi
 
 if [ -d "$HOME/.cargo/env" ]; then
    source "$HOME/.cargo/env"
-fi
-
-if [ -d "$HOME/tmux" ]; then
-    export PATH=$PATH:$HOME/tmux
 fi
 
 if [ -d "$HOME/.sdkman" ]; then

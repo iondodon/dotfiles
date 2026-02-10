@@ -432,15 +432,6 @@ window-rule {
     	default-window-height { fixed 700; }
 }
 
-// opacity
-window-rule {
-    match app-id="jetbrains-idea"
-    match app-id="dev.zed.Zed"
-    match app-id="code"
-    match app-id="teams-for-linux"
-    opacity 0.95
-}
-
 // no border
 window-rule {
     match app-id="jetbrains-idea"

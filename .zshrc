@@ -70,3 +70,5 @@ if [ -d "$HOME/flutter/bin" ]; then
    export PATH=$HOME/flutter/bin:$PATH
    export FLUTTER_GIT_URL="" # to fix and issues with hagging flutter command - to be removed
 fi
+
+fastfetch

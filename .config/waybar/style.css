@@ -1,7 +1,7 @@
 * {
 	border: none;
 	border-radius: 0;
-	font-family: "JetBrains Mono", monospace;
+	font-family: "JetBrainsMono Nerd Font", "JetBrainsMono Nerd Font Mono", "JetBrains Mono", "Symbols Nerd Font", monospace;
 	font-size: 10px;
 	min-height: 0;
 	margin: 0px;
@@ -58,6 +58,15 @@ window#waybar {
 #backlight, #clock, #battery, #cpu, #memory, #network, #pulseaudio, #custom-spotify, #custom-packages, #custom-dotfiles, #idle_inhibitor, #tray, #mode {
 	padding: 0 3px;
 	margin: 0 2px;
+}
+
+#backlight,
+#clock,
+#pulseaudio,
+#battery,
+#idle_inhibitor,
+#tray {
+	font-size: 12px;
 }
 
 #clock {

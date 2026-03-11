@@ -9,7 +9,7 @@ sudo apt install stow pavucontrol blueman pm-utils brightnessctl network-manager
 ## Arch based
 
 ```bash
-sudo pacman -S stow sddm niri hyprland waybar mako swaylock blueman ttf-nerd-fonts-symbols flameshot nautilus vicious gammastep xclip xsel ttf-jetbrains-mono arandr wl-clipboard shellcheck swaybg network-manager-applet systemctl-tui caligula swayidle fuzzel grim pacman-contrib xwayland-satellite
+sudo pacman -S stow sddm niri hyprland waybar mako swaylock blueman ttf-nerd-fonts-symbols flameshot nautilus vicious gammastep xclip xsel ttf-jetbrains-mono arandr wl-clipboard shellcheck swaybg network-manager-applet systemctl-tui caligula swayidle fuzzel grim pacman-contrib xwayland-satellite fastfetch
 ```
 
 ```bash
@@ -28,6 +28,7 @@ yay -S ttf-jetbrains-mono fsearch yaru-gtk-theme outlook-for-linux swaylock-effe
 - [lazygit](https://github.com/jesseduffield/lazygit)
 - [dictate](https://github.com/iondodon/dictate)
 - [onefetch](https://github.com/o2sh/onefetch)
+- [fastfetch](https://github.com/fastfetch-cli/fastfetch)
 - [waybar](https://github.com/Alexays/Waybar)
 - [niri](https://github.com/YaLTeR/niri)
 - [hyprland](https://github.com/hyprwm/Hyprland) - [hypr.land/](https://hypr.land/)
@@ -104,7 +105,6 @@ gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 gsettings set org.gnome.desktop.interface gtk-theme 'Yaru-dark'
 ```
 
+#### Flameshot
 
-#### Flameshot 
-
-On Wayland needs `grim` to be installed. 
+On Wayland needs `grim` to be installed.

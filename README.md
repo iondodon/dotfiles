@@ -61,6 +61,10 @@ yay -S ttf-jetbrains-mono fsearch yaru-gtk-theme outlook-for-linux swaylock-effe
 - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 - [shellcheck](https://github.com/koalaman/shellcheck)
 
+<br>
+
+- [just](https://github.com/casey/just)
+
 ---
 
 #### fuzzel

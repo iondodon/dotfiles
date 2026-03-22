@@ -3,13 +3,13 @@
 ## Debian based
 
 ```bash
-sudo apt install stow pavucontrol blueman pm-utils brightnessctl network-manager-gnome xprintidle xdotool arandr pasystray simplescreenrecorder pulseaudio-utils flameshot fonts-jetbrains-mono wl-clipboard yaru-theme-gtk sddm shellcheck
+sudo apt install stow pavucontrol blueman pm-utils brightnessctl network-manager-gnome xprintidle xdotool arandr pasystray simplescreenrecorder pulseaudio-utils flameshot fonts-jetbrains-mono wl-clipboard yaru-theme-gtk sddm shellcheck p7zip-full
 ```
 
 ## Arch based
 
 ```bash
-sudo pacman -S stow sddm niri hyprland waybar mako swaylock blueman ttf-nerd-fonts-symbols flameshot nautilus vicious gammastep xclip xsel ttf-jetbrains-mono arandr wl-clipboard shellcheck swaybg network-manager-applet systemctl-tui caligula swayidle fuzzel grim pacman-contrib xwayland-satellite fastfetch
+sudo pacman -S stow sddm niri hyprland waybar mako swaylock blueman ttf-nerd-fonts-symbols flameshot nautilus vicious gammastep xclip xsel ttf-jetbrains-mono arandr wl-clipboard shellcheck swaybg network-manager-applet systemctl-tui caligula swayidle fuzzel grim pacman-contrib xwayland-satellite fastfetch 7zip
 ```
 
 ```bash

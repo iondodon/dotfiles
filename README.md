@@ -45,7 +45,6 @@ yay -S ttf-jetbrains-mono fsearch yaru-gtk-theme outlook-for-linux swaylock-effe
 - [Kooha](https://github.com/SeaDve/Kooha)
 - [caligula](https://github.com/ifd3f/caligula)
 - [obsidian](https://obsidian.md/)
-- [PeaZip](https://github.com/peazip/PeaZip/)
 
 <br>
 

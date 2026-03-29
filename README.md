@@ -1,4 +1,4 @@
-	The dotfiles are managed by GNU `stow`. Before creating the symlinks perform a sanity check: `stow -nvt ~ .` From the `dotfiles` directory perform: `stow -t ~ .` to create the symlinks.
+    The dotfiles are managed by GNU `stow`. Before creating the symlinks perform a sanity check: `stow -nvt ~ .` From the `dotfiles` directory perform: `stow -t ~ .` to create the symlinks.
 
 ## Debian based
 
@@ -45,6 +45,7 @@ yay -S ttf-jetbrains-mono fsearch yaru-gtk-theme outlook-for-linux swaylock-effe
 - [Kooha](https://github.com/SeaDve/Kooha)
 - [caligula](https://github.com/ifd3f/caligula)
 - [obsidian](https://obsidian.md/)
+- [7zip](https://github.com/ip7z/7zip)
 
 <br>
 

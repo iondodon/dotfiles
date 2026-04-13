@@ -66,7 +66,7 @@ yay -S ttf-jetbrains-mono fsearch yaru-gtk-theme outlook-for-linux swaylock-effe
 <br>
 
 - [just](https://github.com/casey/just)
-- [task](https://github.com/go-task/task)
+- [task](https://github.com/go-task/task) - [taskfile.dev](https://taskfile.dev/)
 
 ---
 

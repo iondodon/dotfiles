@@ -52,6 +52,7 @@ yay -S ttf-jetbrains-mono fsearch yaru-gtk-theme outlook-for-linux swaylock-effe
 - [tpm](https://github.com/tmux-plugins/tpm) - install to use it to install tmux plugins
 - [tmux](https://github.com/tmux/tmux) - install latest version from source. Use [tpm](https://github.com/tmux-plugins/tpm) plugin to install other plugins - `prefix+b I` to install the plugins defined in `tmux.conf`.
 - [tmux-better-mouse-mode](https://github.com/NHDaly/tmux-better-mouse-mode)
+- [alacritty](https://github.com/alacritty/alacritty) - [https://alacritty.org/](https://alacritty.org/)
 - [ghostty](https://ghostty.org/)
 - [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh) - [https://ohmyz.sh](https://ohmyz.sh)
 - List all available shells: `cat /etc/shells`

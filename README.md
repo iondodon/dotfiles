@@ -30,7 +30,7 @@ yay -S ttf-jetbrains-mono fsearch yaru-gtk-theme outlook-for-linux swaylock-effe
 - [onefetch](https://github.com/o2sh/onefetch)
 - [fastfetch](https://github.com/fastfetch-cli/fastfetch)
 - [waybar](https://github.com/Alexays/Waybar)
-- [niri](https://github.com/YaLTeR/niri)
+- [niri](https://github.com/niri-wm/niri) - [https://niri-wm.github.io/niri/](https://niri-wm.github.io/niri/)
 - [hyprland](https://github.com/hyprwm/Hyprland) - [hypr.land/](https://hypr.land/)
 - [fsearch](https://github.com/cboxdoerfer/fsearch)
 - [brave-browser](https://brave.com)

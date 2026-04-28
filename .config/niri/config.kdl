@@ -409,6 +409,14 @@ window-rule {
     }
 }
 
+layer-rule {
+	match namespace="^witcher$"
+
+	background-effect {
+	  xray false
+	}
+}
+
 window-rule {
     match app-id="outlook-for-linux"
     open-maximized-to-edges true

@@ -67,7 +67,8 @@ yay -S ttf-jetbrains-mono fsearch yaru-gtk-theme outlook-for-linux swaylock-effe
 <br>
 
 - [just](https://github.com/casey/just)
-- [task](https://github.com/go-task/task) - [taskfile.dev](https://taskfile.dev/)
+- [vscode-restclient](https://github.com/Huachao/vscode-restclient)
+- [httpyac](https://github.com/anweber/httpyac) - [httpyac.github.io](https://httpyac.github.io/)
 
 ---
 

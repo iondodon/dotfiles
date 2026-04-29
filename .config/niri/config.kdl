@@ -417,6 +417,21 @@ layer-rule {
 	}
 }
 
+// for fuzzel
+layer-rule {
+    match namespace="^launcher$"
+
+    background-effect {
+        blur true
+        xray false
+    }
+
+	// this is important so that the blur can follor the rounded corner radius
+	// and I think the clip-to-geometry true should be set
+	// which currently is set in the general window-rule
+    geometry-corner-radius 8
+}
+
 window-rule {
     match app-id="outlook-for-linux"
     open-maximized-to-edges true

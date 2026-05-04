@@ -345,6 +345,8 @@ spawn-at-startup "/opt/outlook-for-linux/outlook-for-linux"
 spawn-at-startup "brave"
 spawn-sh-at-startup "swayidle -w -C ~/.config/swayidle/config"
 
+spawn-at-startup "xwayland-satellite"
+
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"

@@ -388,10 +388,15 @@ animations {
 // https://yalter.githu	
 
 window-rule {
+    draw-border-with-background false
     geometry-corner-radius 8
     clip-to-geometry true
     open-floating true
     // open-maximized-to-edges true
+
+    background-effect {
+        xray false
+    }
 }
 
 // Set the default window size for certain apps
@@ -401,6 +406,14 @@ window-rule {
 	match app-id="org.gnome.SystemMonitor"
 	default-column-width { fixed 1200; }
     	default-window-height { fixed 700; }
+}
+
+window-rule {
+    match app-id="com.mitchellh.ghostty"
+
+    background-effect {
+        blur true
+    }
 }
 
 // no border

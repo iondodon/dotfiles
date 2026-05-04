@@ -9,7 +9,7 @@ sudo apt install stow pavucontrol blueman pm-utils brightnessctl network-manager
 ## Arch based
 
 ```bash
-sudo pacman -S stow sddm niri hyprland waybar mako swaylock blueman ttf-nerd-fonts-symbols flameshot nautilus vicious gammastep xclip xsel ttf-jetbrains-mono arandr wl-clipboard shellcheck swaybg network-manager-applet systemctl-tui caligula swayidle fuzzel grim pacman-contrib xwayland-satellite fastfetch 7zip
+sudo pacman -S stow sddm niri waybar mako swaylock blueman ttf-nerd-fonts-symbols flameshot nautilus vicious gammastep xclip xsel ttf-jetbrains-mono arandr wl-clipboard shellcheck swaybg network-manager-applet systemctl-tui caligula swayidle fuzzel grim pacman-contrib xwayland-satellite fastfetch 7zip
 ```
 
 ```bash
@@ -31,7 +31,6 @@ yay -S ttf-jetbrains-mono fsearch yaru-gtk-theme outlook-for-linux swaylock-effe
 - [fastfetch](https://github.com/fastfetch-cli/fastfetch)
 - [waybar](https://github.com/Alexays/Waybar)
 - [niri](https://github.com/niri-wm/niri) - [https://niri-wm.github.io/niri/](https://niri-wm.github.io/niri/)
-- [hyprland](https://github.com/hyprwm/Hyprland) - [hypr.land/](https://hypr.land/)
 - [fsearch](https://github.com/cboxdoerfer/fsearch)
 - [brave-browser](https://brave.com)
 - [min](https://github.com/minbrowser/min) - [minbrowser.org](https://minbrowser.org/)

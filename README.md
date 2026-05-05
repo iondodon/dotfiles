@@ -1,10 +1,4 @@
-    The dotfiles are managed by GNU `stow`. Before creating the symlinks perform a sanity check: `stow -nvt ~ .` From the `dotfiles` directory perform: `stow -t ~ .` to create the symlinks.
-
-## Debian based
-
-```bash
-sudo apt install stow pavucontrol blueman pm-utils brightnessctl network-manager-gnome xprintidle xdotool arandr pasystray simplescreenrecorder pulseaudio-utils flameshot fonts-jetbrains-mono wl-clipboard yaru-theme-gtk sddm shellcheck p7zip-full
-```
+The dotfiles are managed by GNU `stow`. Before creating the symlinks perform a sanity check: `stow -nvt ~ .` From the `dotfiles` directory perform: `stow -t ~ .` to create the symlinks.
 
 ## Arch based
 

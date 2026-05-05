@@ -79,10 +79,6 @@ Snippets mode (~/.config/fuzzel/snippets.py)
 - Clipboard: wl-clipboard (wl-copy) preferred; fallback xclip or xsel
 - Notifications: notify-send (from libnotify)
 
-#### InteliJ IDEA
-
-In wayland add this VM option `-Dawt.toolkit.name=WLToolkit` in `Help -> About -> Edit Custom VM Options`: https://blog.jetbrains.com/platform/2024/07/wayland-support-preview-in-2024-2/
-
 #### Zed
 
 [java](https://github.com/zed-extensions/java)

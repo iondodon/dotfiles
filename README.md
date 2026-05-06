@@ -20,7 +20,6 @@ yay -S ttf-jetbrains-mono fsearch yaru-gtk-theme outlook-for-linux swaylock-effe
 - [sdkman](https://sdkman.io/)
 - [lazydocker](https://github.com/jesseduffield/lazydocker)
 - [lazygit](https://github.com/jesseduffield/lazygit)
-- [dictate](https://github.com/iondodon/dictate)
 - [onefetch](https://github.com/o2sh/onefetch)
 - [fastfetch](https://github.com/fastfetch-cli/fastfetch)
 - [waybar](https://github.com/Alexays/Waybar)

@@ -1,0 +1,4 @@
+- name: API key
+  desc: Insert API key
+  value: sk-*****
+

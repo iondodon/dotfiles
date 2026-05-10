@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=2FA
+Comment=Copy a 2FA code to the clipboard. For Fuzzel.
+Icon=dialog-password
+Exec=sh -lc 'PATH="$HOME/.config/fuzzel:$PATH" 2fa.py'
+Terminal=false
+Categories=Utility;

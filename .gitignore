@@ -1,0 +1,14 @@
+.codex
+
+.config/tmux/plugins/
+
+.config/fuzzel/2fa.yml
+.config/fuzzel/snippets_closed.yml
+
+.config/zed/workspace/**
+.config/nvim/lazyvim.json
+
+.config/obs-studio/**
+!.config/obs-studio/basic/
+!.config/obs-studio/basic/profiles/
+!.config/obs-studio/basic/profiles/**

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Snippets
+Comment=Copy a saved snippet to the clipboard. For Fuzzel.
+Icon=edit-copy
+Exec=sh -lc 'PATH="$HOME/.config/fuzzel:$PATH" snippets.py'
+Terminal=false
+Categories=Utility;

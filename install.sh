@@ -4,10 +4,63 @@ set -euo pipefail
 ROOT="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 TARGET_USER="${USER:-}"
 
+PACMAN_PACKAGES=(
+  sddm
+  niri
+  waybar
+  mako
+  swaylock
+  blueman
+  ttf-nerd-fonts-symbols
+  flameshot
+  nautilus
+  vicious
+  gammastep
+  xclip
+  xsel
+  ttf-jetbrains-mono
+  arandr
+  wl-clipboard
+  shellcheck
+  swaybg
+  network-manager-applet
+  systemctl-tui
+  caligula
+  swayidle
+  fuzzel
+  grim
+  pacman-contrib
+  xwayland-satellite
+  fastfetch
+  7zip
+)
+
+YAY_PACKAGES=(
+  ttf-jetbrains-mono
+  fsearch
+  yaru-gtk-theme
+  outlook-for-linux
+  swaylock-effects
+)
+
 if [ -z "$TARGET_USER" ]; then
   echo "install.sh: USER is not set" >&2
   exit 2
 fi
+
+install_packages() {
+  if command -v pacman >/dev/null 2>&1; then
+    sudo pacman -S --needed "${PACMAN_PACKAGES[@]}"
+  else
+    echo "skip    pacman not found"
+  fi
+
+  if command -v yay >/dev/null 2>&1; then
+    yay -S --needed "${YAY_PACKAGES[@]}"
+  else
+    echo "skip    yay not found"
+  fi
+}
 
 link() {
   local rel="$1"
@@ -46,6 +99,8 @@ link() {
   mkdir -p -- "$(dirname -- "$target")"
   ln -s -- "$source" "$target"
 }
+
+install_packages
 
 link "home/USER/.zshrc"
 link "home/USER/.gitconfig"

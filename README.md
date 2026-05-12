@@ -3,7 +3,7 @@ The repository mirrors the real filesystem layout:
 - `home/USER/...` maps to `/home/$USER/...`
 - `etc/...` maps to `/etc/...`
 
-Install by creating the symlinks listed in `install.sh`:
+Install packages and create the symlinks listed in `install.sh`:
 
 ```bash
 ./install.sh
@@ -17,7 +17,7 @@ For system-wide files, run it with privileges:
 sudo ./install.sh
 ```
 
-## Arch based
+## Arch based packages
 
 ```bash
 sudo pacman -S sddm niri waybar mako swaylock blueman ttf-nerd-fonts-symbols flameshot nautilus vicious gammastep xclip xsel ttf-jetbrains-mono arandr wl-clipboard shellcheck swaybg network-manager-applet systemctl-tui caligula swayidle fuzzel grim pacman-contrib xwayland-satellite fastfetch 7zip

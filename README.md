@@ -1,9 +1,26 @@
-The dotfiles are managed by GNU `stow`. Before creating the symlinks perform a sanity check: `stow -nvt ~ .` From the `dotfiles` directory perform: `stow -t ~ .` to create the symlinks.
+The repository mirrors the real filesystem layout:
+
+- `home/USER/...` maps to `/home/$USER/...`
+- `etc/...` maps to `/etc/...`
+
+Install by creating symlinks into the real filesystem:
+
+```bash
+./install.sh
+```
+
+The installer uses the current `$USER` for the `home/USER` placeholder. Existing files are skipped.
+
+For system-wide files, run it with privileges:
+
+```bash
+sudo ./install.sh
+```
 
 ## Arch based
 
 ```bash
-sudo pacman -S stow sddm niri waybar mako swaylock blueman ttf-nerd-fonts-symbols flameshot nautilus vicious gammastep xclip xsel ttf-jetbrains-mono arandr wl-clipboard shellcheck swaybg network-manager-applet systemctl-tui caligula swayidle fuzzel grim pacman-contrib xwayland-satellite fastfetch 7zip
+sudo pacman -S sddm niri waybar mako swaylock blueman ttf-nerd-fonts-symbols flameshot nautilus vicious gammastep xclip xsel ttf-jetbrains-mono arandr wl-clipboard shellcheck swaybg network-manager-applet systemctl-tui caligula swayidle fuzzel grim pacman-contrib xwayland-satellite fastfetch 7zip
 ```
 
 ```bash
@@ -12,7 +29,6 @@ yay -S ttf-jetbrains-mono fsearch yaru-gtk-theme outlook-for-linux swaylock-effe
 
 ## Sources
 
-- [stow](https://www.gnu.org/software/stow/)
 - [flameshot](https://github.com/flameshot-org/flameshot) - [flameshot.org](https://flameshot.org/)
 - [fireshot](https://github.com/iondodon/fireshot) - `cargo install --path crates/app` from root directory
 - [witcher](https://github.com/iondodon/witcher) - `cargo install --path .`

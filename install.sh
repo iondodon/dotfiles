@@ -9,9 +9,9 @@ if [ -z "$TARGET_USER" ]; then
   exit 2
 fi
 
-link_file() {
-  local source="$1"
-  local rel="$2"
+link() {
+  local rel="$1"
+  local source="$ROOT/$rel"
   local target
 
   case "$rel" in
@@ -22,6 +22,11 @@ link_file() {
       target="/$rel"
       ;;
   esac
+
+  if [ ! -e "$source" ] && [ ! -L "$source" ]; then
+    echo "missing $source" >&2
+    exit 1
+  fi
 
   if [ -e "$target" ] || [ -L "$target" ]; then
     if [ "$(readlink -- "$target" || true)" = "$source" ]; then
@@ -42,18 +47,35 @@ link_file() {
   ln -s -- "$source" "$target"
 }
 
-while IFS= read -r -d '' source; do
-  rel="${source#$ROOT/}"
+link "home/USER/.zshrc"
+link "home/USER/.gitconfig"
 
-  case "$rel" in
-    .git/*|.git|.codex/*|.codex|.agents/*|.agents|README.md|.gitignore|install.sh)
-      continue
-      ;;
-  esac
+link "home/USER/.config/Code/User/settings.json"
+link "home/USER/.config/MangoHud/MangoHud.conf"
+link "home/USER/.config/environment.d/electron.conf"
+link "home/USER/.config/flameshot"
+link "home/USER/.config/fuzzel"
+link "home/USER/.config/ghostty"
+link "home/USER/.config/gtk-2.0"
+link "home/USER/.config/gtk-3.0"
+link "home/USER/.config/gtk-4.0"
+link "home/USER/.config/lazygit"
+link "home/USER/.config/mako"
+link "home/USER/.config/niri"
+link "home/USER/.config/nvim"
+link "home/USER/.config/obs-studio/basic/profiles"
+link "home/USER/.config/swayidle"
+link "home/USER/.config/swaylock"
+link "home/USER/.config/tmux"
+link "home/USER/.config/waybar"
+link "home/USER/.config/witcher"
+link "home/USER/.config/zed/keymap.json"
+link "home/USER/.config/zed/settings.json"
+link "home/USER/.config/zed/settings_backup.json"
 
-  link_file "$source" "$rel"
-done < <(
-  find "$ROOT" \
-    \( -path "$ROOT/.git" -o -path "$ROOT/.codex" -o -path "$ROOT/.agents" \) -prune \
-    -o \( -type f -o -type l \) -print0
-)
+link "home/USER/.icons/Polarnight-cursors"
+
+link "home/USER/.local/bin/secure7z.sh"
+link "home/USER/.local/share/applications/fuzzel-2fa.desktop"
+link "home/USER/.local/share/applications/fuzzel-snippets.desktop"
+link "home/USER/.local/share/backgrounds/bolduresti.png"

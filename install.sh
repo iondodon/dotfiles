@@ -62,6 +62,33 @@ install_packages() {
   fi
 }
 
+delete_broken_symlinks_in_path() {
+  local dir="$1"
+  local path="/"
+  local part
+  local rest="${dir#/}"
+
+  while [ -n "$rest" ]; do
+    part="${rest%%/*}"
+    if [ "$rest" = "$part" ]; then
+      rest=""
+    else
+      rest="${rest#*/}"
+    fi
+
+    if [ "$path" = "/" ]; then
+      path="/$part"
+    else
+      path="$path/$part"
+    fi
+
+    if [ -L "$path" ] && [ ! -e "$path" ]; then
+      printf 'delete  broken symlink %s -> %s\n' "$path" "$(readlink -- "$path")"
+      rm -- "$path"
+    fi
+  done
+}
+
 link() {
   local rel="$1"
   local source="$ROOT/$rel"
@@ -81,6 +108,11 @@ link() {
     exit 1
   fi
 
+  if [ -L "$target" ] && [ ! -e "$target" ]; then
+    printf 'delete  broken symlink %s -> %s\n' "$target" "$(readlink -- "$target")"
+    rm -- "$target"
+  fi
+
   if [ -e "$target" ] || [ -L "$target" ]; then
     if [ "$(readlink -- "$target" || true)" = "$source" ]; then
       printf 'exists  %s -> %s\n' "$target" "$source"
@@ -95,8 +127,9 @@ link() {
     fi
   fi
 
-  printf 'link    %s -> %s\n' "$target" "$source"
+  delete_broken_symlinks_in_path "$(dirname -- "$target")"
   mkdir -p -- "$(dirname -- "$target")"
+  printf 'link    %s -> %s\n' "$target" "$source"
   ln -s -- "$source" "$target"
 }
 

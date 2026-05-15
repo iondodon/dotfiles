@@ -15,6 +15,19 @@ The installer uses the current `$USER` for the `home/USER` placeholder. Some ent
 
 Run the installer as your normal home user. The script refuses to run as root or with `sudo`; it uses `sudo` internally only where package installation needs it.
 
+If Pacman fails to download packages from a broken mirror, refresh the mirror list and rerun the installer:
+
+```bash
+sudo pacman -Syyu
+```
+
+If `reflector` is installed:
+
+```bash
+sudo reflector --protocol https --latest 20 --sort rate --save /etc/pacman.d/mirrorlist
+sudo pacman -Syyu
+```
+
 ## Arch based packages
 
 ```bash

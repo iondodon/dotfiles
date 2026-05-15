@@ -69,13 +69,40 @@ if [ "$(id -u)" -eq 0 ]; then
   exit 2
 fi
 
+pacman_failed() {
+  cat >&2 <<'EOF'
+install.sh: pacman failed.
+
+This is often caused by a stale or broken Arch mirror. Refresh your mirrors, then
+run the installer again:
+
+  sudo pacman -Syyu
+
+If pacman reports a specific bad mirror, remove or move that mirror lower in:
+
+  /etc/pacman.d/mirrorlist
+
+If reflector is installed, you can regenerate the mirror list with:
+
+  sudo reflector --protocol https --latest 20 --sort rate --save /etc/pacman.d/mirrorlist
+  sudo pacman -Syyu
+EOF
+}
+
+pacman_install() {
+  sudo pacman -S --needed "$@" || {
+    pacman_failed
+    exit 1
+  }
+}
+
 ensure_git() {
   if command -v git >/dev/null 2>&1; then
     return
   fi
 
   if command -v pacman >/dev/null 2>&1; then
-    sudo pacman -S --needed git
+    pacman_install git
   else
     echo "install.sh: git is required" >&2
     exit 1
@@ -123,7 +150,7 @@ install_yay() {
 
   (
     trap 'rm -rf -- "$build_dir"' EXIT
-    sudo pacman -S --needed git base-devel
+    pacman_install git base-devel
     git clone --depth 1 "$YAY_REPO_URL" "$build_dir/yay"
     cd "$build_dir/yay"
     makepkg -si --needed
@@ -132,7 +159,7 @@ install_yay() {
 
 install_packages() {
   if command -v pacman >/dev/null 2>&1; then
-    sudo pacman -S --needed "${PACMAN_PACKAGES[@]}"
+    pacman_install "${PACMAN_PACKAGES[@]}"
   else
     echo "skip    pacman not found"
   fi

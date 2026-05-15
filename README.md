@@ -24,7 +24,7 @@ sudo pacman -S sddm niri waybar mako swaylock blueman ttf-nerd-fonts-symbols fla
 ```
 
 ```bash
-yay -S ttf-jetbrains-mono fsearch yaru-gtk-theme outlook-for-linux swaylock-effects
+yay -S ttf-jetbrains-mono fsearch yaru-gtk-theme outlook-for-linux
 ```
 
 ## Sources

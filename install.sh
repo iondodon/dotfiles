@@ -40,7 +40,6 @@ YAY_PACKAGES=(
   fsearch
   yaru-gtk-theme
   outlook-for-linux
-  swaylock-effects
 )
 
 if [ -z "$TARGET_USER" ]; then

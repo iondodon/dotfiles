@@ -5,6 +5,8 @@ ROOT="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 TARGET_USER="${USER:-}"
 
 PACMAN_PACKAGES=(
+  git
+  base-devel
   sddm
   niri
   waybar
@@ -42,10 +44,39 @@ YAY_PACKAGES=(
   outlook-for-linux
 )
 
+YAY_REPO_URL="https://aur.archlinux.org/yay.git"
+
 if [ -z "$TARGET_USER" ]; then
   echo "install.sh: USER is not set" >&2
   exit 2
 fi
+
+install_yay() {
+  if command -v yay >/dev/null 2>&1; then
+    return
+  fi
+
+  if ! command -v pacman >/dev/null 2>&1; then
+    echo "skip    yay install requires pacman"
+    return
+  fi
+
+  if [ "$(id -u)" -eq 0 ]; then
+    echo "skip    yay install cannot run as root; run install.sh as your user"
+    return
+  fi
+
+  local build_dir
+  build_dir="$(mktemp -d)"
+
+  (
+    trap 'rm -rf -- "$build_dir"' EXIT
+    sudo pacman -S --needed git base-devel
+    git clone --depth 1 "$YAY_REPO_URL" "$build_dir/yay"
+    cd "$build_dir/yay"
+    makepkg -si --needed
+  )
+}
 
 install_packages() {
   if command -v pacman >/dev/null 2>&1; then
@@ -53,6 +84,8 @@ install_packages() {
   else
     echo "skip    pacman not found"
   fi
+
+  install_yay
 
   if command -v yay >/dev/null 2>&1; then
     yay -S --needed "${YAY_PACKAGES[@]}"

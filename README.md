@@ -11,6 +11,8 @@ Install packages and create the symlinks listed in `install.sh`:
 
 The installer uses the current `$USER` for the `home/USER` placeholder. Some entries map individual files, while self-contained config folders can be mapped as directories. Existing targets are confirmed before replacement.
 
+On Arch, run the installer as your normal user so it can build `yay`; the script uses `sudo` only where package installation needs it.
+
 For system-wide files, run it with privileges:
 
 ```bash
@@ -20,7 +22,15 @@ sudo ./install.sh
 ## Arch based packages
 
 ```bash
-sudo pacman -S sddm niri waybar mako swaylock blueman ttf-nerd-fonts-symbols flameshot nautilus vicious gammastep xclip xsel ttf-jetbrains-mono arandr wl-clipboard shellcheck swaybg network-manager-applet systemctl-tui caligula swayidle fuzzel grim pacman-contrib xwayland-satellite fastfetch 7zip
+sudo pacman -S git base-devel sddm niri waybar mako swaylock blueman ttf-nerd-fonts-symbols flameshot nautilus vicious gammastep xclip xsel ttf-jetbrains-mono arandr wl-clipboard shellcheck swaybg network-manager-applet systemctl-tui caligula swayidle fuzzel grim pacman-contrib xwayland-satellite fastfetch 7zip
+```
+
+If `yay` is not installed yet:
+
+```bash
+git clone https://aur.archlinux.org/yay.git /tmp/yay
+cd /tmp/yay
+makepkg -si
 ```
 
 ```bash

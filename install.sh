@@ -122,9 +122,26 @@ bootstrap_repo() {
       exit 1
     fi
 
-    git -C "$INSTALL_DIR" fetch --depth 1 origin "$BRANCH"
-    git -C "$INSTALL_DIR" checkout "$BRANCH"
-    git -C "$INSTALL_DIR" pull --ff-only origin "$BRANCH"
+    if [ -n "$(git -C "$INSTALL_DIR" status --porcelain)" ]; then
+      echo "install.sh: $INSTALL_DIR has uncommitted changes; commit, stash, or remove them before updating" >&2
+      exit 1
+    fi
+
+    git -C "$INSTALL_DIR" fetch --depth 1 origin "+refs/heads/$BRANCH:refs/remotes/origin/$BRANCH"
+
+    local current_head
+    local remote_head
+    current_head="$(git -C "$INSTALL_DIR" rev-parse --verify HEAD 2>/dev/null || true)"
+    remote_head="$(git -C "$INSTALL_DIR" rev-parse --verify "origin/$BRANCH")"
+
+    if [ -n "$current_head" ] && [ "$current_head" != "$remote_head" ] && ! git -C "$INSTALL_DIR" merge-base --is-ancestor "$current_head" "origin/$BRANCH"; then
+      local backup_branch
+      backup_branch="backup/$BRANCH-$(date +%Y%m%d%H%M%S)"
+      git -C "$INSTALL_DIR" branch "$backup_branch" "$current_head"
+      echo "backup  saved previous $BRANCH as $backup_branch"
+    fi
+
+    git -C "$INSTALL_DIR" checkout -B "$BRANCH" "origin/$BRANCH"
   else
     mkdir -p -- "$(dirname -- "$INSTALL_DIR")"
     git clone --depth 1 --branch "$BRANCH" "$REPO_URL" "$INSTALL_DIR"

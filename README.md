@@ -3,7 +3,7 @@ The repository mirrors the real filesystem layout:
 - `home/USER/...` maps to `/home/$USER/...`
 - `etc/...` maps to `/etc/...`
 
-Install packages and create the symlinks listed in `install.sh` with one command:
+Install packages, install `witcher`, and create the symlinks listed in `install.sh` with one command:
 
 ```bash
 bash -c "$(curl -LfsS https://github.com/iondodon/dotfiles/raw/main/install.sh)"

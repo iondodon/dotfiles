@@ -50,9 +50,11 @@ YAY_PACKAGES=(
   fsearch
   yaru-gtk-theme
   outlook-for-linux
+  brave-bin
 )
 
 YAY_REPO_URL="https://aur.archlinux.org/yay.git"
+WITCHER_REPO_URL="https://github.com/iondodon/witcher.git"
 
 if [ -z "${HOME:-}" ]; then
   echo "install.sh: HOME is not set" >&2
@@ -110,6 +112,19 @@ ensure_git() {
     pacman_install git
   else
     echo "install.sh: git is required" >&2
+    exit 1
+  fi
+}
+
+ensure_cargo() {
+  if command -v cargo >/dev/null 2>&1; then
+    return
+  fi
+
+  if command -v pacman >/dev/null 2>&1; then
+    pacman_install rust
+  else
+    echo "install.sh: cargo is required to install witcher" >&2
     exit 1
   fi
 }
@@ -195,6 +210,28 @@ install_packages() {
   fi
 }
 
+install_witcher() {
+  local cargo_home="${CARGO_HOME:-$HOME/.cargo}"
+
+  if command -v witcher >/dev/null 2>&1 || [ -x "$cargo_home/bin/witcher" ]; then
+    echo "exists  witcher"
+    return
+  fi
+
+  ensure_git
+  ensure_cargo
+
+  local build_dir
+  build_dir="$(mktemp -d)"
+
+  (
+    trap 'rm -rf -- "$build_dir"' EXIT
+    git clone --depth 1 "$WITCHER_REPO_URL" "$build_dir/witcher"
+    cd "$build_dir/witcher"
+    cargo install --path .
+  )
+}
+
 delete_broken_symlinks_in_path() {
   local dir="$1"
   local path="/"
@@ -267,6 +304,7 @@ link() {
 }
 
 install_packages
+install_witcher
 
 link "home/USER/.zshrc"
 link "home/USER/.gitconfig"

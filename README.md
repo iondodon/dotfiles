@@ -6,7 +6,7 @@ The repository mirrors the real filesystem layout:
 Install packages and create the symlinks listed in `install.sh` with one command:
 
 ```bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/iondodon/dotfiles/main/install.sh)"
+bash -c "$(curl -LfsS https://github.com/iondodon/dotfiles/raw/main/install.sh)"
 ```
 
 When run from curl, `install.sh` clones or updates the repository at `~/dotfiles`, then runs the local copy from there.
@@ -15,7 +15,7 @@ The installer uses the current `$USER` for the `home/USER` placeholder. Some ent
 
 Run the installer as your normal home user. The script refuses to run as root or with `sudo`; it uses `sudo` internally only where package installation needs it.
 
-If Pacman fails to download packages from a broken mirror, refresh the mirror list and rerun the installer:
+If Pacman fails to download packages from a broken mirror, comment out, remove, or move that mirror lower in `/etc/pacman.d/mirrorlist`. Then refresh package databases and rerun the installer:
 
 ```bash
 sudo pacman -Syyu

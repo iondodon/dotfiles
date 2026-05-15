@@ -78,9 +78,14 @@ run the installer again:
 
   sudo pacman -Syyu
 
-If pacman reports a specific bad mirror, remove or move that mirror lower in:
+If pacman reports a specific bad mirror, comment it out, remove it, or move it
+lower in:
 
   /etc/pacman.d/mirrorlist
+
+Then refresh package databases again:
+
+  sudo pacman -Syyu
 
 If reflector is installed, you can regenerate the mirror list with:
 

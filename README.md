@@ -3,11 +3,13 @@ The repository mirrors the real filesystem layout:
 - `home/USER/...` maps to `/home/$USER/...`
 - `etc/...` maps to `/etc/...`
 
-Install packages and create the symlinks listed in `install.sh`:
+Install packages and create the symlinks listed in `install.sh` with one command:
 
 ```bash
-./install.sh
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/iondodon/dotfiles/main/install.sh)"
 ```
+
+When run from curl, `install.sh` clones or updates the repository at `~/dotfiles`, then runs the local copy from there.
 
 The installer uses the current `$USER` for the `home/USER` placeholder. Some entries map individual files, while self-contained config folders can be mapped as directories. Existing targets are confirmed before replacement.
 

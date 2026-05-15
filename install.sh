@@ -1,8 +1,16 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-ROOT="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+SCRIPT_PATH="${BASH_SOURCE[0]:-$0}"
+if [ -f "$SCRIPT_PATH" ]; then
+  ROOT="$(cd -- "$(dirname -- "$SCRIPT_PATH")" && pwd)"
+else
+  ROOT=""
+fi
 TARGET_USER="${USER:-}"
+REPO_URL="${DOTFILES_REPO_URL:-https://github.com/iondodon/dotfiles.git}"
+BRANCH="${DOTFILES_BRANCH:-main}"
+INSTALL_DIR="${DOTFILES_INSTALL_DIR:-${HOME:-}/dotfiles}"
 
 PACMAN_PACKAGES=(
   git
@@ -46,6 +54,11 @@ YAY_PACKAGES=(
 
 YAY_REPO_URL="https://aur.archlinux.org/yay.git"
 
+if [ -z "${HOME:-}" ]; then
+  echo "install.sh: HOME is not set" >&2
+  exit 2
+fi
+
 if [ -z "$TARGET_USER" ]; then
   echo "install.sh: USER is not set" >&2
   exit 2
@@ -55,6 +68,45 @@ if [ "$(id -u)" -eq 0 ]; then
   echo "install.sh: run this script as your home user, not as root or with sudo" >&2
   exit 2
 fi
+
+ensure_git() {
+  if command -v git >/dev/null 2>&1; then
+    return
+  fi
+
+  if command -v pacman >/dev/null 2>&1; then
+    sudo pacman -S --needed git
+  else
+    echo "install.sh: git is required" >&2
+    exit 1
+  fi
+}
+
+bootstrap_repo() {
+  if [ -n "$ROOT" ] && [ -f "$ROOT/install.sh" ] && [ -e "$ROOT/home/USER/.zshrc" ]; then
+    return
+  fi
+
+  ensure_git
+
+  if [ -e "$INSTALL_DIR" ]; then
+    if [ ! -d "$INSTALL_DIR/.git" ]; then
+      echo "install.sh: $INSTALL_DIR exists and is not a git repository" >&2
+      exit 1
+    fi
+
+    git -C "$INSTALL_DIR" fetch --depth 1 origin "$BRANCH"
+    git -C "$INSTALL_DIR" checkout "$BRANCH"
+    git -C "$INSTALL_DIR" pull --ff-only origin "$BRANCH"
+  else
+    mkdir -p -- "$(dirname -- "$INSTALL_DIR")"
+    git clone --depth 1 --branch "$BRANCH" "$REPO_URL" "$INSTALL_DIR"
+  fi
+
+  exec bash "$INSTALL_DIR/install.sh"
+}
+
+bootstrap_repo
 
 install_yay() {
   if command -v yay >/dev/null 2>&1; then

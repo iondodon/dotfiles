@@ -51,6 +51,11 @@ if [ -z "$TARGET_USER" ]; then
   exit 2
 fi
 
+if [ "$(id -u)" -eq 0 ]; then
+  echo "install.sh: run this script as your home user, not as root or with sudo" >&2
+  exit 2
+fi
+
 install_yay() {
   if command -v yay >/dev/null 2>&1; then
     return
@@ -58,11 +63,6 @@ install_yay() {
 
   if ! command -v pacman >/dev/null 2>&1; then
     echo "skip    yay install requires pacman"
-    return
-  fi
-
-  if [ "$(id -u)" -eq 0 ]; then
-    echo "skip    yay install cannot run as root; run install.sh as your user"
     return
   fi
 

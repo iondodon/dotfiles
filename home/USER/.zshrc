@@ -66,7 +66,13 @@ if [[ -d "$HOME/.local/bin" ]]; then
    export PATH="$HOME/.local/bin:$PATH"
 fi
 
-if [ -f "$HOME/.fzf.zsh" ]; then
+if [ -f /usr/share/fzf/key-bindings.zsh ]; then
+   source /usr/share/fzf/key-bindings.zsh
+fi
+
+if [ -f /usr/share/fzf/completion.zsh ]; then
+   source /usr/share/fzf/completion.zsh
+elif [ -f "$HOME/.fzf.zsh" ]; then
    source "$HOME/.fzf.zsh"
 fi
 

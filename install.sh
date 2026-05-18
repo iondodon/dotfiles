@@ -43,6 +43,7 @@ PACMAN_PACKAGES=(
   caligula
   swayidle
   fuzzel
+  fzf
   oath-toolkit
   libnotify
   grim

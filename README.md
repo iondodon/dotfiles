@@ -31,7 +31,7 @@ sudo pacman -Syyu
 ## Arch based packages
 
 ```bash
-sudo pacman -S git base-devel zsh python python-yaml tmux sddm niri waybar mako swaylock bluez blueman ttf-nerd-fonts-symbols flameshot nautilus vicious gammastep xclip xsel ttf-jetbrains-mono arandr wl-clipboard shellcheck swaybg network-manager-applet systemctl-tui caligula swayidle fuzzel oath-toolkit libnotify grim pacman-contrib xwayland-satellite fastfetch 7zip
+sudo pacman -S git base-devel zsh python python-yaml tmux sddm niri waybar mako swaylock bluez blueman ttf-nerd-fonts-symbols flameshot nautilus vicious gammastep xclip xsel ttf-jetbrains-mono arandr wl-clipboard shellcheck swaybg network-manager-applet systemctl-tui caligula swayidle fuzzel fzf oath-toolkit libnotify grim pacman-contrib xwayland-satellite fastfetch 7zip
 ```
 
 If `paru` is not installed yet:
@@ -84,8 +84,6 @@ paru -S ttf-jetbrains-mono fsearch yaru-gtk-theme outlook-for-linux brave-bin
 - [alacritty](https://github.com/alacritty/alacritty) - [https://alacritty.org/](https://alacritty.org/)
 - [ghostty](https://ghostty.org/)
 - [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh) - [https://ohmyz.sh](https://ohmyz.sh)
-- List all available shells: `cat /etc/shells`
-- Set the default shell: `chsh -s /bin/zsh`
 - [fzf](https://github.com/junegunn/fzf)
 - [inshellisense](https://github.com/microsoft/inshellisense)
 - [jwt-cli](https://github.com/mike-engel/jwt-cli)

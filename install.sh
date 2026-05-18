@@ -305,6 +305,17 @@ setup_system_services() {
   start_systemd_service bluetooth.service
 }
 
+set_gnome_interface_settings() {
+  if ! command -v gsettings >/dev/null 2>&1; then
+    echo "skip    gsettings not found"
+    return
+  fi
+
+  echo "setting GNOME interface dark mode"
+  gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+  gsettings set org.gnome.desktop.interface gtk-theme 'Yaru-dark'
+}
+
 set_default_shell() {
   local zsh_path
   local current_shell
@@ -407,6 +418,7 @@ link() {
 install_packages
 install_witcher
 setup_system_services
+set_gnome_interface_settings
 set_default_shell
 
 link "home/USER/.zshrc"

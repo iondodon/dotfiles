@@ -119,26 +119,6 @@ Snippets mode (~/.config/fuzzel/snippets.py)
 
 [java](https://github.com/zed-extensions/java)
 
-#### blueman
-
-```sh
-sudo systemctl enable bluetooth
-sudo systemctl start bluetooth
-```
-
 #### VSCode
 
 Extensions: mhutchie.git-graph, humao.rest-client, cordx56.rustowl-vscode
-
-#### GNOME interface theme
-
-GNOME apps (e.g., Nautilus/System Monitor) read theme and color-scheme from dconf, not GTK ini files. Set dark mode with:
-
-```sh
-gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
-gsettings set org.gnome.desktop.interface gtk-theme 'Yaru-dark'
-```
-
-#### Flameshot
-
-On Wayland needs `grim` to be installed.

@@ -15,6 +15,7 @@ INSTALL_DIR="${DOTFILES_INSTALL_DIR:-${HOME:-}/dotfiles}"
 PACMAN_PACKAGES=(
   git
   base-devel
+  zsh
   sddm
   niri
   waybar
@@ -234,6 +235,25 @@ install_witcher() {
   )
 }
 
+set_default_shell() {
+  local zsh_path
+  local current_shell
+
+  if ! zsh_path="$(command -v zsh)"; then
+    echo "skip    zsh not found"
+    return
+  fi
+
+  current_shell="$(getent passwd "$TARGET_USER" | cut -d: -f7)"
+  if [ "$current_shell" = "$zsh_path" ]; then
+    printf 'exists  default shell %s\n' "$zsh_path"
+    return
+  fi
+
+  printf 'shell   %s -> %s\n' "$TARGET_USER" "$zsh_path"
+  chsh -s "$zsh_path" "$TARGET_USER"
+}
+
 delete_broken_symlinks_in_path() {
   local dir="$1"
   local path="/"
@@ -307,6 +327,7 @@ link() {
 
 install_packages
 install_witcher
+set_default_shell
 
 link "home/USER/.zshrc"
 link "home/USER/.gitconfig"

@@ -19,6 +19,8 @@ PACMAN_PACKAGES=(
   python
   python-yaml
   tmux
+  qt6-5compat
+  qt6-declarative
   sddm
   niri
   waybar
@@ -27,6 +29,7 @@ PACMAN_PACKAGES=(
   bluez
   blueman
   ttf-nerd-fonts-symbols
+  ttf-roboto
   flameshot
   ghostty
   nautilus
@@ -498,6 +501,40 @@ link() {
   ln -s -- "$source" "$target"
 }
 
+link_system() {
+  local rel="$1"
+  local source="$ROOT/$rel"
+  local target="/$rel"
+
+  if [ ! -e "$source" ] && [ ! -L "$source" ]; then
+    echo "missing $source" >&2
+    exit 1
+  fi
+
+  if [ -L "$target" ] && [ ! -e "$target" ]; then
+    printf 'delete  broken symlink %s -> %s\n' "$target" "$(readlink -- "$target")"
+    sudo rm -- "$target"
+  fi
+
+  if [ -e "$target" ] || [ -L "$target" ]; then
+    if [ "$(readlink -- "$target" || true)" = "$source" ]; then
+      printf 'exists  %s -> %s\n' "$target" "$source"
+      return
+    fi
+
+    if read -r -p "override $target? [y/N] " answer && [[ "$answer" =~ ^[Yy]$ ]]; then
+      sudo rm -rf -- "$target"
+    else
+      printf 'skip    %s exists\n' "$target"
+      return
+    fi
+  fi
+
+  sudo mkdir -p -- "$(dirname -- "$target")"
+  printf 'link    %s -> %s\n' "$target" "$source"
+  sudo ln -s -- "$source" "$target"
+}
+
 install_packages
 install_witcher
 install_oh_my_zsh
@@ -538,3 +575,6 @@ link "home/USER/.local/bin/secure7z.sh"
 link "home/USER/.local/share/applications/fuzzel-2fa.desktop"
 link "home/USER/.local/share/applications/fuzzel-snippets.desktop"
 link "home/USER/.local/share/backgrounds/bolduresti.png"
+
+link_system "etc/sddm.conf.d/theme.conf"
+link_system "usr/share/sddm/themes/sddm-slice"

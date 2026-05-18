@@ -61,6 +61,9 @@ AUR_PACKAGES=(
 
 PARU_REPO_URL="https://aur.archlinux.org/paru.git"
 WITCHER_REPO_URL="https://github.com/iondodon/witcher.git"
+OH_MY_ZSH_REPO_URL="https://github.com/ohmyzsh/ohmyzsh.git"
+ZSH_AUTOSUGGESTIONS_REPO_URL="https://github.com/zsh-users/zsh-autosuggestions.git"
+ZSH_SYNTAX_HIGHLIGHTING_REPO_URL="https://github.com/zsh-users/zsh-syntax-highlighting.git"
 
 if [ -z "${HOME:-}" ]; then
   echo "install.sh: HOME is not set" >&2
@@ -238,6 +241,37 @@ install_witcher() {
     cd "$build_dir/witcher"
     cargo install --path .
   )
+}
+
+clone_or_update_repo() {
+  local repo_url="$1"
+  local target_dir="$2"
+
+  ensure_git
+
+  if [ -d "$target_dir/.git" ]; then
+    printf 'update  %s\n' "$target_dir"
+    git -C "$target_dir" pull --ff-only
+    return
+  fi
+
+  if [ -e "$target_dir" ]; then
+    printf 'skip    %s exists and is not a git repository\n' "$target_dir"
+    return
+  fi
+
+  printf 'clone   %s\n' "$target_dir"
+  git clone --depth 1 "$repo_url" "$target_dir"
+}
+
+install_oh_my_zsh() {
+  local zsh_dir="$HOME/.oh-my-zsh"
+  local custom_dir="${ZSH_CUSTOM:-$zsh_dir/custom}"
+
+  clone_or_update_repo "$OH_MY_ZSH_REPO_URL" "$zsh_dir"
+  mkdir -p -- "$custom_dir/plugins"
+  clone_or_update_repo "$ZSH_AUTOSUGGESTIONS_REPO_URL" "$custom_dir/plugins/zsh-autosuggestions"
+  clone_or_update_repo "$ZSH_SYNTAX_HIGHLIGHTING_REPO_URL" "$custom_dir/plugins/zsh-syntax-highlighting"
 }
 
 enable_systemd_service() {
@@ -421,6 +455,7 @@ link() {
 
 install_packages
 install_witcher
+install_oh_my_zsh
 setup_system_services
 set_gnome_interface_settings
 set_default_shell

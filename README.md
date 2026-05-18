@@ -34,16 +34,16 @@ sudo pacman -Syyu
 sudo pacman -S git base-devel sddm niri waybar mako swaylock blueman ttf-nerd-fonts-symbols flameshot nautilus vicious gammastep xclip xsel ttf-jetbrains-mono arandr wl-clipboard shellcheck swaybg network-manager-applet systemctl-tui caligula swayidle fuzzel grim pacman-contrib xwayland-satellite fastfetch 7zip
 ```
 
-If `yay` is not installed yet:
+If `paru` is not installed yet:
 
 ```bash
-git clone https://aur.archlinux.org/yay.git /tmp/yay
-cd /tmp/yay
+git clone https://aur.archlinux.org/paru.git /tmp/paru
+cd /tmp/paru
 makepkg -si
 ```
 
 ```bash
-yay -S ttf-jetbrains-mono fsearch yaru-gtk-theme outlook-for-linux
+paru -S ttf-jetbrains-mono fsearch yaru-gtk-theme outlook-for-linux brave-bin
 ```
 
 ## Sources

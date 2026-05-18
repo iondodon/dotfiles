@@ -45,7 +45,7 @@ PACMAN_PACKAGES=(
   7zip
 )
 
-YAY_PACKAGES=(
+AUR_PACKAGES=(
   ttf-jetbrains-mono
   fsearch
   yaru-gtk-theme
@@ -53,7 +53,7 @@ YAY_PACKAGES=(
   brave-bin
 )
 
-YAY_REPO_URL="https://aur.archlinux.org/yay.git"
+PARU_REPO_URL="https://aur.archlinux.org/paru.git"
 WITCHER_REPO_URL="https://github.com/iondodon/witcher.git"
 
 if [ -z "${HOME:-}" ]; then
@@ -172,15 +172,17 @@ bootstrap_repo() {
 
 bootstrap_repo
 
-install_yay() {
-  if command -v yay >/dev/null 2>&1; then
+install_paru() {
+  if command -v paru >/dev/null 2>&1; then
     return
   fi
 
   if ! command -v pacman >/dev/null 2>&1; then
-    echo "skip    yay install requires pacman"
+    echo "skip    paru install requires pacman"
     return
   fi
+
+  ensure_cargo
 
   local build_dir
   build_dir="$(mktemp -d)"
@@ -188,8 +190,8 @@ install_yay() {
   (
     trap 'rm -rf -- "$build_dir"' EXIT
     pacman_install git base-devel
-    git clone --depth 1 "$YAY_REPO_URL" "$build_dir/yay"
-    cd "$build_dir/yay"
+    git clone --depth 1 "$PARU_REPO_URL" "$build_dir/paru"
+    cd "$build_dir/paru"
     makepkg -si --needed
   )
 }
@@ -201,12 +203,12 @@ install_packages() {
     echo "skip    pacman not found"
   fi
 
-  install_yay
+  install_paru
 
-  if command -v yay >/dev/null 2>&1; then
-    yay -S --needed "${YAY_PACKAGES[@]}"
+  if command -v paru >/dev/null 2>&1; then
+    paru -S --needed "${AUR_PACKAGES[@]}"
   else
-    echo "skip    yay not found"
+    echo "skip    paru not found"
   fi
 }
 

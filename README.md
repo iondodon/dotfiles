@@ -3,15 +3,11 @@ The repository mirrors the real filesystem layout:
 - `home/USER/...` maps to `/home/$USER/...`
 - `etc/...` maps to `/etc/...`
 
-Install packages, install `witcher`, install Oh My Zsh, and create the symlinks listed in `install.sh` with one command:
+## Install
 
 ```bash
 bash -c "$(curl -LfsS https://github.com/iondodon/dotfiles/raw/main/install.sh)"
 ```
-
-When run from curl, `install.sh` clones or updates the repository at `~/dotfiles`, then runs the local copy from there.
-
-The installer uses the current `$USER` for the `home/USER` placeholder. Some entries map individual files, while self-contained config folders can be mapped as directories. Existing targets are confirmed before replacement.
 
 Run the installer as your normal home user. The script refuses to run as root or with `sudo`; it uses `sudo` internally only where package installation needs it.
 
@@ -26,24 +22,6 @@ If `reflector` is installed:
 ```bash
 sudo reflector --protocol https --latest 20 --sort rate --save /etc/pacman.d/mirrorlist
 sudo pacman -Syyu
-```
-
-## Arch based packages
-
-```bash
-sudo pacman -S git base-devel zsh python python-yaml tmux sddm niri waybar mako swaylock bluez blueman ttf-nerd-fonts-symbols flameshot ghostty nautilus vicious gammastep xclip xsel ttf-jetbrains-mono arandr wl-clipboard shellcheck swaybg network-manager-applet systemctl-tui caligula swayidle fuzzel fzf oath-toolkit libnotify grim pacman-contrib xwayland-satellite fastfetch 7zip
-```
-
-If `paru` is not installed yet:
-
-```bash
-git clone https://aur.archlinux.org/paru.git /tmp/paru
-cd /tmp/paru
-makepkg -si
-```
-
-```bash
-paru -S ttf-jetbrains-mono fsearch yaru-gtk-theme outlook-for-linux brave-bin
 ```
 
 ## Sources

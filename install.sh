@@ -144,6 +144,20 @@ ensure_cargo() {
   fi
 }
 
+clone_install_repo() {
+  mkdir -p -- "$(dirname -- "$INSTALL_DIR")"
+  git clone --depth 1 --branch "$BRANCH" "$REPO_URL" "$INSTALL_DIR"
+}
+
+backup_install_repo() {
+  local reason="$1"
+  local backup_dir
+
+  backup_dir="$INSTALL_DIR.$reason.$(date +%Y%m%d%H%M%S)"
+  printf 'backup  %s -> %s\n' "$INSTALL_DIR" "$backup_dir"
+  mv -- "$INSTALL_DIR" "$backup_dir"
+}
+
 bootstrap_repo() {
   if [ -n "$ROOT" ] && [ -f "$ROOT/install.sh" ] && [ -e "$ROOT/home/USER/.zshrc" ]; then
     return
@@ -152,17 +166,34 @@ bootstrap_repo() {
   ensure_git
 
   if [ -e "$INSTALL_DIR" ]; then
+    local status_output
+
     if [ ! -d "$INSTALL_DIR/.git" ]; then
       echo "install.sh: $INSTALL_DIR exists and is not a git repository" >&2
       exit 1
     fi
 
-    if [ -n "$(git -C "$INSTALL_DIR" status --porcelain)" ]; then
+    if ! status_output="$(git -C "$INSTALL_DIR" status --porcelain 2>/dev/null)"; then
+      backup_install_repo "corrupt"
+      clone_install_repo
+      exec bash "$INSTALL_DIR/install.sh"
+    fi
+
+    if [ -n "$status_output" ]; then
       echo "install.sh: $INSTALL_DIR has uncommitted changes; commit, stash, or remove them before updating" >&2
       exit 1
     fi
 
-    git -C "$INSTALL_DIR" fetch --depth 1 origin "+refs/heads/$BRANCH:refs/remotes/origin/$BRANCH"
+    if ! git -C "$INSTALL_DIR" fetch --depth 1 origin "+refs/heads/$BRANCH:refs/remotes/origin/$BRANCH"; then
+      if ! git -C "$INSTALL_DIR" fsck --no-progress >/dev/null 2>&1; then
+        backup_install_repo "corrupt"
+        clone_install_repo
+        exec bash "$INSTALL_DIR/install.sh"
+      fi
+
+      echo "install.sh: failed to update $INSTALL_DIR" >&2
+      exit 1
+    fi
 
     local current_head
     local remote_head
@@ -178,8 +209,7 @@ bootstrap_repo() {
 
     git -C "$INSTALL_DIR" checkout -B "$BRANCH" "origin/$BRANCH"
   else
-    mkdir -p -- "$(dirname -- "$INSTALL_DIR")"
-    git clone --depth 1 --branch "$BRANCH" "$REPO_URL" "$INSTALL_DIR"
+    clone_install_repo
   fi
 
   exec bash "$INSTALL_DIR/install.sh"

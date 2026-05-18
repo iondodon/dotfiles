@@ -38,7 +38,7 @@ sudo pacman -Syyu
 - [fastfetch](https://github.com/fastfetch-cli/fastfetch)
 - [waybar](https://github.com/Alexays/Waybar)
 - [niri](https://github.com/niri-wm/niri) - [https://niri-wm.github.io/niri/](https://niri-wm.github.io/niri/)
-- [sddm-slice](https://github.com/EricKotato/sddm-slice) - vendored under `usr/share/sddm/themes/sddm-slice` and patched for Arch's Qt5 SDDM greeter
+- [sddm-slice](https://github.com/EricKotato/sddm-slice) - vendored under `usr/share/sddm/themes/sddm-slice` and configured for Arch's Qt6 SDDM greeter
 - [fsearch](https://github.com/cboxdoerfer/fsearch)
 - [brave-browser](https://brave.com)
 - [min](https://github.com/minbrowser/min) - [minbrowser.org](https://minbrowser.org/)

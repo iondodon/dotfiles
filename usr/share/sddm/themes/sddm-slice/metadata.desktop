@@ -11,3 +11,4 @@ Version=1.5.1
 MainScript=Main.qml
 TranslationsDirectory=translations
 ConfigFile=theme.conf
+QtVersion=6

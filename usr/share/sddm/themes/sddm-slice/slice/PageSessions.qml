@@ -7,6 +7,7 @@ Item
     property int selectedIndex: sessionModel.lastIndex
     property string currentSessionName: get_name(0)
     property int scrollRepeat: 0
+    readonly property int sessionCount: sessionModel.rowCount()
 
     function get_relative_index(relate)
     {
@@ -38,6 +39,7 @@ Item
     {
         id: sessionListContainer
         anchors.horizontalCenter: parent.horizontalCenter
+        width: 450
 
         property int scrollDuration: 100
 
@@ -50,6 +52,7 @@ Item
             x: -225
             width: 450
             height: pageRoot.height / 6
+            enabled: pageRoot.sessionCount > 4
 
             onClicked: { scrollRepeat = 1; scroll_down(); }
 
@@ -65,6 +68,7 @@ Item
             x: -225
             width: 450
             height: pageRoot.height / 5
+            enabled: pageRoot.sessionCount > 2
 
             onClicked: scroll_down()
 
@@ -95,6 +99,7 @@ Item
             x: -225
             width: 450
             height: pageRoot.height / 5
+            enabled: pageRoot.sessionCount > 1
 
             onClicked: scroll_up()
 
@@ -110,6 +115,7 @@ Item
             x: -225
             width: 450
             height: pageRoot.height / 6
+            enabled: pageRoot.sessionCount > 3
 
             onClicked: { scrollRepeat = 1; scroll_up(); }
 
@@ -121,6 +127,7 @@ Item
             y: 0
             distance: 0
             sessionName: get_name(-3)
+            visible: pageRoot.sessionCount > 5
         }
 
         LoopListSessionItem
@@ -129,6 +136,7 @@ Item
             y: pageRoot.height / 18
             distance: 0.33
             sessionName: get_name(-2)
+            visible: pageRoot.sessionCount > 4
         }
 
         LoopListSessionItem
@@ -137,6 +145,7 @@ Item
             y: pageRoot.height / 4.3
             distance: 0.66
             sessionName: get_name(-1)
+            visible: pageRoot.sessionCount > 2
         }
 
         LoopListSessionItem
@@ -152,6 +161,7 @@ Item
             y: pageRoot.height / 1.4
             distance: 0.66
             sessionName: get_name(1)
+            visible: pageRoot.sessionCount > 1
         }
 
         LoopListSessionItem
@@ -160,6 +170,7 @@ Item
             y: pageRoot.height / 1.1
             distance: 0.33
             sessionName: get_name(2)
+            visible: pageRoot.sessionCount > 3
         }
 
         LoopListSessionItem
@@ -168,6 +179,7 @@ Item
             y: pageRoot.height
             distance: 0
             sessionName: get_name(3)
+            visible: pageRoot.sessionCount > 5
         }
 
         ParallelAnimation
@@ -273,12 +285,14 @@ Item
 
     function scroll_up()
     {
-        sessionListScrollUp.start()
+        if (sessionCount > 1)
+            sessionListScrollUp.start()
     }
 
     function scroll_down()
     {
-        sessionListScrollDown.start()
+        if (sessionCount > 1)
+            sessionListScrollDown.start()
     }
 
     Keys.onUpPressed: scroll_down()

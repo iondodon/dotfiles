@@ -1,5 +1,5 @@
 import QtQuick 2.7
-import QtGraphicalEffects 1.0
+import Qt5Compat.GraphicalEffects
 import SddmComponents 2.0
 
 Item
@@ -7,6 +7,8 @@ Item
     id: itemRoot
     opacity: computedDistance
     scale: computedDistance
+    width: parent.width
+    height: sessionNameLabel.height + 10
 
     property real distance: 1.0
     readonly property real computedDistance: Math.sin(Math.PI / 2 * distance)

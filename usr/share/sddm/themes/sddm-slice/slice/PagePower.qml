@@ -1,7 +1,6 @@
 import QtQuick 2.7
-import QtGraphicalEffects 1.0
+import Qt5Compat.GraphicalEffects
 import SddmComponents 2.0
-import QtQuick.Layouts 1.3
 
 
 Item
@@ -44,12 +43,12 @@ Item
         }
     }
     
-    ColumnLayout
+    Column
     {
         id: powerListContainer
-        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.centerIn: parent
         width: 370
-        height: pageRoot.height
+        spacing: 14
 
         property int scrollDuration: 100
 
@@ -60,9 +59,6 @@ Item
             distance: selectedIndex == 0 ? 1.0 : 0.6
             hover: selectedIndex == 0
             icon: "icons/power-off.svg"
-
-            Layout.alignment: Qt.AlignVCenter
-            Layout.minimumHeight: 48
 
             visible: debug.canPowerOff
             onEntered: selectedIndex = 0
@@ -76,9 +72,6 @@ Item
             distance: selectedIndex == 1 ? 1.0 : 0.6
             hover: selectedIndex == 1
             icon: "icons/reboot.svg"
-
-            Layout.alignment: Qt.AlignVCenter
-            Layout.minimumHeight: 48
 
             visible: debug.canReboot
 
@@ -95,9 +88,6 @@ Item
             hover: selectedIndex == 2
             icon: "icons/suspend.svg"
 
-            Layout.alignment: Qt.AlignVCenter
-            Layout.minimumHeight: 48
-
             visible: debug.canSuspend
 
             onEntered: selectedIndex = 2
@@ -112,9 +102,6 @@ Item
             hover: selectedIndex == 3
             icon: "icons/hibernate.svg"
 
-            Layout.alignment: Qt.AlignVCenter
-            Layout.minimumHeight: 48
-
             visible: debug.canHibernate
 
             onEntered: selectedIndex = 3
@@ -128,10 +115,6 @@ Item
             distance: selectedIndex == 4 ? 1.0 : 0.6
             hover: selectedIndex == 4
             icon: "icons/hybrid-sleep.svg"
-
-            //Layout.fillHeight: true
-            Layout.alignment: Qt.AlignVCenter
-            Layout.minimumHeight: 48
 
             visible: debug.canHybridSleep
 

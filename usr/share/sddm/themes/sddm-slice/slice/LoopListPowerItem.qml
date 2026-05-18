@@ -1,5 +1,5 @@
 import QtQuick 2.7
-import QtGraphicalEffects 1.0
+import Qt5Compat.GraphicalEffects
 
 Item
 {
@@ -7,6 +7,7 @@ Item
     opacity: distance
     property int duration: 100
     width: parent.width
+    height: descriptionLabel.height + 10
     property bool hover: false
 
     signal clicked()
@@ -59,7 +60,7 @@ Item
     Rectangle
     {
         x: descriptionLabel.height + 10 + 2
-        width: parent.width - descriptionLabel.height + 10 - 2
+        width: parent.width - descriptionLabel.height - 12
         height: descriptionLabel.height + 10
         color: ( hover ? colors.textBgHover : colors.textBg )
     }
@@ -69,7 +70,7 @@ Item
         id: descriptionLabel
         text: itemRoot.title
         color: ( hover ? colors.textHover : colors.text )
-        width: parent.width - descriptionLabel.height + 10 - 2 - 24
+        width: parent.width - descriptionLabel.height - 36
 
         font: fonts.listItemMed
         elide: Text.ElideRight

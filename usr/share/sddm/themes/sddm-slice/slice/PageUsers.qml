@@ -11,6 +11,7 @@ Item
     property string currentUserLogin: get_login(0)
     property bool hasLoginShown: true
     property bool manual: bool(config.manual)
+    readonly property int userCount: userModel.count
 
     signal lockNav()
     signal unlockNav()
@@ -92,6 +93,7 @@ Item
             hoverEnabled: true
             width: parent.width
             height: pageRoot.height / 6
+            enabled: pageRoot.userCount > 4
             //enabled: !hasLoginShown
 
             onClicked: { if (!hasLoginShown) { scrollRepeat = 1; scroll_down(); } }
@@ -107,6 +109,7 @@ Item
             hoverEnabled: true
             width: parent.width
             height: pageRoot.height / 5
+            enabled: pageRoot.userCount > 2
             propagateComposedEvents: true
             //enabled: !hasLoginShown
 
@@ -138,6 +141,7 @@ Item
             hoverEnabled: true
             width: parent.width
             height: pageRoot.height / 5
+            enabled: pageRoot.userCount > 1
             //enabled: !hasLoginShown
 
             onClicked: { if (!hasLoginShown) { scroll_up(); } }
@@ -153,6 +157,7 @@ Item
             hoverEnabled: true
             width: parent.width
             height: pageRoot.height / 6
+            enabled: pageRoot.userCount > 3
             //enabled: !hasLoginShown
 
             onClicked: { if (!hasLoginShown) { scrollRepeat = 1; scroll_up(); } }
@@ -167,6 +172,7 @@ Item
             userName: get_name(-3)
             userLogin: get_login(-3)
             userAvatar: get_avatar(-3)
+            visible: pageRoot.userCount > 5
         }
 
         LoopListUserItem
@@ -177,6 +183,7 @@ Item
             userName: get_name(-2)
             userLogin: get_login(-2)
             userAvatar: get_avatar(-2)
+            visible: pageRoot.userCount > 4
         }
 
         LoopListUserItem
@@ -187,6 +194,7 @@ Item
             userName: get_name(-1)
             userLogin: get_login(-1)
             userAvatar: get_avatar(-1)
+            visible: pageRoot.userCount > 2
         }
 
         LoopListUserItem
@@ -207,6 +215,7 @@ Item
             userName: get_name(1)
             userLogin: get_login(1)
             userAvatar: get_avatar(1)
+            visible: pageRoot.userCount > 1
         }
 
         LoopListUserItem
@@ -217,6 +226,7 @@ Item
             userName: get_name(2)
             userLogin: get_login(2)
             userAvatar: get_avatar(2)
+            visible: pageRoot.userCount > 3
         }
 
         LoopListUserItem
@@ -227,6 +237,7 @@ Item
             userName: get_name(3)
             userLogin: get_login(3)
             userAvatar: get_avatar(3)
+            visible: pageRoot.userCount > 5
         }
 
         Item {

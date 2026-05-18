@@ -31,7 +31,7 @@ sudo pacman -Syyu
 ## Arch based packages
 
 ```bash
-sudo pacman -S git base-devel zsh python python-yaml tmux sddm niri waybar mako swaylock bluez blueman ttf-nerd-fonts-symbols flameshot nautilus vicious gammastep xclip xsel ttf-jetbrains-mono arandr wl-clipboard shellcheck swaybg network-manager-applet systemctl-tui caligula swayidle fuzzel fzf oath-toolkit libnotify grim pacman-contrib xwayland-satellite fastfetch 7zip
+sudo pacman -S git base-devel zsh python python-yaml tmux sddm niri waybar mako swaylock bluez blueman ttf-nerd-fonts-symbols flameshot ghostty nautilus vicious gammastep xclip xsel ttf-jetbrains-mono arandr wl-clipboard shellcheck swaybg network-manager-applet systemctl-tui caligula swayidle fuzzel fzf oath-toolkit libnotify grim pacman-contrib xwayland-satellite fastfetch 7zip
 ```
 
 If `paru` is not installed yet:

@@ -28,6 +28,7 @@ PACMAN_PACKAGES=(
   blueman
   ttf-nerd-fonts-symbols
   flameshot
+  ghostty
   nautilus
   vicious
   gammastep

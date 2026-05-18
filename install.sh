@@ -16,6 +16,8 @@ PACMAN_PACKAGES=(
   git
   base-devel
   zsh
+  python
+  python-yaml
   sddm
   niri
   waybar
@@ -40,6 +42,8 @@ PACMAN_PACKAGES=(
   caligula
   swayidle
   fuzzel
+  oath-toolkit
+  libnotify
   grim
   pacman-contrib
   xwayland-satellite

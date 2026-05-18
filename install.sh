@@ -21,6 +21,7 @@ PACMAN_PACKAGES=(
   waybar
   mako
   swaylock
+  bluez
   blueman
   ttf-nerd-fonts-symbols
   flameshot
@@ -235,6 +236,75 @@ install_witcher() {
   )
 }
 
+enable_systemd_service() {
+  local service="$1"
+
+  if ! command -v systemctl >/dev/null 2>&1; then
+    echo "skip    systemctl not found"
+    return
+  fi
+
+  if systemctl is-enabled --quiet "$service"; then
+    printf 'exists  %s enabled\n' "$service"
+  else
+    printf 'enable  %s\n' "$service"
+    sudo systemctl enable "$service" || {
+      printf 'install.sh: failed to enable %s\n' "$service" >&2
+      exit 1
+    }
+  fi
+}
+
+set_display_manager() {
+  local service="$1"
+  local display_manager_path
+  local service_path
+
+  if ! command -v systemctl >/dev/null 2>&1; then
+    echo "skip    systemctl not found"
+    return
+  fi
+
+  display_manager_path="$(readlink -f /etc/systemd/system/display-manager.service 2>/dev/null || true)"
+  service_path="$(systemctl show -P FragmentPath "$service" 2>/dev/null || true)"
+
+  if [ -n "$display_manager_path" ] && [ "$display_manager_path" = "$service_path" ]; then
+    printf 'exists  display manager %s\n' "$service"
+    return
+  fi
+
+  printf 'display %s\n' "$service"
+  sudo systemctl enable --force "$service" || {
+    printf 'install.sh: failed to set %s as display manager\n' "$service" >&2
+    exit 1
+  }
+}
+
+start_systemd_service() {
+  local service="$1"
+
+  if ! command -v systemctl >/dev/null 2>&1; then
+    echo "skip    systemctl not found"
+    return
+  fi
+
+  if systemctl is-active --quiet "$service"; then
+    printf 'exists  %s active\n' "$service"
+  else
+    printf 'start   %s\n' "$service"
+    sudo systemctl start "$service" || {
+      printf 'install.sh: failed to start %s\n' "$service" >&2
+      exit 1
+    }
+  fi
+}
+
+setup_system_services() {
+  set_display_manager sddm.service
+  enable_systemd_service bluetooth.service
+  start_systemd_service bluetooth.service
+}
+
 set_default_shell() {
   local zsh_path
   local current_shell
@@ -242,6 +312,15 @@ set_default_shell() {
   if ! zsh_path="$(command -v zsh)"; then
     echo "skip    zsh not found"
     return
+  fi
+
+  if ! grep -Fxq "$zsh_path" /etc/shells; then
+    if grep -Fxq /bin/zsh /etc/shells; then
+      zsh_path="/bin/zsh"
+    else
+      echo "skip    $zsh_path is not listed in /etc/shells"
+      return
+    fi
   fi
 
   current_shell="$(getent passwd "$TARGET_USER" | cut -d: -f7)"
@@ -327,6 +406,7 @@ link() {
 
 install_packages
 install_witcher
+setup_system_services
 set_default_shell
 
 link "home/USER/.zshrc"

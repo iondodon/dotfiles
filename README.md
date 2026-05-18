@@ -31,7 +31,7 @@ sudo pacman -Syyu
 ## Arch based packages
 
 ```bash
-sudo pacman -S git base-devel zsh python python-yaml sddm niri waybar mako swaylock bluez blueman ttf-nerd-fonts-symbols flameshot nautilus vicious gammastep xclip xsel ttf-jetbrains-mono arandr wl-clipboard shellcheck swaybg network-manager-applet systemctl-tui caligula swayidle fuzzel oath-toolkit libnotify grim pacman-contrib xwayland-satellite fastfetch 7zip
+sudo pacman -S git base-devel zsh python python-yaml tmux sddm niri waybar mako swaylock bluez blueman ttf-nerd-fonts-symbols flameshot nautilus vicious gammastep xclip xsel ttf-jetbrains-mono arandr wl-clipboard shellcheck swaybg network-manager-applet systemctl-tui caligula swayidle fuzzel oath-toolkit libnotify grim pacman-contrib xwayland-satellite fastfetch 7zip
 ```
 
 If `paru` is not installed yet:
@@ -78,8 +78,8 @@ paru -S ttf-jetbrains-mono fsearch yaru-gtk-theme outlook-for-linux brave-bin
 
 <br>
 
-- [tpm](https://github.com/tmux-plugins/tpm) - install to use it to install tmux plugins
-- [tmux](https://github.com/tmux/tmux) - install latest version from source. Use [tpm](https://github.com/tmux-plugins/tpm) plugin to install other plugins - `prefix+b I` to install the plugins defined in `tmux.conf`.
+- [tpm](https://github.com/tmux-plugins/tpm) - installed by `install.sh` into `~/.tmux/plugins/tpm`
+- [tmux](https://github.com/tmux/tmux) - installed from Arch packages. The installer clones the tmux plugins used by `tmux.conf`.
 - [tmux-better-mouse-mode](https://github.com/NHDaly/tmux-better-mouse-mode)
 - [alacritty](https://github.com/alacritty/alacritty) - [https://alacritty.org/](https://alacritty.org/)
 - [ghostty](https://ghostty.org/)
@@ -100,24 +100,6 @@ paru -S ttf-jetbrains-mono fsearch yaru-gtk-theme outlook-for-linux brave-bin
 - [httpyac](https://github.com/anweber/httpyac) - [httpyac.github.io](https://httpyac.github.io/)
 
 ---
-
-#### fuzzel
-
-2FA mode (~/.config/fuzzel/2fa.py)
-
-- Required: python3, fuzzel, pyyaml, oathtool
-- Clipboard: wl-clipboard (wl-copy) preferred; fallback xclip or xsel
-- Notifications: notify-send (from libnotify)
-
-Snippets mode (~/.config/fuzzel/snippets.py)
-
-- Required: python3, fuzzel, pyyaml
-- Clipboard: wl-clipboard (wl-copy) preferred; fallback xclip or xsel
-- Notifications: notify-send (from libnotify)
-
-#### Zed
-
-[java](https://github.com/zed-extensions/java)
 
 #### VSCode
 

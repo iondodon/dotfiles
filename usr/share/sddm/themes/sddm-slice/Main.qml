@@ -1,5 +1,5 @@
 import QtQuick 2.7
-import Qt5Compat.GraphicalEffects
+import QtGraphicalEffects 1.0
 import SddmComponents 2.0
 
 import "slice"
@@ -436,4 +436,3 @@ Rectangle
     Keys.onLeftPressed: previousScreen()
     Keys.onRightPressed: nextScreen()
 }
-

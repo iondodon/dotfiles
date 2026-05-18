@@ -19,8 +19,10 @@ PACMAN_PACKAGES=(
   python
   python-yaml
   tmux
-  qt6-5compat
-  qt6-declarative
+  qt5-declarative
+  qt5-graphicaleffects
+  qt5-quickcontrols2
+  qt5-virtualkeyboard
   sddm
   niri
   waybar

@@ -2,7 +2,6 @@ The repository mirrors the real filesystem layout:
 
 - `home/USER/...` maps to `/home/$USER/...`
 - `etc/...` maps to `/etc/...`
-- SDDM theme files are copied into `/usr/share/sddm/themes/...` so the greeter does not depend on files under `/home`.
 
 ## Install
 

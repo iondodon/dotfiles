@@ -503,7 +503,7 @@ link() {
   ln -s -- "$source" "$target"
 }
 
-install_system() {
+link_system() {
   local rel="$1"
   local source="$ROOT/$rel"
   local target="/$rel"
@@ -513,7 +513,17 @@ install_system() {
     exit 1
   fi
 
+  if [ -L "$target" ] && [ ! -e "$target" ]; then
+    printf 'delete  broken symlink %s -> %s\n' "$target" "$(readlink -- "$target")"
+    sudo rm -- "$target"
+  fi
+
   if [ -e "$target" ] || [ -L "$target" ]; then
+    if [ "$(readlink -- "$target" || true)" = "$source" ]; then
+      printf 'exists  %s -> %s\n' "$target" "$source"
+      return
+    fi
+
     if read -r -p "override $target? [y/N] " answer && [[ "$answer" =~ ^[Yy]$ ]]; then
       sudo rm -rf -- "$target"
     else
@@ -523,15 +533,8 @@ install_system() {
   fi
 
   sudo mkdir -p -- "$(dirname -- "$target")"
-  printf 'install %s -> %s\n' "$source" "$target"
-  sudo cp -a -- "$source" "$target"
-  sudo chown -R root:root "$target"
-  if [ -d "$target" ]; then
-    sudo find "$target" -type d -exec chmod 755 {} +
-    sudo find "$target" -type f -exec chmod 644 {} +
-  else
-    sudo chmod 644 "$target"
-  fi
+  printf 'link    %s -> %s\n' "$target" "$source"
+  sudo ln -s -- "$source" "$target"
 }
 
 install_packages
@@ -575,5 +578,5 @@ link "home/USER/.local/share/applications/fuzzel-2fa.desktop"
 link "home/USER/.local/share/applications/fuzzel-snippets.desktop"
 link "home/USER/.local/share/backgrounds/bolduresti.png"
 
-install_system "etc/sddm.conf.d/theme.conf"
-install_system "usr/share/sddm/themes/sddm-slice"
+link_system "etc/sddm.conf.d/theme.conf"
+link_system "usr/share/sddm/themes/sddm-slice"

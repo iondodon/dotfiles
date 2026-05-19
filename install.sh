@@ -67,7 +67,7 @@ AUR_PACKAGES=(
   brave-bin
 )
 
-PARU_REPO_URL="https://aur.archlinux.org/paru.git"
+PARU_BIN_REPO_URL="https://aur.archlinux.org/paru-bin.git"
 WITCHER_REPO_URL="https://github.com/iondodon/witcher.git"
 OH_MY_ZSH_REPO_URL="https://github.com/ohmyzsh/ohmyzsh.git"
 ZSH_AUTOSUGGESTIONS_REPO_URL="https://github.com/zsh-users/zsh-autosuggestions.git"
@@ -232,16 +232,14 @@ install_paru() {
     return
   fi
 
-  ensure_cargo
-
   local build_dir
   build_dir="$(mktemp -d)"
 
   (
     trap 'rm -rf -- "$build_dir"' EXIT
     pacman_install git base-devel
-    git clone --depth 1 "$PARU_REPO_URL" "$build_dir/paru"
-    cd "$build_dir/paru"
+    git clone --depth 1 "$PARU_BIN_REPO_URL" "$build_dir/paru-bin"
+    cd "$build_dir/paru-bin"
     makepkg -si --needed
   )
 }

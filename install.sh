@@ -91,52 +91,13 @@ if [ "$(id -u)" -eq 0 ]; then
   exit 2
 fi
 
-pacman_failed() {
-  cat >&2 <<'EOF'
-install.sh: pacman failed.
-
-This is often caused by a stale or broken Arch mirror. Refresh your mirrors, then
-run the installer again:
-
-  sudo pacman -Syyu
-
-If pacman reports a specific bad mirror, comment it out, remove it, or move it
-lower in:
-
-  /etc/pacman.d/mirrorlist
-
-Then refresh package databases again:
-
-  sudo pacman -Syyu
-
-If reflector is installed, you can regenerate the mirror list with:
-
-  sudo reflector --protocol https --latest 20 --sort rate --save /etc/pacman.d/mirrorlist
-  sudo pacman -Syyu
-EOF
-}
-
-pacman_install() {
-  sudo pacman -S --needed "$@" || {
-    pacman_failed
-    exit 1
-  }
-}
-
-pacman_upgrade_install() {
-  sudo pacman -Syu --needed "$@" || {
-    pacman_failed
-    exit 1
-  }
-}
-
 ensure_git() {
   if command -v git >/dev/null 2>&1; then
     return
   fi
 
   if command -v pacman >/dev/null 2>&1; then
-    pacman_install git
+    sudo pacman -S --needed git
   else
     echo "install.sh: git is required" >&2
     exit 1
@@ -149,7 +110,7 @@ ensure_cargo() {
   fi
 
   if command -v pacman >/dev/null 2>&1; then
-    pacman_install rust
+    sudo pacman -S --needed rust
   else
     echo "install.sh: cargo is required to install witcher" >&2
     exit 1
@@ -248,7 +209,7 @@ install_paru() {
 
   (
     trap 'rm -rf -- "$build_dir"' EXIT
-    pacman_upgrade_install git base-devel
+    sudo pacman -Syu --needed git base-devel
     git clone --depth 1 "$PARU_BIN_REPO_URL" "$build_dir/paru-bin"
     cd "$build_dir/paru-bin"
     makepkg -si --needed
@@ -262,7 +223,7 @@ install_paru() {
 
 install_packages() {
   if command -v pacman >/dev/null 2>&1; then
-    pacman_upgrade_install "${PACMAN_PACKAGES[@]}"
+    sudo pacman -Syu --needed "${PACMAN_PACKAGES[@]}"
   else
     echo "skip    pacman not found"
   fi

@@ -61,7 +61,6 @@ PACMAN_PACKAGES=(
 
 AUR_PACKAGES=(
   ttf-jetbrains-mono
-  fsearch
   yaru-gtk-theme
   outlook-for-linux
   brave-bin

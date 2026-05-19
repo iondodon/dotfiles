@@ -123,6 +123,13 @@ pacman_install() {
   }
 }
 
+pacman_upgrade_install() {
+  sudo pacman -Syu --needed "$@" || {
+    pacman_failed
+    exit 1
+  }
+}
+
 ensure_git() {
   if command -v git >/dev/null 2>&1; then
     return
@@ -147,6 +154,10 @@ ensure_cargo() {
     echo "install.sh: cargo is required to install witcher" >&2
     exit 1
   fi
+}
+
+paru_works() {
+  command -v paru >/dev/null 2>&1 && paru --version >/dev/null 2>&1
 }
 
 clone_install_repo() {
@@ -223,7 +234,7 @@ bootstrap_repo() {
 bootstrap_repo
 
 install_paru() {
-  if command -v paru >/dev/null 2>&1; then
+  if paru_works; then
     return
   fi
 
@@ -237,23 +248,28 @@ install_paru() {
 
   (
     trap 'rm -rf -- "$build_dir"' EXIT
-    pacman_install git base-devel
+    pacman_upgrade_install git base-devel
     git clone --depth 1 "$PARU_BIN_REPO_URL" "$build_dir/paru-bin"
     cd "$build_dir/paru-bin"
     makepkg -si --needed
   )
+
+  if ! paru_works; then
+    echo "install.sh: paru-bin installed, but paru cannot run. Run 'sudo pacman -Syu' and retry." >&2
+    exit 1
+  fi
 }
 
 install_packages() {
   if command -v pacman >/dev/null 2>&1; then
-    pacman_install "${PACMAN_PACKAGES[@]}"
+    pacman_upgrade_install "${PACMAN_PACKAGES[@]}"
   else
     echo "skip    pacman not found"
   fi
 
   install_paru
 
-  if command -v paru >/dev/null 2>&1; then
+  if paru_works; then
     paru -S --needed "${AUR_PACKAGES[@]}"
   else
     echo "skip    paru not found"

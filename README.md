@@ -1,9 +1,3 @@
-The repository mirrors the real filesystem layout:
-
-- `home/USER/...` maps to `/home/$USER/...`
-- `etc/...` maps to `/etc/...`
-- SDDM theme files are copied into `/usr/share/sddm/themes/...` so the greeter does not depend on files under `/home`.
-
 ## Install
 
 ```bash
@@ -11,19 +5,6 @@ bash -c "$(curl -LfsS https://github.com/iondodon/dotfiles/raw/main/install.sh)"
 ```
 
 Run the installer as your normal home user. The script refuses to run as root or with `sudo`; it uses `sudo` internally only where package installation needs it.
-
-If Pacman fails to download packages from a broken mirror, comment out, remove, or move that mirror lower in `/etc/pacman.d/mirrorlist`. Then refresh package databases and rerun the installer:
-
-```bash
-sudo pacman -Syyu
-```
-
-If `reflector` is installed:
-
-```bash
-sudo reflector --protocol https --latest 20 --sort rate --save /etc/pacman.d/mirrorlist
-sudo pacman -Syyu
-```
 
 ## Sources
 

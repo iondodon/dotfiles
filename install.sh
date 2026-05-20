@@ -32,6 +32,8 @@ PACMAN_PACKAGES=(
   blueman
   impala
   wiremix
+  lazydocker
+  lazygit
   ttf-nerd-fonts-symbols
   ttf-roboto
   flameshot

@@ -1,3 +1,4 @@
-- name: Greet
-  desc: Friendly greeting
-  value: "Hello there!"
+- name: Bootable USB
+  desc: Make bootable USB
+  value: sudo dd if=linux.iso of=/dev/sdX bs=4M status=progress oflag=sync
+

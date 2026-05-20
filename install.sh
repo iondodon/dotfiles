@@ -484,6 +484,57 @@ link() {
   ln -s -- "$source" "$target"
 }
 
+link_group() {
+  local rel
+  local source
+  local target
+  local conflicting_targets=()
+
+  for rel in "$@"; do
+    source="$ROOT/$rel"
+
+    case "$rel" in
+      home/USER/*)
+        target="/home/$TARGET_USER/${rel#home/USER/}"
+        ;;
+      *)
+        target="/$rel"
+        ;;
+    esac
+
+    if [ ! -e "$source" ] && [ ! -L "$source" ]; then
+      echo "missing $source" >&2
+      exit 1
+    fi
+
+    if [ -e "$target" ] || [ -L "$target" ]; then
+      if [ "$(readlink -- "$target" || true)" != "$source" ]; then
+        conflicting_targets+=("$target")
+      fi
+    fi
+  done
+
+  if [ "${#conflicting_targets[@]}" -gt 0 ]; then
+    echo "override link targets?"
+    for target in "${conflicting_targets[@]}"; do
+      printf '  %s\n' "$target"
+    done
+
+    if read -r -p "[y/N] " answer && [[ "$answer" =~ ^[Yy]$ ]]; then
+      for target in "${conflicting_targets[@]}"; do
+        rm -rf -- "$target"
+      done
+    else
+      echo "skip    link target group"
+      return
+    fi
+  fi
+
+  for rel in "$@"; do
+    link "$rel"
+  done
+}
+
 install_system() {
   local rel="$1"
   local source="$ROOT/$rel"
@@ -513,6 +564,47 @@ install_system() {
   else
     sudo chmod 644 "$target"
   fi
+}
+
+install_system_group() {
+  local rel
+  local source
+  local target
+  local existing_targets=()
+
+  for rel in "$@"; do
+    source="$ROOT/$rel"
+    target="/$rel"
+
+    if [ ! -e "$source" ] && [ ! -L "$source" ]; then
+      echo "missing $source" >&2
+      exit 1
+    fi
+
+    if [ -e "$target" ] || [ -L "$target" ]; then
+      existing_targets+=("$target")
+    fi
+  done
+
+  if [ "${#existing_targets[@]}" -gt 0 ]; then
+    echo "override system paths?"
+    for target in "${existing_targets[@]}"; do
+      printf '  %s\n' "$target"
+    done
+
+    if read -r -p "[y/N] " answer && [[ "$answer" =~ ^[Yy]$ ]]; then
+      for target in "${existing_targets[@]}"; do
+        sudo rm -rf -- "$target"
+      done
+    else
+      echo "skip    system path group"
+      return
+    fi
+  fi
+
+  for rel in "$@"; do
+    install_system "$rel"
+  done
 }
 
 install_packages
@@ -552,9 +644,11 @@ link "home/USER/.config/zed/settings_backup.json"
 link "home/USER/.icons/Polarnight-cursors"
 
 link "home/USER/.local/bin/secure7z.sh"
-link "home/USER/.local/share/applications/fuzzel-2fa.desktop"
-link "home/USER/.local/share/applications/fuzzel-snippets.desktop"
+link_group \
+  "home/USER/.local/share/applications/fuzzel-2fa.desktop" \
+  "home/USER/.local/share/applications/fuzzel-snippets.desktop"
 link "home/USER/.local/share/backgrounds/bolduresti.png"
 
-install_system "etc/sddm.conf.d/theme.conf"
-install_system "usr/share/sddm/themes/sddm-slice"
+install_system_group \
+  "etc/sddm.conf.d/theme.conf" \
+  "usr/share/sddm/themes/sddm-slice"

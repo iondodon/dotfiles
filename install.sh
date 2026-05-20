@@ -58,6 +58,7 @@ PACMAN_PACKAGES=(
   pacman-contrib
   xwayland-satellite
   fastfetch
+  onefetch
   7zip
 )
 

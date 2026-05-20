@@ -81,4 +81,25 @@ if [ -d "$HOME/flutter/bin" ]; then
    export FLUTTER_GIT_URL="" # to fix and issues with hagging flutter command - to be removed
 fi
 
+autoload -U add-zsh-hook
+
+LAST_ONEFETCH_ROOT=""
+
+run_onefetch() {
+  local root
+
+  if ! root=$(git rev-parse --show-toplevel 2>/dev/null); then
+    LAST_ONEFETCH_ROOT=""
+    return
+  fi
+
+  if [[ "$root" != "$LAST_ONEFETCH_ROOT" ]]; then
+    LAST_ONEFETCH_ROOT="$root"
+    onefetch
+  fi
+}
+
+add-zsh-hook chpwd run_onefetch
+run_onefetch
+
 fastfetch

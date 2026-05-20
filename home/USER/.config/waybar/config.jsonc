@@ -7,7 +7,7 @@
 	// Choose the order of the modules
 	// "modules-left": ["sway/workspaces", "sway/mode"],
 	// "modules-center": ["sway/window"],
-	"modules-right": ["backlight", "pulseaudio", "custom/wiremix", "custom/impala", "custom/lazydocker", "custom/lazygit", "custom/gpu-temperature", "battery", "clock", "custom/system-upgrade", "custom/dotfiles", "idle_inhibitor", "tray"],
+	"modules-right": ["backlight", "pulseaudio", "custom/wiremix", "custom/impala", "custom/lazydocker", "custom/gpu-temperature", "battery", "clock", "custom/system-upgrade", "custom/dotfiles", "idle_inhibitor", "tray"],
 
 	"backlight": {
 		// "device": "acpi_video1",
@@ -104,14 +104,6 @@
 		"tooltip": true,
 		"tooltip-format": "Open Lazydocker",
 		"on-click": "ghostty -e lazydocker"
-	},
-	"custom/lazygit": {
-		"format": "{}",
-		"interval": "once",
-		"exec": "echo Lazygit",
-		"tooltip": true,
-		"tooltip-format": "Open Lazygit",
-		"on-click": "ghostty -e lazygit"
 	},
 	"custom/gpu-temperature": {
 		"format": "{}",

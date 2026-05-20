@@ -55,7 +55,7 @@ window#waybar {
 	background: #ff0000;
 	color: #ffffff;
 }
-#backlight, #clock, #battery, #cpu, #memory, #network, #pulseaudio, #custom-spotify, #custom-gpu-temperature, #custom-system-upgrade, #custom-impala, #custom-wiremix, #custom-lazydocker, #custom-lazygit, #custom-dotfiles, #idle_inhibitor, #tray, #mode {
+#backlight, #clock, #battery, #cpu, #memory, #network, #pulseaudio, #custom-spotify, #custom-gpu-temperature, #custom-system-upgrade, #custom-impala, #custom-wiremix, #custom-lazydocker, #custom-dotfiles, #idle_inhibitor, #tray, #mode {
 	padding: 0 3px;
 	margin: 0 2px;
 }
@@ -154,8 +154,7 @@ window#waybar {
 
 #custom-impala,
 #custom-wiremix,
-#custom-lazydocker,
-#custom-lazygit {
+#custom-lazydocker {
 	color: #aaaaaa;
 	background: transparent;
 }

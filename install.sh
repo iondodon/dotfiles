@@ -30,6 +30,8 @@ PACMAN_PACKAGES=(
   swaylock
   bluez
   blueman
+  impala
+  wiremix
   ttf-nerd-fonts-symbols
   ttf-roboto
   flameshot

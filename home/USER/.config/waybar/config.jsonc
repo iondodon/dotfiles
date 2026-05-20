@@ -7,7 +7,7 @@
 	// Choose the order of the modules
 	// "modules-left": ["sway/workspaces", "sway/mode"],
 	// "modules-center": ["sway/window"],
-	"modules-right": ["backlight", "pulseaudio", "custom/gpu-temperature", "battery", "clock", "custom/system-upgrade", "custom/dotfiles", "idle_inhibitor", "tray"],
+	"modules-right": ["backlight", "pulseaudio", "custom/wiremix", "custom/impala", "custom/gpu-temperature", "battery", "clock", "custom/system-upgrade", "custom/dotfiles", "idle_inhibitor", "tray"],
 
 	"backlight": {
 		// "device": "acpi_video1",
@@ -80,6 +80,22 @@
 		"tooltip": true,
 		"tooltip-format": "Upgrade system packages",
 		"on-click": "ghostty -e paru -Syu"
+	},
+	"custom/impala": {
+		"format": "{}",
+		"interval": "once",
+		"exec": "echo Impala",
+		"tooltip": true,
+		"tooltip-format": "Open Impala",
+		"on-click": "ghostty -e impala"
+	},
+	"custom/wiremix": {
+		"format": "{}",
+		"interval": "once",
+		"exec": "echo Wiremix",
+		"tooltip": true,
+		"tooltip-format": "Open Wiremix",
+		"on-click": "ghostty -e wiremix"
 	},
 	"custom/gpu-temperature": {
 		"format": "{}",

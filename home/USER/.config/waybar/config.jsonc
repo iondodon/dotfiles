@@ -7,7 +7,7 @@
 	// Choose the order of the modules
 	// "modules-left": ["sway/workspaces", "sway/mode"],
 	// "modules-center": ["sway/window"],
-	"modules-right": ["backlight", "pulseaudio", "custom/wiremix", "custom/impala", "custom/lazydocker", "custom/gpu-temperature", "battery", "clock", "custom/system-upgrade", "custom/dotfiles", "idle_inhibitor", "tray"],
+	"modules-right": ["backlight", "pulseaudio", "custom/wiremix", "custom/systemctl-tui", "custom/impala", "custom/lazydocker", "custom/gpu-temperature", "battery", "clock", "custom/system-upgrade", "custom/dotfiles", "idle_inhibitor", "tray"],
 
 	"backlight": {
 		// "device": "acpi_video1",
@@ -96,6 +96,14 @@
 		"tooltip": true,
 		"tooltip-format": "Open Wiremix",
 		"on-click": "ghostty -e wiremix"
+	},
+	"custom/systemctl-tui": {
+		"format": "{}",
+		"interval": "once",
+		"exec": "echo Systemctl",
+		"tooltip": true,
+		"tooltip-format": "Open systemctl-tui",
+		"on-click": "ghostty -e systemctl-tui"
 	},
 	"custom/lazydocker": {
 		"format": "{}",

@@ -1,7 +1,7 @@
 ## Install
 
 ```bash
-bash -c "$(curl -LfsS https://github.com/iondodon/dotfiles/raw/main/install.sh)"
+bash <(curl -LfsS https://github.com/iondodon/dotfiles/raw/main/install.sh)
 ```
 
 Run the installer as your normal home user. The script refuses to run as root or with `sudo`; it uses `sudo` internally only where package installation needs it.

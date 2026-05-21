@@ -23,17 +23,10 @@ The installer clones and updates this repo as a shallow checkout with `--depth 1
 - [niri](https://github.com/niri-wm/niri) - [https://niri-wm.github.io/niri/](https://niri-wm.github.io/niri/)
 - [sddm-slice](https://github.com/EricKotato/sddm-slice) - vendored under `usr/share/sddm/themes/sddm-slice` and configured for Arch's Qt6 SDDM greeter
 - [brave-browser](https://brave.com)
-- [min](https://github.com/minbrowser/min) - [minbrowser.org](https://minbrowser.org/)
 - [qbittorrent](https://www.qbittorrent.org/)
-- [mechvibes-dx](https://github.com/hainguyents13/mechvibes-dx) - `cargo install --path .`
-- [localsend](https://github.com/localsend/localsend) - [localsend.org](https://localsend.org/)
 - [impala](https://github.com/pythops/impala)
 - [wiremix](https://github.com/tsowell/wiremix)
-- [fresh](https://github.com/sinelaw/fresh)
 - [systemctl-tui](https://github.com/rgwood/systemctl-tui)
-- [Kooha](https://github.com/SeaDve/Kooha)
-- [caligula](https://github.com/ifd3f/caligula)
-- [obsidian](https://obsidian.md/)
 - [7zip](https://github.com/ip7z/7zip)
 - [Mangohud](https://github.com/flightlessmango/Mangohud)
 - [LACT](https://github.com/ilya-zlobintsev/LACT)
@@ -57,7 +50,6 @@ The installer clones and updates this repo as a shallow checkout with `--depth 1
 
 - [just](https://github.com/casey/just)
 - [vscode-restclient](https://github.com/Huachao/vscode-restclient)
-- [httpyac](https://github.com/anweber/httpyac) - [httpyac.github.io](https://httpyac.github.io/)
 
 ---
 

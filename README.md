@@ -4,10 +4,6 @@
 bash <(curl -LfsS https://github.com/iondodon/dotfiles/raw/main/install.sh)
 ```
 
-Run the installer as your normal home user. The script refuses to run as root or with `sudo`; it uses `sudo` internally only where package installation needs it.
-
-The installer clones and updates this repo as a shallow checkout with `--depth 1`. Local history is intentionally limited to the latest fetched commit, so commands such as `git log`, parent lookup, or child lookup only see the commits available in that shallow clone.
-
 ## Sources
 
 - [flameshot](https://github.com/flameshot-org/flameshot) - [flameshot.org](https://flameshot.org/)

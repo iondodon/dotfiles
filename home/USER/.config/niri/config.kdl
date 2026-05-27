@@ -435,6 +435,15 @@ window-rule {
 }
 
 layer-rule {
+    match namespace="^waybar$"
+
+    background-effect {
+        blur true
+        xray false
+    }
+}
+
+layer-rule {
 	match namespace="^witcher$"
 
 	background-effect {

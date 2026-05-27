@@ -19,6 +19,7 @@ PACMAN_PACKAGES=(
   python
   python-yaml
   tmux
+  alacritty
   qt6-declarative
   qt6-5compat
   qt6-svg
@@ -297,7 +298,7 @@ install_oh_my_zsh() {
 }
 
 install_tmux_plugins() {
-  local plugins_dir="$HOME/.tmux/plugins"
+  local plugins_dir="$HOME/.local/share/tmux/plugins"
 
   mkdir -p -- "$plugins_dir"
   clone_or_update_repo "$TPM_REPO_URL" "$plugins_dir/tpm"
@@ -619,6 +620,7 @@ link "home/USER/.zshrc"
 link "home/USER/.gitconfig"
 
 link "home/USER/.config/Code/User/settings.json"
+link "home/USER/.config/alacritty"
 link "home/USER/.config/MangoHud/MangoHud.conf"
 link "home/USER/.config/environment.d/electron.conf"
 link "home/USER/.config/flameshot"

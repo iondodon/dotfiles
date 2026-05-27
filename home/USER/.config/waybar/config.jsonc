@@ -79,7 +79,7 @@
 		"exec": "echo Upgrade",
 		"tooltip": true,
 		"tooltip-format": "Upgrade system packages",
-		"on-click": "ghostty -e paru -Syu"
+		"on-click": "alacritty -e paru -Syu"
 	},
 	"custom/impala": {
 		"format": "{}",
@@ -87,7 +87,7 @@
 		"exec": "echo Impala",
 		"tooltip": true,
 		"tooltip-format": "Open Impala",
-		"on-click": "ghostty -e impala"
+		"on-click": "alacritty -e impala"
 	},
 	"custom/wiremix": {
 		"format": "{}",
@@ -95,7 +95,7 @@
 		"exec": "echo Wiremix",
 		"tooltip": true,
 		"tooltip-format": "Open Wiremix",
-		"on-click": "ghostty -e wiremix"
+		"on-click": "alacritty -e wiremix"
 	},
 	"custom/systemctl-tui": {
 		"format": "{}",
@@ -103,7 +103,7 @@
 		"exec": "echo Systemctl",
 		"tooltip": true,
 		"tooltip-format": "Open systemctl-tui",
-		"on-click": "ghostty -e systemctl-tui"
+		"on-click": "alacritty -e systemctl-tui"
 	},
 	"custom/lazydocker": {
 		"format": "{}",
@@ -111,7 +111,7 @@
 		"exec": "echo Lazydocker",
 		"tooltip": true,
 		"tooltip-format": "Open Lazydocker",
-		"on-click": "ghostty -e lazydocker"
+		"on-click": "alacritty -e lazydocker"
 	},
 	"custom/gpu-temperature": {
 		"format": "{}",

@@ -1,8 +1,0 @@
-# https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md
-
-git:
-  log:
-    order: topo-order
-    showGraph: when-maximised
-    showWholeGraph: true
-

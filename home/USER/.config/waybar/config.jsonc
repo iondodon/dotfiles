@@ -79,7 +79,7 @@
 		"exec": "echo Upgrade",
 		"tooltip": true,
 		"tooltip-format": "Upgrade system packages",
-		"on-click": "alacritty -e paru -Syu"
+		"on-click": "sh -lc 'exec ${TERMINAL} -e paru -Syu'"
 	},
 	"custom/impala": {
 		"format": "{}",
@@ -87,7 +87,7 @@
 		"exec": "echo Impala",
 		"tooltip": true,
 		"tooltip-format": "Open Impala",
-		"on-click": "alacritty -e impala"
+		"on-click": "sh -lc 'exec ${TERMINAL} -e impala'"
 	},
 	"custom/wiremix": {
 		"format": "{}",
@@ -95,7 +95,7 @@
 		"exec": "echo Wiremix",
 		"tooltip": true,
 		"tooltip-format": "Open Wiremix",
-		"on-click": "alacritty -e wiremix"
+		"on-click": "sh -lc 'exec ${TERMINAL} -e wiremix'"
 	},
 	"custom/systemctl-tui": {
 		"format": "{}",
@@ -103,7 +103,7 @@
 		"exec": "echo Systemctl",
 		"tooltip": true,
 		"tooltip-format": "Open systemctl-tui",
-		"on-click": "alacritty -e systemctl-tui"
+		"on-click": "sh -lc 'exec ${TERMINAL} -e systemctl-tui'"
 	},
 	"custom/lazydocker": {
 		"format": "{}",
@@ -111,7 +111,7 @@
 		"exec": "echo Lazydocker",
 		"tooltip": true,
 		"tooltip-format": "Open Lazydocker",
-		"on-click": "alacritty -e lazydocker"
+		"on-click": "sh -lc 'exec ${TERMINAL} -e lazydocker'"
 	},
 	"custom/gpu-temperature": {
 		"format": "{}",

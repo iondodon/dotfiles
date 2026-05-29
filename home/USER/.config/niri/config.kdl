@@ -497,7 +497,7 @@ binds {
     Alt+Shift+Tab repeat=false { spawn "~/.cargo/bin/witcher" "--cycle-prev"; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
-    Mod+Return hotkey-overlay-title="Open a Terminal: Alacritty" { spawn "alacritty" "-e" "sh" "-lc" "tmux attach-session || exec tmux new-session"; }
+    Mod+Return hotkey-overlay-title="Open a Terminal" { spawn-sh "exec ${TERMINAL} -e sh -lc 'tmux attach-session || exec tmux new-session'"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
 

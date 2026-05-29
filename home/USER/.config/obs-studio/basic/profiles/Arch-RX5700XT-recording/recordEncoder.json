@@ -1,0 +1,12 @@
+{
+    "bf": 0,
+    "bitrate": 12000,
+    "ffmpeg_opts": "",
+    "keyint_sec": 2,
+    "level": -99,
+    "maxrate": 12000,
+    "profile": 100,
+    "qp": 17,
+    "rate_control": "CQP",
+    "vaapi_device": "/dev/dri/renderD128"
+}

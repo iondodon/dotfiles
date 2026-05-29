@@ -1,0 +1,3 @@
+- name: Greet
+  desc: Friendly greeting
+  value: "Hello there!"

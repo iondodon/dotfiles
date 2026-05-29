@@ -1,0 +1,11 @@
+# Mako notifications timeout in milliseconds
+# 10 seconds
+default-timeout=10000
+
+# Rounded notification corners
+border-radius=8
+
+# Gruvbox Dark colors
+background-color=#282828
+text-color=#ebdbb2
+border-color=#3c3836

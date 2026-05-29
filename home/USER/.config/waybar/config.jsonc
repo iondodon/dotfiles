@@ -1,0 +1,165 @@
+{
+	// "layer": "top", // Waybar at top layer
+	"position": "bottom", // Waybar position (top|bottom|left|right)
+	"height": 14,
+	// "width": 1280, // Waybar width
+
+	// Choose the order of the modules
+	// "modules-left": ["sway/workspaces", "sway/mode"],
+	// "modules-center": ["sway/window"],
+	"modules-right": ["backlight", "pulseaudio", "custom/wiremix", "custom/systemctl-tui", "custom/impala", "custom/lazydocker", "custom/gpu-temperature", "battery", "clock", "custom/system-upgrade", "custom/dotfiles", "idle_inhibitor", "tray"],
+
+	"backlight": {
+		// "device": "acpi_video1",
+		"format": "{icon} {percent}%",
+		"format-icons": ["󰃞", "󰃟", "󰃠"]
+	},
+	"pulseaudio": {
+		// "scroll-step": 1, // %, can be a float
+		"format": "{icon} {volume}% {format_source}",
+		"format-muted": " {format_source}",
+		"format-bluetooth": "{icon} {volume}% {format_source}",
+		"format-bluetooth-muted": " {format_source}",
+
+		"format-source": " {volume}%",
+		"format-source-muted": "",
+
+		"format-icons": {
+			"headphones": "",
+			"handsfree": "",
+			"headset": "",
+			"phone": "",
+			"portable": "",
+			"car": "",
+			"default": ["", "", ""]
+		},
+		"on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+		"on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
+	},
+	"clock": {
+		"interval": 1,
+		"format": " {:%a %b %d, %H:%M}",
+		"tooltip-format": "{:%Y-%m-%d | %H:%M:%S}"
+		// "format-alt": "{:%Y-%m-%d}"
+	},
+	"battery": {
+		"states": {
+			"good": 95,
+			"warning": 20,
+			"critical": 10
+		},
+		"format": "<span color='#e88939'>{icon}</span> {capacity}% ({time})",
+		"format-charging": "<span color='#e88939'></span> {capacity}%",
+		"format-plugged":  "<span color='#e88939'>{icon} </span> {capacity}% ({time})",
+		// "format-good": "", // An empty format will hide the module
+		// "format-full": "",
+		"format-icons": ["", "", "", "", ""]
+	},
+	"battery#bat2": {
+		"bat": "BAT2"
+	},
+	"idle_inhibitor": {
+		"format": "<span color='#589df6'>{icon}</span>",
+		"format-icons": {
+			"activated": "",
+			"deactivated": ""
+		},
+		"on-click-right": "swaylock -eFfki ~/.config/lockscreen-origin.png"
+	},
+	"custom/dotfiles": {
+		"format": "{}",
+		"return-type": "json",
+		"interval": 3600,
+		"exec": "~/.config/waybar/dotfiles-update.sh status",
+		"tooltip": true
+	},
+	"custom/system-upgrade": {
+		"format": "{}",
+		"interval": "once",
+		"exec": "echo Upgrade",
+		"tooltip": true,
+		"tooltip-format": "Upgrade system packages",
+		"on-click": "alacritty -e paru -Syu"
+	},
+	"custom/impala": {
+		"format": "{}",
+		"interval": "once",
+		"exec": "echo Impala",
+		"tooltip": true,
+		"tooltip-format": "Open Impala",
+		"on-click": "alacritty -e impala"
+	},
+	"custom/wiremix": {
+		"format": "{}",
+		"interval": "once",
+		"exec": "echo Wiremix",
+		"tooltip": true,
+		"tooltip-format": "Open Wiremix",
+		"on-click": "alacritty -e wiremix"
+	},
+	"custom/systemctl-tui": {
+		"format": "{}",
+		"interval": "once",
+		"exec": "echo Systemctl",
+		"tooltip": true,
+		"tooltip-format": "Open systemctl-tui",
+		"on-click": "alacritty -e systemctl-tui"
+	},
+	"custom/lazydocker": {
+		"format": "{}",
+		"interval": "once",
+		"exec": "echo Lazydocker",
+		"tooltip": true,
+		"tooltip-format": "Open Lazydocker",
+		"on-click": "alacritty -e lazydocker"
+	},
+	"custom/gpu-temperature": {
+		"format": "{}",
+		"return-type": "json",
+		"interval": 5,
+		"exec": "~/.config/waybar/gpu-temperature.sh",
+		"tooltip": true
+	},
+	"tray": {
+		// "icon-size": 21,
+		"spacing": 10
+	},
+    "custom/media": {
+        "format": "{icon} {}",
+        "return-type": "json",
+        "max-length": 40,
+        "format-icons": {
+            "spotify": "",
+            "default": ""
+        },
+        "escape": true,
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    },
+    "mpd": {
+        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ",
+        "format-disconnected": "Disconnected ",
+        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+        "unknown-tag": "N/A",
+        "interval": 2,
+        "consume-icons": {
+            "on": " "
+        },
+        "random-icons": {
+            "off": "<span color=\"#f53c3c\"></span> ",
+            "on": " "
+        },
+        "repeat-icons": {
+            "on": " "
+        },
+        "single-icons": {
+            "on": "1 "
+        },
+        "state-icons": {
+            "paused": "",
+            "playing": ""
+        },
+        "tooltip-format": "MPD (connected)",
+        "tooltip-format-disconnected": "MPD (disconnected)"
+    }
+}

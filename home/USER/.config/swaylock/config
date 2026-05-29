@@ -1,0 +1,6 @@
+image=$HOME/.local/share/backgrounds/bolduresti.png
+scaling=fill
+indicator
+clock
+timestr=%H:%M
+datestr=%A, %d %B

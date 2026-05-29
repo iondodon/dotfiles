@@ -66,7 +66,6 @@ PACMAN_PACKAGES=(
 )
 
 AUR_PACKAGES=(
-  ttf-jetbrains-mono
   yaru-gtk-theme
   outlook-for-linux
   brave-bin

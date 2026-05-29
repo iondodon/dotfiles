@@ -128,7 +128,7 @@ paru_works() {
 
 clone_install_repo() {
   mkdir -p -- "$(dirname -- "$INSTALL_DIR")"
-  git clone --depth 1 --branch "$BRANCH" "$REPO_URL" "$INSTALL_DIR"
+  git clone --branch "$BRANCH" "$REPO_URL" "$INSTALL_DIR"
 }
 
 backup_install_repo() {
@@ -166,7 +166,7 @@ bootstrap_repo() {
       exit 1
     fi
 
-    if ! git -C "$INSTALL_DIR" fetch --depth 1 origin "+refs/heads/$BRANCH:refs/remotes/origin/$BRANCH"; then
+    if ! git -C "$INSTALL_DIR" fetch origin "+refs/heads/$BRANCH:refs/remotes/origin/$BRANCH"; then
       if ! git -C "$INSTALL_DIR" fsck --no-progress >/dev/null 2>&1; then
         backup_install_repo "corrupt"
         clone_install_repo

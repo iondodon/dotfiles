@@ -39,7 +39,7 @@ Then you will be able to `git push`.
 
 <br>
 
-- [tpm](https://github.com/tmux-plugins/tpm) - installed by `install.sh` into `~/.tmux/plugins/tpm`
+- [tpm](https://github.com/tmux-plugins/tpm) - installed by `install.sh` into `~/.local/share/tmux/plugins/tpm`
 - [tmux](https://github.com/tmux/tmux) - installed from Arch packages. The installer clones the tmux plugins used by `tmux.conf`.
 - [tmux-better-mouse-mode](https://github.com/NHDaly/tmux-better-mouse-mode)
 - [alacritty](https://github.com/alacritty/alacritty) - [https://alacritty.org/](https://alacritty.org/)

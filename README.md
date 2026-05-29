@@ -4,7 +4,7 @@
 bash <(curl -LfsS https://github.com/iondodon/dotfiles/raw/main/install.sh)
 ```
 
-To push changes from the installed repository, configure GitHub write access yourself.
+To push changes from the installed repository:
 For SSH:
 
 ```bash
@@ -27,7 +27,7 @@ Then you will be able to `git push`.
 - [fastfetch](https://github.com/fastfetch-cli/fastfetch)
 - [waybar](https://github.com/Alexays/Waybar)
 - [niri](https://github.com/niri-wm/niri) - [https://niri-wm.github.io/niri/](https://niri-wm.github.io/niri/)
-- [sddm-slice](https://github.com/EricKotato/sddm-slice) - vendored under `usr/share/sddm/themes/sddm-slice` and configured for Arch's Qt6 SDDM greeter
+- [sddm-slice](https://github.com/EricKotato/sddm-slice)
 - [brave-browser](https://brave.com)
 - [qbittorrent](https://www.qbittorrent.org/)
 - [impala](https://github.com/pythops/impala)
@@ -39,8 +39,8 @@ Then you will be able to `git push`.
 
 <br>
 
-- [tpm](https://github.com/tmux-plugins/tpm) - installed by `install.sh` into `~/.local/share/tmux/plugins/tpm`
-- [tmux](https://github.com/tmux/tmux) - installed from Arch packages. The installer clones the tmux plugins used by `tmux.conf`.
+- [tpm](https://github.com/tmux-plugins/tpm)
+- [tmux](https://github.com/tmux/tmux)
 - [tmux-better-mouse-mode](https://github.com/NHDaly/tmux-better-mouse-mode)
 - [alacritty](https://github.com/alacritty/alacritty) - [https://alacritty.org/](https://alacritty.org/)
 - [ghostty](https://ghostty.org/)

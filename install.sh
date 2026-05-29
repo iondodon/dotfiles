@@ -40,7 +40,6 @@ PACMAN_PACKAGES=(
   flameshot
   ghostty
   nautilus
-  vicious
   gammastep
   xclip
   xsel
@@ -51,7 +50,6 @@ PACMAN_PACKAGES=(
   swaybg
   network-manager-applet
   systemctl-tui
-  caligula
   swayidle
   fuzzel
   fzf

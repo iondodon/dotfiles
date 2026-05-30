@@ -5,14 +5,10 @@ bash <(curl -LfsS https://github.com/iondodon/dotfiles/raw/main/install.sh)
 ```
 
 To push changes from the installed repository:
-For SSH:
 
 ```bash
-cd ~/dotfiles
 git remote set-url origin git@github.com:iondodon/dotfiles.git
 ```
-
-Then you will be able to `git push`. 
 
 ## Sources
 

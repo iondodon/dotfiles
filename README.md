@@ -37,7 +37,6 @@ git remote set-url origin git@github.com:iondodon/dotfiles.git
 
 - [tpm](https://github.com/tmux-plugins/tpm)
 - [tmux](https://github.com/tmux/tmux)
-- [tmux-better-mouse-mode](https://github.com/NHDaly/tmux-better-mouse-mode)
 - [ghostty](https://ghostty.org/)
 - [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh) - [https://ohmyz.sh](https://ohmyz.sh)
 - [fzf](https://github.com/junegunn/fzf)

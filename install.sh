@@ -74,7 +74,6 @@ OH_MY_ZSH_REPO_URL="https://github.com/ohmyzsh/ohmyzsh.git"
 ZSH_AUTOSUGGESTIONS_REPO_URL="https://github.com/zsh-users/zsh-autosuggestions.git"
 ZSH_SYNTAX_HIGHLIGHTING_REPO_URL="https://github.com/zsh-users/zsh-syntax-highlighting.git"
 TPM_REPO_URL="https://github.com/tmux-plugins/tpm.git"
-TMUX_BETTER_MOUSE_MODE_REPO_URL="https://github.com/NHDaly/tmux-better-mouse-mode.git"
 TMUX_PREFIX_HIGHLIGHT_REPO_URL="https://github.com/tmux-plugins/tmux-prefix-highlight.git"
 
 if [ -z "${HOME:-}" ]; then
@@ -298,7 +297,6 @@ install_tmux_plugins() {
 
   mkdir -p -- "$plugins_dir"
   clone_or_update_repo "$TPM_REPO_URL" "$plugins_dir/tpm"
-  clone_or_update_repo "$TMUX_BETTER_MOUSE_MODE_REPO_URL" "$plugins_dir/tmux-better-mouse-mode"
   clone_or_update_repo "$TMUX_PREFIX_HIGHLIGHT_REPO_URL" "$plugins_dir/tmux-prefix-highlight"
 }
 

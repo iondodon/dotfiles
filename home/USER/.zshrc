@@ -99,7 +99,7 @@ run_onefetch() {
   fi
 }
 
+fastfetch
+
 add-zsh-hook chpwd run_onefetch
 run_onefetch
-
-fastfetch

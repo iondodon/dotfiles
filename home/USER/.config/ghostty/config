@@ -17,13 +17,7 @@ window-padding-color = extend-always
 window-save-state = always
 
 gtk-titlebar = false
-gtk-wide-tabs = false
-
-keybind = ctrl+shift+t=unbind
-keybind = cmd+t=unbind
-keybind = ctrl+shift+]=unbind
-keybind = ctrl+shift+[=unbind
-keybind = ctrl+w=unbind
+gtk-wide-tabs = true
 
 cursor-style = block
 cursor-style-blink = true

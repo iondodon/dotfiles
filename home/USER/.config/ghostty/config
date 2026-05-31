@@ -7,6 +7,8 @@ gtk-custom-css = ~/.config/ghostty/custom-style.css
 background = #111216 
 background-opacity = 0.8
 background-blur = 20
+selection-background = #d79921
+selection-foreground = #111216
 
 window-decoration = none
 window-theme = dark

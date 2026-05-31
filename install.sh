@@ -19,7 +19,6 @@ PACMAN_PACKAGES=(
   python
   python-yaml
   tmux
-  alacritty
   qt6-declarative
   qt6-5compat
   qt6-svg
@@ -617,7 +616,6 @@ link "home/USER/.zshrc"
 link "home/USER/.gitconfig"
 
 link "home/USER/.config/Code/User/settings.json"
-link "home/USER/.config/alacritty"
 link "home/USER/.config/MangoHud/MangoHud.conf"
 link "home/USER/.config/environment.d"
 link "home/USER/.config/flameshot"

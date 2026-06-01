@@ -38,6 +38,7 @@ PACMAN_PACKAGES=(
   ttf-roboto
   flameshot
   ghostty
+  nano
   nautilus
   gammastep
   xclip

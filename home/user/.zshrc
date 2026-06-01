@@ -23,6 +23,10 @@ source $ZSH/oh-my-zsh.sh
 # User configuration ##################
 #######################################
 
+export EDITOR=nano
+export VISUAL=nano
+export SUDO_EDITOR=nano
+
 # Secrets
 if [ -f "$HOME/.secrets" ]; then
     source "$HOME/.secrets"

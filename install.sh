@@ -136,7 +136,7 @@ backup_install_repo() {
 }
 
 bootstrap_repo() {
-  if [ -n "$ROOT" ] && [ -f "$ROOT/install.sh" ] && [ -e "$ROOT/home/USER/.zshrc" ]; then
+  if [ -n "$ROOT" ] && [ -f "$ROOT/install.sh" ] && [ -e "$ROOT/home/user/.zshrc" ]; then
     return
   fi
 
@@ -441,8 +441,8 @@ link() {
   local target
 
   case "$rel" in
-    home/USER/*)
-      target="/home/$TARGET_USER/${rel#home/USER/}"
+    home/user/*)
+      target="/home/$TARGET_USER/${rel#home/user/}"
       ;;
     *)
       target="/$rel"
@@ -489,8 +489,8 @@ link_group() {
     source="$ROOT/$rel"
 
     case "$rel" in
-      home/USER/*)
-        target="/home/$TARGET_USER/${rel#home/USER/}"
+      home/user/*)
+        target="/home/$TARGET_USER/${rel#home/user/}"
         ;;
       *)
         target="/$rel"
@@ -610,39 +610,39 @@ setup_system_services
 set_gnome_interface_settings
 set_default_shell
 
-link "home/USER/.zshrc"
-link "home/USER/.gitconfig"
+link "home/user/.zshrc"
+link "home/user/.gitconfig"
 
-link "home/USER/.config/Code/User/settings.json"
-link "home/USER/.config/MangoHud/MangoHud.conf"
-link "home/USER/.config/environment.d"
-link "home/USER/.config/flameshot"
-link "home/USER/.config/fuzzel"
-link "home/USER/.config/ghostty"
-link "home/USER/.config/gtk-2.0"
-link "home/USER/.config/gtk-3.0"
-link "home/USER/.config/gtk-4.0"
-link "home/USER/.config/lazygit"
-link "home/USER/.config/mako"
-link "home/USER/.config/niri"
-link "home/USER/.config/nvim"
-link "home/USER/.config/obs-studio/basic/profiles"
-link "home/USER/.config/swayidle"
-link "home/USER/.config/swaylock"
-link "home/USER/.config/tmux"
-link "home/USER/.config/waybar"
-link "home/USER/.config/witcher"
-link "home/USER/.config/zed/keymap.json"
-link "home/USER/.config/zed/settings.json"
-link "home/USER/.config/zed/settings_backup.json"
+link "home/user/.config/Code/User/settings.json"
+link "home/user/.config/MangoHud/MangoHud.conf"
+link "home/user/.config/environment.d"
+link "home/user/.config/flameshot"
+link "home/user/.config/fuzzel"
+link "home/user/.config/ghostty"
+link "home/user/.config/gtk-2.0"
+link "home/user/.config/gtk-3.0"
+link "home/user/.config/gtk-4.0"
+link "home/user/.config/lazygit"
+link "home/user/.config/mako"
+link "home/user/.config/niri"
+link "home/user/.config/nvim"
+link "home/user/.config/obs-studio/basic/profiles"
+link "home/user/.config/swayidle"
+link "home/user/.config/swaylock"
+link "home/user/.config/tmux"
+link "home/user/.config/waybar"
+link "home/user/.config/witcher"
+link "home/user/.config/zed/keymap.json"
+link "home/user/.config/zed/settings.json"
+link "home/user/.config/zed/settings_backup.json"
 
-link "home/USER/.icons/Polarnight-cursors"
+link "home/user/.icons/Polarnight-cursors"
 
-link "home/USER/.local/bin/secure7z.sh"
+link "home/user/.local/bin/secure7z.sh"
 link_group \
-  "home/USER/.local/share/applications/fuzzel-2fa.desktop" \
-  "home/USER/.local/share/applications/fuzzel-snippets.desktop"
-link "home/USER/.local/share/backgrounds/bolduresti.png"
+  "home/user/.local/share/applications/fuzzel-2fa.desktop" \
+  "home/user/.local/share/applications/fuzzel-snippets.desktop"
+link "home/user/.local/share/backgrounds/bolduresti.png"
 
 install_system_group \
   "etc/sddm.conf.d/theme.conf" \

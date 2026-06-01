@@ -1,14 +1,14 @@
 .codex
 
-home/USER/.config/tmux/plugins/
+home/user/.config/tmux/plugins/
 
-home/USER/.config/fuzzel/2fa.yml
-home/USER/.config/fuzzel/snippets_closed.yml
+home/user/.config/fuzzel/2fa.yml
+home/user/.config/fuzzel/snippets_closed.yml
 
-home/USER/.config/zed/workspace/**
-home/USER/.config/nvim/lazyvim.json
+home/user/.config/zed/workspace/**
+home/user/.config/nvim/lazyvim.json
 
-home/USER/.config/obs-studio/**
-!home/USER/.config/obs-studio/basic/
-!home/USER/.config/obs-studio/basic/profiles/
-!home/USER/.config/obs-studio/basic/profiles/**
+home/user/.config/obs-studio/**
+!home/user/.config/obs-studio/basic/
+!home/user/.config/obs-studio/basic/profiles/
+!home/user/.config/obs-studio/basic/profiles/**

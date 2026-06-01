@@ -18,13 +18,17 @@ window-padding-balance = true
 window-padding-color = extend-always
 window-save-state = always
 
+window-save-state = always
+
 gtk-titlebar = false
 gtk-wide-tabs = true
 
 cursor-style = block
 cursor-style-blink = true
 
+shell-integration = detect
 shell-integration-features = no-cursor
+quit-after-last-window-closed = false
 
 font-feature = -calt
 font-feature = -liga

@@ -7,7 +7,7 @@
 	// Choose the order of the modules
 	// "modules-left": ["sway/workspaces", "sway/mode"],
 	// "modules-center": ["sway/window"],
-	"modules-right": ["backlight", "pulseaudio", "custom/wiremix", "custom/systemctl-tui", "custom/impala", "custom/lazydocker", "custom/gpu-temperature", "battery", "clock", "custom/system-upgrade", "custom/dotfiles", "idle_inhibitor", "tray"],
+	"modules-right": ["backlight", "pulseaudio", "custom/wiremix", "custom/systemctl-tui", "custom/btop", "custom/impala", "custom/lazydocker", "custom/gpu-temperature", "battery", "clock", "custom/system-upgrade", "custom/dotfiles", "idle_inhibitor", "tray"],
 
 	"backlight": {
 		// "device": "acpi_video1",
@@ -104,6 +104,14 @@
 		"tooltip": true,
 		"tooltip-format": "Open systemctl-tui",
 		"on-click": "sh -lc 'exec ${TERMINAL} -e systemctl-tui'"
+	},
+	"custom/btop": {
+		"format": "{}",
+		"interval": "once",
+		"exec": "echo Btop",
+		"tooltip": true,
+		"tooltip-format": "Open btop",
+		"on-click": "sh -lc 'exec ${TERMINAL} -e btop'"
 	},
 	"custom/lazydocker": {
 		"format": "{}",

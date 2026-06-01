@@ -34,6 +34,7 @@ PACMAN_PACKAGES=(
   wiremix
   lazydocker
   lazygit
+  btop
   ttf-nerd-fonts-symbols
   ttf-roboto
   flameshot

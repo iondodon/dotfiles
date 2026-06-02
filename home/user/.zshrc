@@ -70,6 +70,12 @@ if [[ -d "$HOME/.local/bin" ]]; then
    export PATH="$HOME/.local/bin:$PATH"
 fi
 
+if [ -d "$HOME/Android/Sdk" ]; then
+   export ANDROID_HOME="$HOME/Android/Sdk"
+   export ANDROID_SDK_ROOT="$ANDROID_HOME"
+   export PATH="$ANDROID_HOME/platform-tools:$ANDROID_HOME/cmdline-tools/latest/bin:$PATH"
+fi
+
 if [ -f /usr/share/fzf/key-bindings.zsh ]; then
    source /usr/share/fzf/key-bindings.zsh
 fi

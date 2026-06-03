@@ -32,9 +32,6 @@ git remote set-url origin git@github.com:iondodon/dotfiles.git
 - [7zip](https://github.com/ip7z/7zip)
 - [Mangohud](https://github.com/flightlessmango/Mangohud)
 - [LACT](https://github.com/ilya-zlobintsev/LACT)
-
-<br>
-
 - [tpm](https://github.com/tmux-plugins/tpm)
 - [tmux](https://github.com/tmux/tmux)
 - [ghostty](https://ghostty.org/)
@@ -45,9 +42,6 @@ git remote set-url origin git@github.com:iondodon/dotfiles.git
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 - [shellcheck](https://github.com/koalaman/shellcheck)
-
-<br>
-
 - [just](https://github.com/casey/just)
 - [vscode-restclient](https://github.com/Huachao/vscode-restclient)
 

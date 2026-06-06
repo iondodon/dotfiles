@@ -367,6 +367,8 @@ start_systemd_service() {
 
 setup_system_services() {
   set_display_manager sddm.service
+  enable_systemd_service NetworkManager.service
+  start_systemd_service NetworkManager.service
   enable_systemd_service bluetooth.service
   start_systemd_service bluetooth.service
 }

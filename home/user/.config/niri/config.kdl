@@ -524,7 +524,7 @@ binds {
     // Open/close the Overview: a zoomed-out view of workspaces and windows.
     // You can also move the mouse into the top-left hot corner,
     // or do a four-finger swipe up on a touchpad.
-    Mod+O repeat=false hotkey-overlay-title="Show overview" { toggle-overview; }
+    Mod+Grave repeat=false hotkey-overlay-title="Show overview" { toggle-overview; }
 
     Mod+Shift+C repeat=false hotkey-overlay-title="Close focused window" { close-window; }
 

@@ -32,6 +32,11 @@ if [ -f "$HOME/.secrets" ]; then
     source "$HOME/.secrets"
 fi
 
+# External environment
+if [ -f "$HOME/.external" ]; then
+    source "$HOME/.external"
+fi
+
 # Go binaries (go install)
 if [[ -d "$HOME/go/bin" ]]; then
   export PATH="$PATH:$HOME/go/bin"

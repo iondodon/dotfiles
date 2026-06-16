@@ -213,7 +213,7 @@ install_paru() {
 
   (
     trap 'rm -rf -- "$build_dir"' EXIT
-    sudo pacman -Syu --needed git base-devel
+    sudo pacman -S --needed git base-devel
     git clone --depth 1 "$PARU_REPO_URL" "$build_dir/paru"
     cd "$build_dir/paru"
     makepkg -si --needed
@@ -227,7 +227,7 @@ install_paru() {
 
 install_packages() {
   if command -v pacman >/dev/null 2>&1; then
-    sudo pacman -Syu --needed "${PACMAN_PACKAGES[@]}"
+    sudo pacman -S --needed "${PACMAN_PACKAGES[@]}"
   else
     echo "skip    pacman not found"
   fi

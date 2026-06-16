@@ -1,28 +1,39 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="14" viewBox="0 0 1920 14" preserveAspectRatio="none">
+<svg xmlns="http://www.w3.org/2000/svg" width="7680" height="14" viewBox="0 0 7680 14" preserveAspectRatio="xMidYMid meet">
 	<defs>
 		<linearGradient id="sky" x1="0" y1="0" x2="0" y2="14" gradientUnits="userSpaceOnUse">
 			<stop offset="0" stop-color="#273241"/>
 			<stop offset="0.58" stop-color="#1d2733"/>
 			<stop offset="1" stop-color="#11161c"/>
 		</linearGradient>
-		<radialGradient id="sun-glow" cx="334" cy="5.8" r="190" gradientUnits="userSpaceOnUse">
+		<radialGradient id="sun-glow" cx="3214" cy="5.8" r="190" gradientUnits="userSpaceOnUse">
 			<stop offset="0" stop-color="#f0b35a" stop-opacity="0.42"/>
 			<stop offset="0.45" stop-color="#d77c57" stop-opacity="0.12"/>
 			<stop offset="1" stop-color="#d77c57" stop-opacity="0"/>
 		</radialGradient>
-		<linearGradient id="water" x1="0" y1="11.1" x2="1920" y2="14" gradientUnits="userSpaceOnUse">
+		<linearGradient id="water" x1="2880" y1="11.1" x2="4800" y2="14" gradientUnits="userSpaceOnUse">
 			<stop offset="0" stop-color="#18252c"/>
 			<stop offset="0.5" stop-color="#20323a"/>
 			<stop offset="1" stop-color="#172028"/>
 		</linearGradient>
 	</defs>
-	<rect width="1920" height="14" fill="url(#sky)"/>
-	<rect width="1920" height="14" fill="url(#sun-glow)"/>
-	<circle cx="334" cy="5.8" r="3.1" fill="#e8a052" opacity="0.9"/>
-	<path d="M0 10.2L96 6.9L180 9.8L276 6.2L360 9.5L475 6.6L620 10.1L742 6.3L895 9.7L1018 6.8L1162 10L1298 6.1L1442 9.6L1588 6.7L1720 9.9L1835 6.5L1920 9.5V14H0Z" fill="#141b24" opacity="0.88"/>
-	<path d="M0 11.1L130 8.8L235 10.6L352 8L515 11L666 8.4L792 10.8L952 8.3L1105 11.2L1268 8.5L1390 10.9L1538 8.1L1675 10.7L1812 8.7L1920 10.5V14H0Z" fill="#0e141b" opacity="0.96"/>
-	<rect y="11.1" width="1920" height="2.9" fill="url(#water)" opacity="0.82"/>
-	<path d="M0 12.4H1920M128 13H278M432 12.7H594M846 13.1H1036M1210 12.8H1404M1600 13.1H1784" stroke="#5f7d91" stroke-opacity="0.16" stroke-width="0.6"/>
-	<path d="M0 13.5H1920" stroke="#000000" stroke-opacity="0.48"/>
-	<path d="M0 0.5H1920" stroke="#ffffff" stroke-opacity="0.08"/>
+	<rect width="7680" height="14" fill="url(#sky)"/>
+	<rect width="7680" height="14" fill="url(#sun-glow)"/>
+
+	<path d="M0 10.2H2880V14H0Z" fill="#141b24" opacity="0.88"/>
+	<path d="M4800 9.5H7680V14H4800Z" fill="#141b24" opacity="0.88"/>
+	<path d="M0 11.1H2880V14H0Z" fill="#0e141b" opacity="0.96"/>
+	<path d="M4800 10.5H7680V14H4800Z" fill="#0e141b" opacity="0.96"/>
+	<rect y="11.1" width="7680" height="2.9" fill="url(#water)" opacity="0.82"/>
+	<path d="M0 12.4H2880M4800 12.4H7680" stroke="#5f7d91" stroke-opacity="0.16" stroke-width="0.6"/>
+
+	<g transform="translate(2880 0)">
+		<circle cx="334" cy="5.8" r="3.1" fill="#e8a052" opacity="0.9"/>
+		<path d="M0 10.2L96 6.9L180 9.8L276 6.2L360 9.5L475 6.6L620 10.1L742 6.3L895 9.7L1018 6.8L1162 10L1298 6.1L1442 9.6L1588 6.7L1720 9.9L1835 6.5L1920 9.5V14H0Z" fill="#141b24" opacity="0.88"/>
+		<path d="M0 11.1L130 8.8L235 10.6L352 8L515 11L666 8.4L792 10.8L952 8.3L1105 11.2L1268 8.5L1390 10.9L1538 8.1L1675 10.7L1812 8.7L1920 10.5V14H0Z" fill="#0e141b" opacity="0.96"/>
+		<rect y="11.1" width="1920" height="2.9" fill="url(#water)" opacity="0.82"/>
+		<path d="M0 12.4H1920M128 13H278M432 12.7H594M846 13.1H1036M1210 12.8H1404M1600 13.1H1784" stroke="#5f7d91" stroke-opacity="0.16" stroke-width="0.6"/>
+	</g>
+
+	<path d="M0 13.5H7680" stroke="#000000" stroke-opacity="0.48"/>
+	<path d="M0 0.5H7680" stroke="#ffffff" stroke-opacity="0.08"/>
 </svg>

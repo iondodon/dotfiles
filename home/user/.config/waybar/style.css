@@ -8,8 +8,10 @@
 }
 
 window#waybar {
-	/*background: #000000;*/
-	background: #222222;
+	background-image: url("bar-landscape.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% 100%;
 	color: #aaaaaa;
 }
 

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="7680" height="14" viewBox="0 0 7680 14" preserveAspectRatio="xMidYMid meet">
+	<defs>
+		<linearGradient id="sky" x1="0" y1="0" x2="0" y2="14" gradientUnits="userSpaceOnUse">
+			<stop offset="0" stop-color="#152033"/>
+			<stop offset="0.52" stop-color="#101b2a"/>
+			<stop offset="1" stop-color="#0a1118"/>
+		</linearGradient>
+		<linearGradient id="aurora" x1="3120" y1="0" x2="4540" y2="10" gradientUnits="userSpaceOnUse">
+			<stop offset="0" stop-color="#4ad6a2" stop-opacity="0"/>
+			<stop offset="0.24" stop-color="#4ad6a2" stop-opacity="0.22"/>
+			<stop offset="0.5" stop-color="#6fa8ff" stop-opacity="0.16"/>
+			<stop offset="0.74" stop-color="#94d7ba" stop-opacity="0.2"/>
+			<stop offset="1" stop-color="#94d7ba" stop-opacity="0"/>
+		</linearGradient>
+		<radialGradient id="moon-glow" cx="4260" cy="3.4" r="150" gradientUnits="userSpaceOnUse">
+			<stop offset="0" stop-color="#d9e7ff" stop-opacity="0.2"/>
+			<stop offset="0.42" stop-color="#90b7e7" stop-opacity="0.08"/>
+			<stop offset="1" stop-color="#90b7e7" stop-opacity="0"/>
+		</radialGradient>
+		<linearGradient id="water" x1="2880" y1="10.8" x2="4800" y2="14" gradientUnits="userSpaceOnUse">
+			<stop offset="0" stop-color="#0d1c24"/>
+			<stop offset="0.5" stop-color="#17303a"/>
+			<stop offset="1" stop-color="#0c151c"/>
+		</linearGradient>
+	</defs>
+	<rect width="7680" height="14" fill="url(#sky)"/>
+	<rect width="7680" height="14" fill="url(#aurora)"/>
+	<rect width="7680" height="14" fill="url(#moon-glow)"/>
+
+	<path d="M0 9.4H2880V14H0ZM4800 9.2H7680V14H4800Z" fill="#0c151d" opacity="0.9"/>
+	<path d="M0 10.8H2880V14H0ZM4800 10.8H7680V14H4800Z" fill="#071016" opacity="0.96"/>
+	<rect y="10.8" width="7680" height="3.2" fill="url(#water)" opacity="0.88"/>
+
+	<g transform="translate(2880 0)">
+		<path d="M0 8.8L86 7.6L172 8.7L280 6.9L405 8.4L530 7.2L650 8.8L762 7.1L882 8.5L1012 6.8L1150 8.7L1288 7L1424 8.5L1570 7.4L1710 8.8L1832 7.2L1920 8.6V14H0Z" fill="#101925" opacity="0.82"/>
+		<path d="M0 10.1L120 8.9L238 10L374 8.4L512 10.1L660 8.7L806 10.2L950 8.6L1098 10L1250 8.5L1398 10.2L1548 8.8L1692 10L1824 8.6L1920 9.8V14H0Z" fill="#071016" opacity="0.96"/>
+		<rect y="10.8" width="1920" height="3.2" fill="url(#water)" opacity="0.88"/>
+		<circle cx="1380" cy="3.2" r="2" fill="#dbe8ff" opacity="0.9"/>
+		<path d="M255 10.4l6 -6l6 6h-3l4 2h-14l4 -2zM312 10.2l5 -5.2l5 5.2h-2.5l3.5 1.8h-12l3.5 -1.8zM1515 10.5l6.5 -6.5l6.5 6.5h-3l4.5 2.2h-15l4.5 -2.2zM1608 10.3l5.5 -5.6l5.5 5.6h-2.6l3.8 1.9h-13.4l3.8 -1.9z" fill="#050a0f" opacity="0.98"/>
+		<path d="M230 12.4H420M812 12.8H1040M1210 12.3H1430M1500 12.9H1768" stroke="#6db6c2" stroke-opacity="0.17" stroke-width="0.6"/>
+		<path d="M510 3.1l3.5 -1.1l3.5 1.1l3.5 -1.1l3.5 1.1M612 4.1l3 -0.9l3 0.9l3 -0.9l3 0.9M1180 4.8l3.2 -1l3.2 1l3.2 -1l3.2 1" fill="none" stroke="#5fcfa5" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.46" opacity="0.75"/>
+	</g>
+
+	<path d="M0 13.5H7680" stroke="#000000" stroke-opacity="0.5"/>
+	<path d="M0 0.5H7680" stroke="#ffffff" stroke-opacity="0.07"/>
+</svg>

@@ -391,8 +391,6 @@ window-rule {
     draw-border-with-background false
     geometry-corner-radius 8
     clip-to-geometry true
-    // open-floating true
-    open-maximized-to-edges true
 
     background-effect {
         xray false

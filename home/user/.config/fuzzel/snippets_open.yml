@@ -4,10 +4,10 @@
 
 - name: Download YouTube playlist as mp3
   desc: >-
-    Download YouTube playlist as mp3. --audio-quality 0 means available quality.
+    Download YouTube playlist as mp3. --audio-quality 0 means best available quality.
     Make sure the URL does not have character escapes.
     The link from a Youtube Mix also works.
   value: >-
-    yt-dlp -x --audio-format mp3 --audio-quality 0
+    yt-dlp -x --audio-format mp3 --audio lui-quality 0
     -o "%(playlist)s/%(playlist_index)02d - %(title)s.%(ext)s"
     "PLAYLIST_URL"

@@ -30,7 +30,6 @@ PACMAN_PACKAGES=(
   swaylock
   bluez
   blueman
-  impala
   wiremix
   lazydocker
   lazygit

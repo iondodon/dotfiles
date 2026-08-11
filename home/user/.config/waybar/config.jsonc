@@ -7,7 +7,7 @@
 	// Choose the order of the modules
 	// "modules-left": ["sway/workspaces", "sway/mode"],
 	// "modules-center": ["sway/window"],
-	"modules-right": ["backlight", "pulseaudio", "custom/wiremix", "custom/systemctl-tui", "custom/btop", "custom/impala", "custom/lazydocker", "custom/gpu-temperature", "battery", "clock", "custom/system-upgrade", "custom/dotfiles", "idle_inhibitor", "tray"],
+	"modules-right": ["backlight", "pulseaudio", "custom/wiremix", "custom/systemctl-tui", "custom/btop", "custom/lazydocker", "custom/gpu-temperature", "battery", "clock", "custom/system-upgrade", "custom/dotfiles", "idle_inhibitor", "tray"],
 
 	"backlight": {
 		// "device": "acpi_video1",
@@ -80,14 +80,6 @@
 		"tooltip": true,
 		"tooltip-format": "Upgrade system packages",
 		"on-click": "sh -lc 'exec ${TERMINAL} -e paru -Syu'"
-	},
-	"custom/impala": {
-		"format": "{}",
-		"interval": "once",
-		"exec": "echo Impala",
-		"tooltip": true,
-		"tooltip-format": "Open Impala",
-		"on-click": "sh -lc 'exec ${TERMINAL} -e impala'"
 	},
 	"custom/wiremix": {
 		"format": "{}",

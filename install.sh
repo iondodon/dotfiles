@@ -30,7 +30,7 @@ PACMAN_PACKAGES=(
   swaylock
   bluez
   blueman
-  wiremix
+  pavucontrol
   lazydocker
   lazygit
   btop

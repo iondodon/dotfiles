@@ -26,7 +26,7 @@ git remote set-url origin git@github.com:iondodon/dotfiles.git
 - [sddm-slice](https://github.com/EricKotato/sddm-slice)
 - [brave-browser](https://brave.com)
 - [qbittorrent](https://www.qbittorrent.org/)
-- [wiremix](https://github.com/tsowell/wiremix)
+- [pavucontrol](https://freedesktop.org/software/pulseaudio/pavucontrol/)
 - [systemctl-tui](https://github.com/rgwood/systemctl-tui)
 - [7zip](https://github.com/ip7z/7zip)
 - [Mangohud](https://github.com/flightlessmango/Mangohud)

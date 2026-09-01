@@ -26,6 +26,7 @@ PACMAN_PACKAGES=(
   sddm
   niri
   noctalia
+  networkmanager
   bluez
   bluez-utils
   pavucontrol

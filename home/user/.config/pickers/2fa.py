@@ -83,7 +83,7 @@ def load_accounts(yaml_path: str):
 def pick_selection(names):
     menu = "\n".join(names)
     proc = subprocess.run(
-        ["fuzzel", "--dmenu"],
+        ["noctalia", "dmenu", "-p", "2FA"],
         input=menu,
         text=True,
         capture_output=True,
@@ -107,7 +107,7 @@ def generate_code(secret: str):
 
 
 def main() -> int:
-    yaml_path = os.path.expanduser("~/.config/fuzzel/2fa.yml")
+    yaml_path = os.path.expanduser("~/.config/pickers/2fa.yml")
     entries = load_accounts(yaml_path)
     if entries is None:
         notify("Missing PyYAML (pip install pyyaml)")

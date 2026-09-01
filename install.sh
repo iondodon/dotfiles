@@ -25,11 +25,9 @@ PACMAN_PACKAGES=(
   qt6-virtualkeyboard
   sddm
   niri
-  waybar
-  mako
-  swaylock
+  noctalia
   bluez
-  blueman
+  bluez-utils
   pavucontrol
   lazydocker
   lazygit
@@ -40,18 +38,13 @@ PACMAN_PACKAGES=(
   ghostty
   nano
   nautilus
-  gammastep
   xclip
   xsel
   ttf-jetbrains-mono
   arandr
   wl-clipboard
   shellcheck
-  swaybg
-  network-manager-applet
   systemctl-tui
-  swayidle
-  fuzzel
   fzf
   oath-toolkit
   libnotify
@@ -59,6 +52,7 @@ PACMAN_PACKAGES=(
   pacman-contrib
   xwayland-satellite
   fastfetch
+  upower
   onefetch
   7zip
 )
@@ -620,20 +614,17 @@ link "home/user/.config/Code/User/settings.json"
 link "home/user/.config/MangoHud/MangoHud.conf"
 link "home/user/.config/environment.d"
 link "home/user/.config/flameshot"
-link "home/user/.config/fuzzel"
 link "home/user/.config/ghostty"
 link "home/user/.config/gtk-2.0"
 link "home/user/.config/gtk-3.0"
 link "home/user/.config/gtk-4.0"
 link "home/user/.config/lazygit"
-link "home/user/.config/mako"
 link "home/user/.config/niri"
+link "home/user/.config/noctalia"
 link "home/user/.config/nvim"
 link "home/user/.config/obs-studio/basic/profiles"
-link "home/user/.config/swayidle"
-link "home/user/.config/swaylock"
+link "home/user/.config/pickers"
 link "home/user/.config/tmux"
-link "home/user/.config/waybar"
 link "home/user/.config/witcher"
 link "home/user/.config/zed/keymap.json"
 link "home/user/.config/zed/settings.json"
@@ -643,8 +634,8 @@ link "home/user/.icons/Polarnight-cursors"
 
 link "home/user/.local/bin/secure7z.sh"
 link_group \
-  "home/user/.local/share/applications/fuzzel-2fa.desktop" \
-  "home/user/.local/share/applications/fuzzel-snippets.desktop"
+  "home/user/.local/share/applications/pickers-2fa.desktop" \
+  "home/user/.local/share/applications/pickers-snippets.desktop"
 link "home/user/.local/share/backgrounds/bolduresti.png"
 
 install_system_group \

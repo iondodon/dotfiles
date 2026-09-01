@@ -21,7 +21,7 @@ git remote set-url origin git@github.com:iondodon/dotfiles.git
 - [lazygit](https://github.com/jesseduffield/lazygit)
 - [onefetch](https://github.com/o2sh/onefetch)
 - [fastfetch](https://github.com/fastfetch-cli/fastfetch)
-- [waybar](https://github.com/Alexays/Waybar)
+- [noctalia](https://github.com/noctalia-dev/noctalia) - [docs.noctalia.dev](https://docs.noctalia.dev/)
 - [niri](https://github.com/niri-wm/niri) - [https://niri-wm.github.io/niri/](https://niri-wm.github.io/niri/)
 - [sddm-slice](https://github.com/EricKotato/sddm-slice)
 - [brave-browser](https://brave.com)

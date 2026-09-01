@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Snippets
+Comment=Copy a saved snippet to the clipboard.
+Icon=edit-copy
+Exec=sh -lc 'PATH="$HOME/.config/pickers:$PATH" snippets.py'
+Terminal=false
+Categories=Utility;

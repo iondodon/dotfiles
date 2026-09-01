@@ -108,7 +108,7 @@ def build_display(name: str, desc: str) -> str:
 def pick_selection(items):
     menu = "\n".join(build_display(name, desc) for name, desc, _val in items)
     proc = subprocess.run(
-        ["fuzzel", "--dmenu"],
+        ["noctalia", "dmenu", "-p", "Snippets"],
         input=menu,
         text=True,
         capture_output=True,
@@ -126,7 +126,7 @@ def lookup_value(items, selection: str):
 
 
 def main() -> int:
-    cfg_dir = os.path.expanduser("~/.config/fuzzel")
+    cfg_dir = os.path.expanduser("~/.config/pickers")
     paths = [
         os.path.join(cfg_dir, "snippets_open.yml"),
         os.path.join(cfg_dir, "snippets_closed.yml"),

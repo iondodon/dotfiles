@@ -1,0 +1,165 @@
+# Noctalia shell configuration.
+#
+# Docs:         https://docs.noctalia.dev
+# All defaults: https://github.com/noctalia-dev/noctalia/blob/main/example.toml
+#
+# Noctalia merges every *.toml in this directory. Anything changed through the
+# Noctalia settings GUI is written to ~/.local/state/noctalia/settings.toml and
+# takes precedence over this file.
+
+# ── Shell ─────────────────────────────────────────────────────────────────────
+
+[shell]
+font_family       = "JetBrains Mono"
+clipboard_enabled = true
+
+# niri runs with animations off; keep the shell consistent with it.
+[shell.animation]
+enabled = false
+
+# ── Theme ─────────────────────────────────────────────────────────────────────
+
+[theme]
+mode    = "dark"
+source  = "builtin"
+builtin = "Noctalia"
+
+# ── Wallpaper ─────────────────────────────────────────────────────────────────
+# Replaces `swaybg -i ... -m fill`. "crop" is swaybg's "fill".
+
+[wallpaper]
+enabled               = true
+fill_mode             = "crop"
+transition_on_startup = false
+
+[wallpaper.default]
+path = "~/.local/share/backgrounds/bolduresti.png"
+
+# ── Notifications ─────────────────────────────────────────────────────────────
+# Replaces mako. Needs `honor-xdg-activation-with-invalid-serial` in niri's
+# debug block for notification actions to raise the right window.
+
+[notification]
+enable_daemon = true
+show_app_name = true
+show_actions  = true
+
+# ── Lock screen ───────────────────────────────────────────────────────────────
+# Replaces swaylock. Falls back to the desktop wallpaper as its background.
+
+[lockscreen]
+enabled              = true
+lock_before_suspend  = true
+
+# ── Night light ───────────────────────────────────────────────────────────────
+# Replaces `gammastep -l 47.0:28.9`. Same wlr-gamma-control protocol, same
+# temperatures gammastep defaulted to, same one-hour fade around sunrise/sunset.
+# Toggle it with `noctalia msg nightlight-toggle`, from the control center, or
+# by adding "nightlight" to a bar section below.
+
+[nightlight]
+enabled           = true
+force             = false
+temperature_day   = 6500
+temperature_night = 4500
+
+# ── Location ──────────────────────────────────────────────────────────────────
+# Drives the night light schedule (and weather, if it is ever enabled).
+
+[location]
+auto_locate = false
+latitude    = 47.0
+longitude   = 28.9
+
+# ── Idle ──────────────────────────────────────────────────────────────────────
+# Replaces swayidle, whose config had every timeout commented out. Flip these
+# to true to lock and blank the screen on a timer.
+
+[idle.behavior.lock]
+enabled = false
+timeout = 600
+
+[idle.behavior.screen-off]
+enabled = false
+timeout = 660
+
+# ── System monitor ────────────────────────────────────────────────────────────
+# Feeds the gpu-temp widget below.
+
+[system.monitor]
+enabled          = true
+gpu_poll_seconds = 5.0
+
+# ── Bar ───────────────────────────────────────────────────────────────────────
+
+[bar.main]
+position    = "bottom"
+thickness   = 34
+radius      = 12
+margin_ends = 180
+margin_edge = 10
+
+start  = ["launcher", "wallpaper", "workspaces"]
+center = ["clock"]
+end    = [
+  "systemctl-tui",
+  "btop",
+  "lazydocker",
+  "system-upgrade",
+  "gpu-temp",
+  "media",
+  "tray",
+  "notifications",
+  "network",
+  "bluetooth",
+  "volume",
+  "brightness",
+  "battery",
+  "caffeine",
+  "control-center",
+  "session",
+]
+
+# ── Widgets ───────────────────────────────────────────────────────────────────
+
+[widget.clock]
+format         = "{:%a %b %d, %H:%M}"
+tooltip_format = "{:%Y-%m-%d | %H:%M:%S}"
+
+# Reads the amdgpu/i915/NVML sensors directly; no helper script needed.
+[widget.gpu-temp]
+type          = "sysmon"
+stat          = "gpu_temp"
+visualization = "none"
+
+[widget.systemctl-tui]
+type    = "custom_button"
+glyph   = "server"
+tooltip = "Open systemctl-tui"
+
+[widget.systemctl-tui.actions]
+left = "exec sh -lc 'exec ${TERMINAL} -e systemctl-tui'"
+
+[widget.btop]
+type    = "custom_button"
+glyph   = "activity"
+tooltip = "Open btop"
+
+[widget.btop.actions]
+left = "exec sh -lc 'exec ${TERMINAL} -e btop'"
+
+[widget.lazydocker]
+type    = "custom_button"
+glyph   = "brand-docker"
+tooltip = "Open lazydocker"
+
+[widget.lazydocker.actions]
+left = "exec sh -lc 'exec ${TERMINAL} -e lazydocker'"
+
+[widget.system-upgrade]
+type    = "custom_button"
+glyph   = "package"
+tooltip = "Upgrade system packages"
+
+[widget.system-upgrade.actions]
+left = "exec sh -lc 'exec ${TERMINAL} -e paru -Syu'"

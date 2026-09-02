@@ -106,7 +106,7 @@ radius = 0
 margin_ends = 0
 margin_edge = 0
 
-start = ["launcher", "wallpaper", "workspaces"]
+start = ["control-center", "launcher", "wallpaper", "media"]
 center = ["clock"]
 end = [
   "systemctl-tui",
@@ -114,7 +114,6 @@ end = [
   "lazydocker",
   "system-upgrade",
   "gpu-temp",
-  "media",
   "tray",
   "notifications",
   "network",
@@ -123,7 +122,6 @@ end = [
   "brightness",
   "battery",
   "caffeine",
-  "control-center",
   "session",
 ]
 

@@ -19,10 +19,14 @@ enabled = false
 
 # ── Theme ─────────────────────────────────────────────────────────────────────
 
+# Only the key matching `source` is active; the others are the selections
+# Noctalia remembers for when you switch sources in the settings GUI.
 [theme]
-mode    = "dark"
-source  = "builtin"
-builtin = "Noctalia"
+mode              = "dark"
+source            = "builtin"
+builtin           = "Gruvbox"
+community_palette = "spiderman"
+wallpaper_scheme  = "m3-content"
 
 # ── Wallpaper ─────────────────────────────────────────────────────────────────
 # Replaces `swaybg -i ... -m fill`. "crop" is swaybg's "fill".
@@ -95,9 +99,9 @@ gpu_poll_seconds = 5.0
 [bar.main]
 position    = "bottom"
 thickness   = 34
-radius      = 12
-margin_ends = 180
-margin_edge = 10
+radius      = 0
+margin_ends = 0
+margin_edge = 0
 
 start  = ["launcher", "wallpaper", "workspaces"]
 center = ["clock"]
@@ -163,3 +167,102 @@ tooltip = "Upgrade system packages"
 
 [widget.system-upgrade.actions]
 left = "exec sh -lc 'exec ${TERMINAL} -e paru -Syu'"
+
+# ── Desktop widgets ───────────────────────────────────────────────────────────
+# Placed with the in-shell editor (`noctalia msg desktop-widgets-edit`), which
+# writes coordinates in the placement resolution below. They are pinned to
+# HDMI-A-2 and will need re-placing on a different monitor layout.
+
+[desktop_widgets]
+enabled        = false
+schema_version = 2
+widget_order   = [
+  "desktop-widget-0000000000000001",
+  "desktop-widget-0000000000000002",
+  "desktop-widget-0000000000000003",
+]
+
+[desktop_widgets.grid]
+visible        = true
+cell_size      = 16
+major_interval = 4
+
+# CPU usage + temperature
+[desktop_widgets.widget.desktop-widget-0000000000000001]
+type             = "sysmon"
+output           = "HDMI-A-2"
+cx               = 1803.0
+cy               = 300.0
+box_width        = 208.0
+box_height       = 128.0
+rotation         = 0.0
+placement_width  = 1920.0
+placement_height = 1080.0
+
+[desktop_widgets.widget.desktop-widget-0000000000000001.settings]
+stat  = "cpu_usage"
+stat2 = "cpu_temp"
+
+# Weather (uses the [location] coordinates above)
+[desktop_widgets.widget.desktop-widget-0000000000000002]
+type             = "weather"
+output           = "HDMI-A-2"
+cx               = 1803.0
+cy               = 174.0
+box_width        = 208.0
+box_height       = 96.0
+rotation         = 0.0
+placement_width  = 1920.0
+placement_height = 1080.0
+
+[desktop_widgets.widget.desktop-widget-0000000000000003]
+type             = "clock"
+output           = "HDMI-A-2"
+cx               = 1803.0
+cy               = 60.0
+box_width        = 208.0
+box_height       = 96.0
+rotation         = 0.0
+placement_width  = 1920.0
+placement_height = 1080.0
+
+# ── Lock screen widgets ───────────────────────────────────────────────────────
+# `enabled = false` keeps the stock lock screen layout; the login box below is
+# the custom placement, kept so it survives turning this on again.
+
+[lockscreen_widgets]
+enabled        = false
+schema_version = 2
+widget_order   = ["lockscreen-login-box@HDMI-A-2"]
+
+[lockscreen_widgets.grid]
+visible        = true
+cell_size      = 16
+major_interval = 4
+
+[lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-2"]
+type             = "login_box"
+output           = "HDMI-A-2"
+cx               = 960.0
+cy               = 898.0
+box_width        = 810.0
+box_height       = 196.0
+rotation         = 0.0
+placement_width  = 1920.0
+placement_height = 1080.0
+
+[lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-2".settings]
+layout               = "regular"
+background_color     = "surface_variant"
+background_opacity   = 0.88
+background_radius    = 12.0
+input_opacity        = 1.0
+input_radius         = 6.0
+center_password_text = false
+show_caps_lock       = true
+show_keyboard_layout = true
+show_login_button    = true
+show_media           = true
+show_session_buttons = true
+show_unlock_hint     = true
+show_weather         = true

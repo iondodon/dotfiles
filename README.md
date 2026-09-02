@@ -23,7 +23,7 @@ git remote set-url origin git@github.com:iondodon/dotfiles.git
 - [fastfetch](https://github.com/fastfetch-cli/fastfetch)
 - [noctalia](https://github.com/noctalia-dev/noctalia) - [docs.noctalia.dev](https://docs.noctalia.dev/)
 - [niri](https://github.com/niri-wm/niri) - [https://niri-wm.github.io/niri/](https://niri-wm.github.io/niri/)
-- [sddm-slice](https://github.com/EricKotato/sddm-slice)
+- [noctalia-greeter](https://github.com/noctalia-dev/noctalia-greeter) - greetd greeter matching the shell
 - [brave-browser](https://brave.com)
 - [qbittorrent](https://www.qbittorrent.org/)
 - [pavucontrol](https://freedesktop.org/software/pulseaudio/pavucontrol/)

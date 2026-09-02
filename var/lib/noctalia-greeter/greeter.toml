@@ -1,0 +1,58 @@
+# noctalia-greeter declarative config.
+#
+# Docs: https://docs.noctalia.dev/v5/greeter/
+#
+# This is the greeter's equivalent of ~/.config/noctalia/config.toml: the shell's
+# settings GUI and `noctalia msg greeter-sync` write sync.toml beside this file,
+# and never touch this one. Keys set here win over sync, so the login screen looks
+# right on a fresh machine without anyone having to run a sync first.
+#
+# The values below are what `noctalia msg greeter-sync` produced from the running
+# shell, minus the [[session.actions]] block, which the greeter accepts only from
+# sync.toml.
+#
+# Available sections, per the greeter's own generated template:
+#   [session] default          [user] default
+#   [appearance] scheme, password_style, hide_logo, power_buttons_position,
+#                scheme_selector_position, theme_mode, corner_radius_scale, font_family
+#   [appearance.palette]       [appearance.wallpaper] path/fill_mode/fill_color
+#   [appearance.wallpapers.<connector>]
+#   [output] name/layout/scale/scales/width/height/transforms
+#   [idle] timeout             [cursor] theme/size/path
+#   [keyboard] layout/variant/options/numlock
+#   [auth] allow_empty_password, request_timeout
+
+[appearance]
+scheme              = "Synced"
+theme_mode          = "dark"
+font_family         = "JetBrains Mono"
+corner_radius_scale = 1.0
+
+# Gruvbox, as the shell resolves it. Matches [theme] in ../../../home/user/.config/noctalia/config.toml.
+[appearance.palette]
+primary            = "#B8BB26"
+on_primary         = "#282828"
+secondary          = "#FABD2F"
+on_secondary       = "#282828"
+tertiary           = "#83A598"
+on_tertiary        = "#282828"
+error              = "#FB4934"
+on_error           = "#282828"
+surface            = "#282828"
+on_surface         = "#FBF1C7"
+surface_variant    = "#3C3836"
+on_surface_variant = "#EBDBB2"
+outline            = "#4E4A47"
+shadow             = "#282828"
+hover              = "#83A598"
+on_hover           = "#282828"
+
+# greetd runs the greeter as the unprivileged `greeter` user, which cannot read
+# /home/ion. The image is installed to /usr/share/backgrounds so the shell and the
+# greeter can share one copy. "crop" matches [wallpaper] fill_mode in the shell config.
+[appearance.wallpaper]
+path      = "/usr/share/backgrounds/bolduresti.png"
+fill_mode = "crop"
+
+# HDMI-A-2 reports scale 1.0 / transform normal, which are the defaults, so
+# [output] is left unset and the greeter mirrors onto whatever is connected.

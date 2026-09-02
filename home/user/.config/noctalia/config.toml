@@ -5,12 +5,15 @@
 #
 # Noctalia merges every *.toml in this directory. Anything changed through the
 # Noctalia settings GUI is written to ~/.local/state/noctalia/settings.toml and
-# takes precedence over this file.
+# takes precedence over this file. 
+# If you want to set seetings that will be persisted in the dotfiles repo then
+# manually updated this *.toml files from ~/.config/noctalia and make sure that those configs
+# are not overriden in ~/.local/state/noctalia.
 
 # ── Shell ─────────────────────────────────────────────────────────────────────
 
 [shell]
-font_family       = "JetBrains Mono"
+font_family = "JetBrains Mono"
 clipboard_enabled = true
 
 # niri runs with animations off; keep the shell consistent with it.
@@ -22,22 +25,22 @@ enabled = false
 # Only the key matching `source` is active; the others are the selections
 # Noctalia remembers for when you switch sources in the settings GUI.
 [theme]
-mode              = "dark"
-source            = "builtin"
-builtin           = "Gruvbox"
+mode = "dark"
+source = "builtin"
+builtin = "Gruvbox"
 community_palette = "spiderman"
-wallpaper_scheme  = "m3-content"
+wallpaper_scheme = "m3-content"
 
 # ── Wallpaper ─────────────────────────────────────────────────────────────────
 # Replaces `swaybg -i ... -m fill`. "crop" is swaybg's "fill".
 
 [wallpaper]
-enabled               = true
-fill_mode             = "crop"
+enabled = true
+fill_mode = "crop"
 transition_on_startup = false
 
 [wallpaper.default]
-path = "~/.local/share/backgrounds/bolduresti.png"
+path = "/usr/share/backgrounds/bolduresti.png"
 
 # ── Notifications ─────────────────────────────────────────────────────────────
 # Replaces mako. Needs `honor-xdg-activation-with-invalid-serial` in niri's
@@ -46,14 +49,14 @@ path = "~/.local/share/backgrounds/bolduresti.png"
 [notification]
 enable_daemon = true
 show_app_name = true
-show_actions  = true
+show_actions = true
 
 # ── Lock screen ───────────────────────────────────────────────────────────────
 # Replaces swaylock. Falls back to the desktop wallpaper as its background.
 
 [lockscreen]
-enabled              = true
-lock_before_suspend  = true
+enabled = true
+lock_before_suspend = true
 
 # ── Night light ───────────────────────────────────────────────────────────────
 # Replaces `gammastep -l 47.0:28.9`. Same wlr-gamma-control protocol, same
@@ -62,9 +65,9 @@ lock_before_suspend  = true
 # by adding "nightlight" to a bar section below.
 
 [nightlight]
-enabled           = true
-force             = false
-temperature_day   = 6500
+enabled = true
+force = false
+temperature_day = 6500
 temperature_night = 4500
 
 # ── Location ──────────────────────────────────────────────────────────────────
@@ -72,8 +75,8 @@ temperature_night = 4500
 
 [location]
 auto_locate = false
-latitude    = 47.0
-longitude   = 28.9
+latitude = 47.0
+longitude = 28.9
 
 # ── Idle ──────────────────────────────────────────────────────────────────────
 # Replaces swayidle, whose config had every timeout commented out. Flip these
@@ -91,21 +94,21 @@ timeout = 660
 # Feeds the gpu-temp widget below.
 
 [system.monitor]
-enabled          = true
+enabled = true
 gpu_poll_seconds = 5.0
 
 # ── Bar ───────────────────────────────────────────────────────────────────────
 
 [bar.main]
-position    = "bottom"
-thickness   = 34
-radius      = 0
+position = "bottom"
+thickness = 34
+radius = 0
 margin_ends = 0
 margin_edge = 0
 
-start  = ["launcher", "wallpaper", "workspaces"]
+start = ["launcher", "wallpaper", "workspaces"]
 center = ["clock"]
-end    = [
+end = [
   "systemctl-tui",
   "btop",
   "lazydocker",
@@ -127,42 +130,42 @@ end    = [
 # ── Widgets ───────────────────────────────────────────────────────────────────
 
 [widget.clock]
-format         = "{:%a %b %d, %H:%M}"
+format = "{:%a %b %d, %H:%M}"
 tooltip_format = "{:%Y-%m-%d | %H:%M:%S}"
 
 # Reads the amdgpu/i915/NVML sensors directly; no helper script needed.
 [widget.gpu-temp]
-type          = "sysmon"
-stat          = "gpu_temp"
+type = "sysmon"
+stat = "gpu_temp"
 visualization = "none"
 
 [widget.systemctl-tui]
-type    = "custom_button"
-glyph   = "server"
+type = "custom_button"
+glyph = "server"
 tooltip = "Open systemctl-tui"
 
 [widget.systemctl-tui.actions]
 left = "exec sh -lc 'exec ${TERMINAL} -e systemctl-tui'"
 
 [widget.btop]
-type    = "custom_button"
-glyph   = "activity"
+type = "custom_button"
+glyph = "activity"
 tooltip = "Open btop"
 
 [widget.btop.actions]
 left = "exec sh -lc 'exec ${TERMINAL} -e btop'"
 
 [widget.lazydocker]
-type    = "custom_button"
-glyph   = "brand-docker"
+type = "custom_button"
+glyph = "brand-docker"
 tooltip = "Open lazydocker"
 
 [widget.lazydocker.actions]
 left = "exec sh -lc 'exec ${TERMINAL} -e lazydocker'"
 
 [widget.system-upgrade]
-type    = "custom_button"
-glyph   = "package"
+type = "custom_button"
+glyph = "package"
 tooltip = "Upgrade system packages"
 
 [widget.system-upgrade.actions]
@@ -174,56 +177,56 @@ left = "exec sh -lc 'exec ${TERMINAL} -e paru -Syu'"
 # HDMI-A-2 and will need re-placing on a different monitor layout.
 
 [desktop_widgets]
-enabled        = false
+enabled = false
 schema_version = 2
-widget_order   = [
+widget_order = [
   "desktop-widget-0000000000000001",
   "desktop-widget-0000000000000002",
   "desktop-widget-0000000000000003",
 ]
 
 [desktop_widgets.grid]
-visible        = true
-cell_size      = 16
+visible = true
+cell_size = 16
 major_interval = 4
 
 # CPU usage + temperature
 [desktop_widgets.widget.desktop-widget-0000000000000001]
-type             = "sysmon"
-output           = "HDMI-A-2"
-cx               = 1803.0
-cy               = 300.0
-box_width        = 208.0
-box_height       = 128.0
-rotation         = 0.0
-placement_width  = 1920.0
+type = "sysmon"
+output = "HDMI-A-2"
+cx = 1803.0
+cy = 300.0
+box_width = 208.0
+box_height = 128.0
+rotation = 0.0
+placement_width = 1920.0
 placement_height = 1080.0
 
 [desktop_widgets.widget.desktop-widget-0000000000000001.settings]
-stat  = "cpu_usage"
+stat = "cpu_usage"
 stat2 = "cpu_temp"
 
 # Weather (uses the [location] coordinates above)
 [desktop_widgets.widget.desktop-widget-0000000000000002]
-type             = "weather"
-output           = "HDMI-A-2"
-cx               = 1803.0
-cy               = 174.0
-box_width        = 208.0
-box_height       = 96.0
-rotation         = 0.0
-placement_width  = 1920.0
+type = "weather"
+output = "HDMI-A-2"
+cx = 1803.0
+cy = 174.0
+box_width = 208.0
+box_height = 96.0
+rotation = 0.0
+placement_width = 1920.0
 placement_height = 1080.0
 
 [desktop_widgets.widget.desktop-widget-0000000000000003]
-type             = "clock"
-output           = "HDMI-A-2"
-cx               = 1803.0
-cy               = 60.0
-box_width        = 208.0
-box_height       = 96.0
-rotation         = 0.0
-placement_width  = 1920.0
+type = "clock"
+output = "HDMI-A-2"
+cx = 1803.0
+cy = 60.0
+box_width = 208.0
+box_height = 96.0
+rotation = 0.0
+placement_width = 1920.0
 placement_height = 1080.0
 
 # ── Lock screen widgets ───────────────────────────────────────────────────────
@@ -231,38 +234,38 @@ placement_height = 1080.0
 # the custom placement, kept so it survives turning this on again.
 
 [lockscreen_widgets]
-enabled        = false
+enabled = false
 schema_version = 2
-widget_order   = ["lockscreen-login-box@HDMI-A-2"]
+widget_order = ["lockscreen-login-box@HDMI-A-2"]
 
 [lockscreen_widgets.grid]
-visible        = true
-cell_size      = 16
+visible = true
+cell_size = 16
 major_interval = 4
 
 [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-2"]
-type             = "login_box"
-output           = "HDMI-A-2"
-cx               = 960.0
-cy               = 898.0
-box_width        = 810.0
-box_height       = 196.0
-rotation         = 0.0
-placement_width  = 1920.0
+type = "login_box"
+output = "HDMI-A-2"
+cx = 960.0
+cy = 898.0
+box_width = 810.0
+box_height = 196.0
+rotation = 0.0
+placement_width = 1920.0
 placement_height = 1080.0
 
 [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-2".settings]
-layout               = "regular"
-background_color     = "surface_variant"
-background_opacity   = 0.88
-background_radius    = 12.0
-input_opacity        = 1.0
-input_radius         = 6.0
+layout = "regular"
+background_color = "surface_variant"
+background_opacity = 0.88
+background_radius = 12.0
+input_opacity = 1.0
+input_radius = 6.0
 center_password_text = false
-show_caps_lock       = true
+show_caps_lock = true
 show_keyboard_layout = true
-show_login_button    = true
-show_media           = true
+show_login_button = true
+show_media = true
 show_session_buttons = true
-show_unlock_hint     = true
-show_weather         = true
+show_unlock_hint = true
+show_weather = true

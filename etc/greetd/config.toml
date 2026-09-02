@@ -1,0 +1,22 @@
+# greetd configuration.
+#
+# Docs: https://man.sr.ht/~kennylevinsen/greetd/
+#       https://docs.noctalia.dev/v5/greeter/
+#
+# Replaces sddm. greetd launches noctalia-greeter's bundled wlroots compositor
+# and runs the greeter inside it.
+#
+# The session list comes from the .desktop files in /usr/share/wayland-sessions
+# (this machine has one, niri). To skip the picker and boot straight into it,
+# append `-- --session niri`; `noctalia-greeter sessions` prints the valid names.
+#
+# Appearance is synced from the running shell with `noctalia msg greeter-sync`,
+# which stages /var/lib/noctalia-greeter/sync.toml. Anything set by hand in
+# /var/lib/noctalia-greeter/greeter.toml wins over the sync.
+
+[terminal]
+vt = 1
+
+[default_session]
+command = "/usr/bin/noctalia-greeter-session"
+user    = "greeter"

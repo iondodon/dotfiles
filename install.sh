@@ -22,8 +22,7 @@ PACMAN_PACKAGES=(
   qt6-declarative
   qt6-5compat
   qt6-svg
-  qt6-virtualkeyboard
-  sddm
+  greetd
   niri
   noctalia
   networkmanager
@@ -59,6 +58,7 @@ PACMAN_PACKAGES=(
 )
 
 AUR_PACKAGES=(
+  noctalia-greeter
   yaru-gtk-theme
   outlook-for-linux
   brave-bin
@@ -360,7 +360,7 @@ start_systemd_service() {
 }
 
 setup_system_services() {
-  set_display_manager sddm.service
+  set_display_manager greetd.service
   enable_systemd_service NetworkManager.service
   start_systemd_service NetworkManager.service
   enable_systemd_service bluetooth.service
@@ -604,6 +604,10 @@ install_packages
 install_witcher
 install_oh_my_zsh
 install_tmux_plugins
+install_system_group \
+  "etc/greetd/config.toml" \
+  "usr/share/backgrounds/bolduresti.png" \
+  "var/lib/noctalia-greeter/greeter.toml"
 setup_system_services
 set_gnome_interface_settings
 set_default_shell
@@ -637,8 +641,3 @@ link "home/user/.local/bin/secure7z.sh"
 link_group \
   "home/user/.local/share/applications/pickers-2fa.desktop" \
   "home/user/.local/share/applications/pickers-snippets.desktop"
-link "home/user/.local/share/backgrounds/bolduresti.png"
-
-install_system_group \
-  "etc/sddm.conf.d/theme.conf" \
-  "usr/share/sddm/themes/sddm-slice"

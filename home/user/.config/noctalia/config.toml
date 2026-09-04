@@ -20,6 +20,15 @@ clipboard_enabled = true
 [shell.animation]
 enabled = false
 
+# No drop shadows anywhere. The per-component toggles below cover the bar and
+# the panels; alpha = 0.0 is the global multiplier, so it also covers the
+# surfaces that have no toggle of their own (notifications, OSDs, popup menus).
+[shell.shadow]
+alpha = 0.0
+
+[shell.panel]
+shadow = false
+
 # ── Theme ─────────────────────────────────────────────────────────────────────
 
 # Only the key matching `source` is active; the others are the selections
@@ -105,6 +114,7 @@ thickness = 34
 radius = 0
 margin_ends = 0
 margin_edge = 0
+shadow = false
 
 start = ["control-center", "launcher", "wallpaper", "media"]
 center = ["clock"]

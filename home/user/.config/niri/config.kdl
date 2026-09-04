@@ -436,24 +436,19 @@ layer-rule {
 	}
 }
 
-// for noctalia's panels: floating (launcher, clipboard) and attached
-// (control center, wallpaper, session). Run `niri msg layers` to list them.
+// Noctalia's own surfaces: floating panels (launcher, clipboard), attached
+// panels (control center, wallpaper, session), the bars, dock, notifications,
+// OSDs and the window switcher. Run `niri msg layers` to list them.
+//
+// Do NOT set `blur true` here. Noctalia publishes its own blur regions over
+// ext-background-effect-v1, shaped exactly to the panel body and its corner
+// radius. Forcing blur on makes niri blur the whole layer surface rectangle
+// instead, which is larger than the painted panel, so a blurred band shows in
+// the transparent margins for the frames before Noctalia's region lands.
+// `xray false` keeps the wallpaper from bleeding through antialiased edges.
+// See https://docs.noctalia.dev/noctalia/compositor-settings/niri/
 layer-rule {
-    match namespace="^noctalia-(panel|attached-panel)$"
-
-    background-effect {
-        blur true
-        xray false
-    }
-
-	// this is important so that the blur can follor the rounded corner radius
-	// and I think the clip-to-geometry true should be set
-	// which currently is set in the general window-rule
-    geometry-corner-radius 8
-}
-
-layer-rule {
-    match namespace="^noctalia-(bar-.+|notification|osd|window-switcher)$"
+    match namespace="^noctalia-(bar-.+|dock|notification.*|osd|panel|attached-panel|window-switcher)$"
 
     background-effect {
         xray false
